@@ -1,0 +1,23 @@
+[package]
+name = "esp32-hello-rust-main"
+version = "0.1.0"
+edition = "2018"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+esp-idf-alloc = "0.1.0"
+esp-idf-sys = { path = "./esp-idf-sys/" }
+
+[profile.dev]
+lto = false 
+incremental = false
+debug = false # debug adds frame pointers - which must be omitted
+codegen-units = 1
+
+[profile.release]
+lto = false
+incremental = false
+debug = false # debug adds frame pointers - which must be omitted
+codegen-units = 1

@@ -1,6 +1,8 @@
 #![allow(nonstandard_style)]
 #![no_std]
-pub mod bindings;
+mod bindings;
+
+pub use bindings::*;
 
 pub mod types {
     pub enum c_void {}

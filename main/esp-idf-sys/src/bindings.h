@@ -1,4 +1,6 @@
 #include <driver/gpio.h>
+#include <driver/i2c.h>
+#include <driver/uart.h>
 #include <esp_event.h>
 #include <esp_log.h>
 #include <esp_smartconfig.h>

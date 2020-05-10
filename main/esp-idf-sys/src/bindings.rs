@@ -6348,6 +6348,418 @@ pub const tskKERNEL_VERSION_NUMBER: &'static [u8; 7usize] = b"V8.2.0\0";
 pub const tskKERNEL_VERSION_MAJOR: u32 = 8;
 pub const tskKERNEL_VERSION_MINOR: u32 = 2;
 pub const tskKERNEL_VERSION_BUILD: u32 = 0;
+pub const I2C_APB_CLK_FREQ: u32 = 80000000;
+pub const I2C_FIFO_LEN: u32 = 32;
+pub const SOC_UART_NUM: u32 = 3;
+pub const UART_RXFIFO_RD_BYTE: u32 = 255;
+pub const UART_RXFIFO_RD_BYTE_V: u32 = 255;
+pub const UART_RXFIFO_RD_BYTE_S: u32 = 0;
+pub const UART_AT_CMD_CHAR_DET_INT_RAW_V: u32 = 1;
+pub const UART_AT_CMD_CHAR_DET_INT_RAW_S: u32 = 18;
+pub const UART_RS485_CLASH_INT_RAW_V: u32 = 1;
+pub const UART_RS485_CLASH_INT_RAW_S: u32 = 17;
+pub const UART_RS485_FRM_ERR_INT_RAW_V: u32 = 1;
+pub const UART_RS485_FRM_ERR_INT_RAW_S: u32 = 16;
+pub const UART_RS485_PARITY_ERR_INT_RAW_V: u32 = 1;
+pub const UART_RS485_PARITY_ERR_INT_RAW_S: u32 = 15;
+pub const UART_TX_DONE_INT_RAW_V: u32 = 1;
+pub const UART_TX_DONE_INT_RAW_S: u32 = 14;
+pub const UART_TX_BRK_IDLE_DONE_INT_RAW_V: u32 = 1;
+pub const UART_TX_BRK_IDLE_DONE_INT_RAW_S: u32 = 13;
+pub const UART_TX_BRK_DONE_INT_RAW_V: u32 = 1;
+pub const UART_TX_BRK_DONE_INT_RAW_S: u32 = 12;
+pub const UART_GLITCH_DET_INT_RAW_V: u32 = 1;
+pub const UART_GLITCH_DET_INT_RAW_S: u32 = 11;
+pub const UART_SW_XOFF_INT_RAW_V: u32 = 1;
+pub const UART_SW_XOFF_INT_RAW_S: u32 = 10;
+pub const UART_SW_XON_INT_RAW_V: u32 = 1;
+pub const UART_SW_XON_INT_RAW_S: u32 = 9;
+pub const UART_RXFIFO_TOUT_INT_RAW_V: u32 = 1;
+pub const UART_RXFIFO_TOUT_INT_RAW_S: u32 = 8;
+pub const UART_BRK_DET_INT_RAW_V: u32 = 1;
+pub const UART_BRK_DET_INT_RAW_S: u32 = 7;
+pub const UART_CTS_CHG_INT_RAW_V: u32 = 1;
+pub const UART_CTS_CHG_INT_RAW_S: u32 = 6;
+pub const UART_DSR_CHG_INT_RAW_V: u32 = 1;
+pub const UART_DSR_CHG_INT_RAW_S: u32 = 5;
+pub const UART_RXFIFO_OVF_INT_RAW_V: u32 = 1;
+pub const UART_RXFIFO_OVF_INT_RAW_S: u32 = 4;
+pub const UART_FRM_ERR_INT_RAW_V: u32 = 1;
+pub const UART_FRM_ERR_INT_RAW_S: u32 = 3;
+pub const UART_PARITY_ERR_INT_RAW_V: u32 = 1;
+pub const UART_PARITY_ERR_INT_RAW_S: u32 = 2;
+pub const UART_TXFIFO_EMPTY_INT_RAW_V: u32 = 1;
+pub const UART_TXFIFO_EMPTY_INT_RAW_S: u32 = 1;
+pub const UART_RXFIFO_FULL_INT_RAW_V: u32 = 1;
+pub const UART_RXFIFO_FULL_INT_RAW_S: u32 = 0;
+pub const UART_AT_CMD_CHAR_DET_INT_ST_V: u32 = 1;
+pub const UART_AT_CMD_CHAR_DET_INT_ST_S: u32 = 18;
+pub const UART_RS485_CLASH_INT_ST_V: u32 = 1;
+pub const UART_RS485_CLASH_INT_ST_S: u32 = 17;
+pub const UART_RS485_FRM_ERR_INT_ST_V: u32 = 1;
+pub const UART_RS485_FRM_ERR_INT_ST_S: u32 = 16;
+pub const UART_RS485_PARITY_ERR_INT_ST_V: u32 = 1;
+pub const UART_RS485_PARITY_ERR_INT_ST_S: u32 = 15;
+pub const UART_TX_DONE_INT_ST_V: u32 = 1;
+pub const UART_TX_DONE_INT_ST_S: u32 = 14;
+pub const UART_TX_BRK_IDLE_DONE_INT_ST_V: u32 = 1;
+pub const UART_TX_BRK_IDLE_DONE_INT_ST_S: u32 = 13;
+pub const UART_TX_BRK_DONE_INT_ST_V: u32 = 1;
+pub const UART_TX_BRK_DONE_INT_ST_S: u32 = 12;
+pub const UART_GLITCH_DET_INT_ST_V: u32 = 1;
+pub const UART_GLITCH_DET_INT_ST_S: u32 = 11;
+pub const UART_SW_XOFF_INT_ST_V: u32 = 1;
+pub const UART_SW_XOFF_INT_ST_S: u32 = 10;
+pub const UART_SW_XON_INT_ST_V: u32 = 1;
+pub const UART_SW_XON_INT_ST_S: u32 = 9;
+pub const UART_RXFIFO_TOUT_INT_ST_V: u32 = 1;
+pub const UART_RXFIFO_TOUT_INT_ST_S: u32 = 8;
+pub const UART_BRK_DET_INT_ST_V: u32 = 1;
+pub const UART_BRK_DET_INT_ST_S: u32 = 7;
+pub const UART_CTS_CHG_INT_ST_V: u32 = 1;
+pub const UART_CTS_CHG_INT_ST_S: u32 = 6;
+pub const UART_DSR_CHG_INT_ST_V: u32 = 1;
+pub const UART_DSR_CHG_INT_ST_S: u32 = 5;
+pub const UART_RXFIFO_OVF_INT_ST_V: u32 = 1;
+pub const UART_RXFIFO_OVF_INT_ST_S: u32 = 4;
+pub const UART_FRM_ERR_INT_ST_V: u32 = 1;
+pub const UART_FRM_ERR_INT_ST_S: u32 = 3;
+pub const UART_PARITY_ERR_INT_ST_V: u32 = 1;
+pub const UART_PARITY_ERR_INT_ST_S: u32 = 2;
+pub const UART_TXFIFO_EMPTY_INT_ST_V: u32 = 1;
+pub const UART_TXFIFO_EMPTY_INT_ST_S: u32 = 1;
+pub const UART_RXFIFO_FULL_INT_ST_V: u32 = 1;
+pub const UART_RXFIFO_FULL_INT_ST_S: u32 = 0;
+pub const UART_AT_CMD_CHAR_DET_INT_ENA_V: u32 = 1;
+pub const UART_AT_CMD_CHAR_DET_INT_ENA_S: u32 = 18;
+pub const UART_RS485_CLASH_INT_ENA_V: u32 = 1;
+pub const UART_RS485_CLASH_INT_ENA_S: u32 = 17;
+pub const UART_RS485_FRM_ERR_INT_ENA_V: u32 = 1;
+pub const UART_RS485_FRM_ERR_INT_ENA_S: u32 = 16;
+pub const UART_RS485_PARITY_ERR_INT_ENA_V: u32 = 1;
+pub const UART_RS485_PARITY_ERR_INT_ENA_S: u32 = 15;
+pub const UART_TX_DONE_INT_ENA_V: u32 = 1;
+pub const UART_TX_DONE_INT_ENA_S: u32 = 14;
+pub const UART_TX_BRK_IDLE_DONE_INT_ENA_V: u32 = 1;
+pub const UART_TX_BRK_IDLE_DONE_INT_ENA_S: u32 = 13;
+pub const UART_TX_BRK_DONE_INT_ENA_V: u32 = 1;
+pub const UART_TX_BRK_DONE_INT_ENA_S: u32 = 12;
+pub const UART_GLITCH_DET_INT_ENA_V: u32 = 1;
+pub const UART_GLITCH_DET_INT_ENA_S: u32 = 11;
+pub const UART_SW_XOFF_INT_ENA_V: u32 = 1;
+pub const UART_SW_XOFF_INT_ENA_S: u32 = 10;
+pub const UART_SW_XON_INT_ENA_V: u32 = 1;
+pub const UART_SW_XON_INT_ENA_S: u32 = 9;
+pub const UART_RXFIFO_TOUT_INT_ENA_V: u32 = 1;
+pub const UART_RXFIFO_TOUT_INT_ENA_S: u32 = 8;
+pub const UART_BRK_DET_INT_ENA_V: u32 = 1;
+pub const UART_BRK_DET_INT_ENA_S: u32 = 7;
+pub const UART_CTS_CHG_INT_ENA_V: u32 = 1;
+pub const UART_CTS_CHG_INT_ENA_S: u32 = 6;
+pub const UART_DSR_CHG_INT_ENA_V: u32 = 1;
+pub const UART_DSR_CHG_INT_ENA_S: u32 = 5;
+pub const UART_RXFIFO_OVF_INT_ENA_V: u32 = 1;
+pub const UART_RXFIFO_OVF_INT_ENA_S: u32 = 4;
+pub const UART_FRM_ERR_INT_ENA_V: u32 = 1;
+pub const UART_FRM_ERR_INT_ENA_S: u32 = 3;
+pub const UART_PARITY_ERR_INT_ENA_V: u32 = 1;
+pub const UART_PARITY_ERR_INT_ENA_S: u32 = 2;
+pub const UART_TXFIFO_EMPTY_INT_ENA_V: u32 = 1;
+pub const UART_TXFIFO_EMPTY_INT_ENA_S: u32 = 1;
+pub const UART_RXFIFO_FULL_INT_ENA_V: u32 = 1;
+pub const UART_RXFIFO_FULL_INT_ENA_S: u32 = 0;
+pub const UART_AT_CMD_CHAR_DET_INT_CLR_V: u32 = 1;
+pub const UART_AT_CMD_CHAR_DET_INT_CLR_S: u32 = 18;
+pub const UART_RS485_CLASH_INT_CLR_V: u32 = 1;
+pub const UART_RS485_CLASH_INT_CLR_S: u32 = 17;
+pub const UART_RS485_FRM_ERR_INT_CLR_V: u32 = 1;
+pub const UART_RS485_FRM_ERR_INT_CLR_S: u32 = 16;
+pub const UART_RS485_PARITY_ERR_INT_CLR_V: u32 = 1;
+pub const UART_RS485_PARITY_ERR_INT_CLR_S: u32 = 15;
+pub const UART_TX_DONE_INT_CLR_V: u32 = 1;
+pub const UART_TX_DONE_INT_CLR_S: u32 = 14;
+pub const UART_TX_BRK_IDLE_DONE_INT_CLR_V: u32 = 1;
+pub const UART_TX_BRK_IDLE_DONE_INT_CLR_S: u32 = 13;
+pub const UART_TX_BRK_DONE_INT_CLR_V: u32 = 1;
+pub const UART_TX_BRK_DONE_INT_CLR_S: u32 = 12;
+pub const UART_GLITCH_DET_INT_CLR_V: u32 = 1;
+pub const UART_GLITCH_DET_INT_CLR_S: u32 = 11;
+pub const UART_SW_XOFF_INT_CLR_V: u32 = 1;
+pub const UART_SW_XOFF_INT_CLR_S: u32 = 10;
+pub const UART_SW_XON_INT_CLR_V: u32 = 1;
+pub const UART_SW_XON_INT_CLR_S: u32 = 9;
+pub const UART_RXFIFO_TOUT_INT_CLR_V: u32 = 1;
+pub const UART_RXFIFO_TOUT_INT_CLR_S: u32 = 8;
+pub const UART_BRK_DET_INT_CLR_V: u32 = 1;
+pub const UART_BRK_DET_INT_CLR_S: u32 = 7;
+pub const UART_CTS_CHG_INT_CLR_V: u32 = 1;
+pub const UART_CTS_CHG_INT_CLR_S: u32 = 6;
+pub const UART_DSR_CHG_INT_CLR_V: u32 = 1;
+pub const UART_DSR_CHG_INT_CLR_S: u32 = 5;
+pub const UART_RXFIFO_OVF_INT_CLR_V: u32 = 1;
+pub const UART_RXFIFO_OVF_INT_CLR_S: u32 = 4;
+pub const UART_FRM_ERR_INT_CLR_V: u32 = 1;
+pub const UART_FRM_ERR_INT_CLR_S: u32 = 3;
+pub const UART_PARITY_ERR_INT_CLR_V: u32 = 1;
+pub const UART_PARITY_ERR_INT_CLR_S: u32 = 2;
+pub const UART_TXFIFO_EMPTY_INT_CLR_V: u32 = 1;
+pub const UART_TXFIFO_EMPTY_INT_CLR_S: u32 = 1;
+pub const UART_RXFIFO_FULL_INT_CLR_V: u32 = 1;
+pub const UART_RXFIFO_FULL_INT_CLR_S: u32 = 0;
+pub const UART_CLKDIV_FRAG: u32 = 15;
+pub const UART_CLKDIV_FRAG_V: u32 = 15;
+pub const UART_CLKDIV_FRAG_S: u32 = 20;
+pub const UART_CLKDIV: u32 = 1048575;
+pub const UART_CLKDIV_V: u32 = 1048575;
+pub const UART_CLKDIV_S: u32 = 0;
+pub const UART_GLITCH_FILT: u32 = 255;
+pub const UART_GLITCH_FILT_V: u32 = 255;
+pub const UART_GLITCH_FILT_S: u32 = 8;
+pub const UART_AUTOBAUD_EN_V: u32 = 1;
+pub const UART_AUTOBAUD_EN_S: u32 = 0;
+pub const UART_TXD_V: u32 = 1;
+pub const UART_TXD_S: u32 = 31;
+pub const UART_RTSN_V: u32 = 1;
+pub const UART_RTSN_S: u32 = 30;
+pub const UART_DTRN_V: u32 = 1;
+pub const UART_DTRN_S: u32 = 29;
+pub const UART_ST_UTX_OUT: u32 = 15;
+pub const UART_ST_UTX_OUT_V: u32 = 15;
+pub const UART_ST_UTX_OUT_S: u32 = 24;
+pub const UART_TXFIFO_CNT: u32 = 255;
+pub const UART_TXFIFO_CNT_V: u32 = 255;
+pub const UART_TXFIFO_CNT_S: u32 = 16;
+pub const UART_RXD_V: u32 = 1;
+pub const UART_RXD_S: u32 = 15;
+pub const UART_CTSN_V: u32 = 1;
+pub const UART_CTSN_S: u32 = 14;
+pub const UART_DSRN_V: u32 = 1;
+pub const UART_DSRN_S: u32 = 13;
+pub const UART_ST_URX_OUT: u32 = 15;
+pub const UART_ST_URX_OUT_V: u32 = 15;
+pub const UART_ST_URX_OUT_S: u32 = 8;
+pub const UART_RXFIFO_CNT: u32 = 255;
+pub const UART_RXFIFO_CNT_V: u32 = 255;
+pub const UART_RXFIFO_CNT_S: u32 = 0;
+pub const UART_TICK_REF_ALWAYS_ON_V: u32 = 1;
+pub const UART_TICK_REF_ALWAYS_ON_S: u32 = 27;
+pub const UART_ERR_WR_MASK_V: u32 = 1;
+pub const UART_ERR_WR_MASK_S: u32 = 26;
+pub const UART_CLK_EN_V: u32 = 1;
+pub const UART_CLK_EN_S: u32 = 25;
+pub const UART_DTR_INV_V: u32 = 1;
+pub const UART_DTR_INV_S: u32 = 24;
+pub const UART_RTS_INV_V: u32 = 1;
+pub const UART_RTS_INV_S: u32 = 23;
+pub const UART_TXD_INV_V: u32 = 1;
+pub const UART_TXD_INV_S: u32 = 22;
+pub const UART_DSR_INV_V: u32 = 1;
+pub const UART_DSR_INV_S: u32 = 21;
+pub const UART_CTS_INV_V: u32 = 1;
+pub const UART_CTS_INV_S: u32 = 20;
+pub const UART_RXD_INV_V: u32 = 1;
+pub const UART_RXD_INV_S: u32 = 19;
+pub const UART_TXFIFO_RST_V: u32 = 1;
+pub const UART_TXFIFO_RST_S: u32 = 18;
+pub const UART_RXFIFO_RST_V: u32 = 1;
+pub const UART_RXFIFO_RST_S: u32 = 17;
+pub const UART_IRDA_EN_V: u32 = 1;
+pub const UART_IRDA_EN_S: u32 = 16;
+pub const UART_TX_FLOW_EN_V: u32 = 1;
+pub const UART_TX_FLOW_EN_S: u32 = 15;
+pub const UART_LOOPBACK_V: u32 = 1;
+pub const UART_LOOPBACK_S: u32 = 14;
+pub const UART_IRDA_RX_INV_V: u32 = 1;
+pub const UART_IRDA_RX_INV_S: u32 = 13;
+pub const UART_IRDA_TX_INV_V: u32 = 1;
+pub const UART_IRDA_TX_INV_S: u32 = 12;
+pub const UART_IRDA_WCTL_V: u32 = 1;
+pub const UART_IRDA_WCTL_S: u32 = 11;
+pub const UART_IRDA_TX_EN_V: u32 = 1;
+pub const UART_IRDA_TX_EN_S: u32 = 10;
+pub const UART_IRDA_DPLX_V: u32 = 1;
+pub const UART_IRDA_DPLX_S: u32 = 9;
+pub const UART_TXD_BRK_V: u32 = 1;
+pub const UART_TXD_BRK_S: u32 = 8;
+pub const UART_SW_DTR_V: u32 = 1;
+pub const UART_SW_DTR_S: u32 = 7;
+pub const UART_SW_RTS_V: u32 = 1;
+pub const UART_SW_RTS_S: u32 = 6;
+pub const UART_STOP_BIT_NUM: u32 = 3;
+pub const UART_STOP_BIT_NUM_V: u32 = 3;
+pub const UART_STOP_BIT_NUM_S: u32 = 4;
+pub const UART_BIT_NUM: u32 = 3;
+pub const UART_BIT_NUM_V: u32 = 3;
+pub const UART_BIT_NUM_S: u32 = 2;
+pub const UART_PARITY_EN_V: u32 = 1;
+pub const UART_PARITY_EN_S: u32 = 1;
+pub const UART_PARITY_V: u32 = 1;
+pub const UART_PARITY_S: u32 = 0;
+pub const UART_RX_TOUT_EN_V: u32 = 1;
+pub const UART_RX_TOUT_EN_S: u32 = 31;
+pub const UART_RX_TOUT_THRHD: u32 = 127;
+pub const UART_RX_TOUT_THRHD_V: u32 = 127;
+pub const UART_RX_TOUT_THRHD_S: u32 = 24;
+pub const UART_RX_FLOW_EN_V: u32 = 1;
+pub const UART_RX_FLOW_EN_S: u32 = 23;
+pub const UART_RX_FLOW_THRHD: u32 = 127;
+pub const UART_RX_FLOW_THRHD_V: u32 = 127;
+pub const UART_RX_FLOW_THRHD_S: u32 = 16;
+pub const UART_TXFIFO_EMPTY_THRHD: u32 = 127;
+pub const UART_TXFIFO_EMPTY_THRHD_V: u32 = 127;
+pub const UART_TXFIFO_EMPTY_THRHD_S: u32 = 8;
+pub const UART_RXFIFO_FULL_THRHD: u32 = 127;
+pub const UART_RXFIFO_FULL_THRHD_V: u32 = 127;
+pub const UART_RXFIFO_FULL_THRHD_S: u32 = 0;
+pub const UART_LOWPULSE_MIN_CNT: u32 = 1048575;
+pub const UART_LOWPULSE_MIN_CNT_V: u32 = 1048575;
+pub const UART_LOWPULSE_MIN_CNT_S: u32 = 0;
+pub const UART_HIGHPULSE_MIN_CNT: u32 = 1048575;
+pub const UART_HIGHPULSE_MIN_CNT_V: u32 = 1048575;
+pub const UART_HIGHPULSE_MIN_CNT_S: u32 = 0;
+pub const UART_RXD_EDGE_CNT: u32 = 1023;
+pub const UART_RXD_EDGE_CNT_V: u32 = 1023;
+pub const UART_RXD_EDGE_CNT_S: u32 = 0;
+pub const UART_SEND_XOFF_V: u32 = 1;
+pub const UART_SEND_XOFF_S: u32 = 5;
+pub const UART_SEND_XON_V: u32 = 1;
+pub const UART_SEND_XON_S: u32 = 4;
+pub const UART_FORCE_XOFF_V: u32 = 1;
+pub const UART_FORCE_XOFF_S: u32 = 3;
+pub const UART_FORCE_XON_V: u32 = 1;
+pub const UART_FORCE_XON_S: u32 = 2;
+pub const UART_XONOFF_DEL_V: u32 = 1;
+pub const UART_XONOFF_DEL_S: u32 = 1;
+pub const UART_SW_FLOW_CON_EN_V: u32 = 1;
+pub const UART_SW_FLOW_CON_EN_S: u32 = 0;
+pub const UART_ACTIVE_THRESHOLD: u32 = 1023;
+pub const UART_ACTIVE_THRESHOLD_V: u32 = 1023;
+pub const UART_ACTIVE_THRESHOLD_S: u32 = 0;
+pub const UART_XOFF_CHAR: u32 = 255;
+pub const UART_XOFF_CHAR_V: u32 = 255;
+pub const UART_XOFF_CHAR_S: u32 = 24;
+pub const UART_XON_CHAR: u32 = 255;
+pub const UART_XON_CHAR_V: u32 = 255;
+pub const UART_XON_CHAR_S: u32 = 16;
+pub const UART_XOFF_THRESHOLD: u32 = 255;
+pub const UART_XOFF_THRESHOLD_V: u32 = 255;
+pub const UART_XOFF_THRESHOLD_S: u32 = 8;
+pub const UART_XON_THRESHOLD: u32 = 255;
+pub const UART_XON_THRESHOLD_V: u32 = 255;
+pub const UART_XON_THRESHOLD_S: u32 = 0;
+pub const UART_TX_BRK_NUM: u32 = 255;
+pub const UART_TX_BRK_NUM_V: u32 = 255;
+pub const UART_TX_BRK_NUM_S: u32 = 20;
+pub const UART_TX_IDLE_NUM: u32 = 1023;
+pub const UART_TX_IDLE_NUM_V: u32 = 1023;
+pub const UART_TX_IDLE_NUM_S: u32 = 10;
+pub const UART_RX_IDLE_THRHD: u32 = 1023;
+pub const UART_RX_IDLE_THRHD_V: u32 = 1023;
+pub const UART_RX_IDLE_THRHD_S: u32 = 0;
+pub const UART_RS485_TX_DLY_NUM: u32 = 15;
+pub const UART_RS485_TX_DLY_NUM_V: u32 = 15;
+pub const UART_RS485_TX_DLY_NUM_S: u32 = 6;
+pub const UART_RS485_RX_DLY_NUM_V: u32 = 1;
+pub const UART_RS485_RX_DLY_NUM_S: u32 = 5;
+pub const UART_RS485RXBY_TX_EN_V: u32 = 1;
+pub const UART_RS485RXBY_TX_EN_S: u32 = 4;
+pub const UART_RS485TX_RX_EN_V: u32 = 1;
+pub const UART_RS485TX_RX_EN_S: u32 = 3;
+pub const UART_DL1_EN_V: u32 = 1;
+pub const UART_DL1_EN_S: u32 = 2;
+pub const UART_DL0_EN_V: u32 = 1;
+pub const UART_DL0_EN_S: u32 = 1;
+pub const UART_RS485_EN_V: u32 = 1;
+pub const UART_RS485_EN_S: u32 = 0;
+pub const UART_PRE_IDLE_NUM: u32 = 16777215;
+pub const UART_PRE_IDLE_NUM_V: u32 = 16777215;
+pub const UART_PRE_IDLE_NUM_S: u32 = 0;
+pub const UART_POST_IDLE_NUM: u32 = 16777215;
+pub const UART_POST_IDLE_NUM_V: u32 = 16777215;
+pub const UART_POST_IDLE_NUM_S: u32 = 0;
+pub const UART_RX_GAP_TOUT: u32 = 16777215;
+pub const UART_RX_GAP_TOUT_V: u32 = 16777215;
+pub const UART_RX_GAP_TOUT_S: u32 = 0;
+pub const UART_CHAR_NUM: u32 = 255;
+pub const UART_CHAR_NUM_V: u32 = 255;
+pub const UART_CHAR_NUM_S: u32 = 8;
+pub const UART_AT_CMD_CHAR: u32 = 255;
+pub const UART_AT_CMD_CHAR_V: u32 = 255;
+pub const UART_AT_CMD_CHAR_S: u32 = 0;
+pub const UART_TX_MEM_EMPTY_THRHD: u32 = 7;
+pub const UART_TX_MEM_EMPTY_THRHD_V: u32 = 7;
+pub const UART_TX_MEM_EMPTY_THRHD_S: u32 = 28;
+pub const UART_RX_MEM_FULL_THRHD: u32 = 7;
+pub const UART_RX_MEM_FULL_THRHD_V: u32 = 7;
+pub const UART_RX_MEM_FULL_THRHD_S: u32 = 25;
+pub const UART_XOFF_THRESHOLD_H2: u32 = 3;
+pub const UART_XOFF_THRESHOLD_H2_V: u32 = 3;
+pub const UART_XOFF_THRESHOLD_H2_S: u32 = 23;
+pub const UART_XON_THRESHOLD_H2: u32 = 3;
+pub const UART_XON_THRESHOLD_H2_V: u32 = 3;
+pub const UART_XON_THRESHOLD_H2_S: u32 = 21;
+pub const UART_RX_TOUT_THRHD_H3: u32 = 7;
+pub const UART_RX_TOUT_THRHD_H3_V: u32 = 7;
+pub const UART_RX_TOUT_THRHD_H3_S: u32 = 18;
+pub const UART_RX_FLOW_THRHD_H3: u32 = 7;
+pub const UART_RX_FLOW_THRHD_H3_V: u32 = 7;
+pub const UART_RX_FLOW_THRHD_H3_S: u32 = 15;
+pub const UART_TX_SIZE: u32 = 15;
+pub const UART_TX_SIZE_V: u32 = 15;
+pub const UART_TX_SIZE_S: u32 = 7;
+pub const UART_RX_SIZE: u32 = 15;
+pub const UART_RX_SIZE_V: u32 = 15;
+pub const UART_RX_SIZE_S: u32 = 3;
+pub const UART_MEM_PD_V: u32 = 1;
+pub const UART_MEM_PD_S: u32 = 0;
+pub const UART_MEM_TX_STATUS: u32 = 16777215;
+pub const UART_MEM_TX_STATUS_V: u32 = 16777215;
+pub const UART_MEM_TX_STATUS_S: u32 = 0;
+pub const UART_MEM_RX_STATUS: u32 = 16777215;
+pub const UART_MEM_RX_STATUS_V: u32 = 16777215;
+pub const UART_MEM_RX_STATUS_S: u32 = 0;
+pub const UART_MEM_RX_RD_ADDR: u32 = 2047;
+pub const UART_MEM_RX_RD_ADDR_V: u32 = 2047;
+pub const UART_MEM_RX_RD_ADDR_S: u32 = 2;
+pub const UART_MEM_RX_WR_ADDR: u32 = 2047;
+pub const UART_MEM_RX_WR_ADDR_V: u32 = 2047;
+pub const UART_MEM_RX_WR_ADDR_S: u32 = 13;
+pub const UART_TX_MEM_CNT: u32 = 7;
+pub const UART_TX_MEM_CNT_V: u32 = 7;
+pub const UART_TX_MEM_CNT_S: u32 = 3;
+pub const UART_RX_MEM_CNT: u32 = 7;
+pub const UART_RX_MEM_CNT_V: u32 = 7;
+pub const UART_RX_MEM_CNT_S: u32 = 0;
+pub const UART_POSEDGE_MIN_CNT: u32 = 1048575;
+pub const UART_POSEDGE_MIN_CNT_V: u32 = 1048575;
+pub const UART_POSEDGE_MIN_CNT_S: u32 = 0;
+pub const UART_NEGEDGE_MIN_CNT: u32 = 1048575;
+pub const UART_NEGEDGE_MIN_CNT_V: u32 = 1048575;
+pub const UART_NEGEDGE_MIN_CNT_S: u32 = 0;
+pub const UART_DATE: u32 = 4294967295;
+pub const UART_DATE_V: u32 = 4294967295;
+pub const UART_DATE_S: u32 = 0;
+pub const UART_ID: u32 = 4294967295;
+pub const UART_ID_V: u32 = 4294967295;
+pub const UART_ID_S: u32 = 0;
+pub const UART_NUM_0_TXD_DIRECT_GPIO_NUM: u32 = 1;
+pub const UART_NUM_0_RXD_DIRECT_GPIO_NUM: u32 = 3;
+pub const UART_NUM_0_CTS_DIRECT_GPIO_NUM: u32 = 19;
+pub const UART_NUM_0_RTS_DIRECT_GPIO_NUM: u32 = 22;
+pub const UART_NUM_1_TXD_DIRECT_GPIO_NUM: u32 = 10;
+pub const UART_NUM_1_RXD_DIRECT_GPIO_NUM: u32 = 9;
+pub const UART_NUM_1_CTS_DIRECT_GPIO_NUM: u32 = 6;
+pub const UART_NUM_1_RTS_DIRECT_GPIO_NUM: u32 = 11;
+pub const UART_NUM_2_TXD_DIRECT_GPIO_NUM: u32 = 17;
+pub const UART_NUM_2_RXD_DIRECT_GPIO_NUM: u32 = 16;
+pub const UART_NUM_2_CTS_DIRECT_GPIO_NUM: u32 = 8;
+pub const UART_NUM_2_RTS_DIRECT_GPIO_NUM: u32 = 7;
+pub const UART_FIFO_LEN: u32 = 128;
+pub const UART_INTR_MASK: u32 = 511;
+pub const UART_LINE_INV_MASK: u32 = 33030144;
+pub const UART_BITRATE_MAX: u32 = 5000000;
+pub const UART_PIN_NO_CHANGE: i32 = -1;
+pub const UART_INVERSE_DISABLE: u32 = 0;
 pub const ESP_EVENT_ANY_ID: i32 = -1;
 pub const WIFI_PROTOCOL_11B: u32 = 1;
 pub const WIFI_PROTOCOL_11G: u32 = 2;
@@ -14435,6 +14847,669 @@ pub struct xSTATIC_TIMER {
     pub pvDummy5: [*mut crate::types::c_void; 2usize],
 }
 pub type StaticTimer_t = xSTATIC_TIMER;
+#[doc = " Type by which queues are referenced.  For example, a call to xQueueCreate()"]
+#[doc = " returns an QueueHandle_t variable that can then be used as a parameter to"]
+#[doc = " xQueueSend(), xQueueReceive(), etc."]
+pub type QueueHandle_t = *mut crate::types::c_void;
+#[doc = " Type by which queue sets are referenced.  For example, a call to"]
+#[doc = " xQueueCreateSet() returns an xQueueSet variable that can then be used as a"]
+#[doc = " parameter to xQueueSelectFromSet(), xQueueAddToSet(), etc."]
+pub type QueueSetHandle_t = *mut crate::types::c_void;
+#[doc = " Queue sets can contain both queues and semaphores, so the"]
+#[doc = " QueueSetMemberHandle_t is defined as a type to be used where a parameter or"]
+#[doc = " return value can be either an QueueHandle_t or an SemaphoreHandle_t."]
+pub type QueueSetMemberHandle_t = *mut crate::types::c_void;
+extern "C" {
+    #[doc = " It is preferred that the macros xQueueSend(), xQueueSendToFront() and"]
+    #[doc = " xQueueSendToBack() are used in place of calling this function directly."]
+    #[doc = ""]
+    #[doc = " Post an item on a queue.  The item is queued by copy, not by reference."]
+    #[doc = " This function must not be called from an interrupt service routine."]
+    #[doc = " See xQueueSendFromISR () for an alternative which may be used in an ISR."]
+    #[doc = ""]
+    #[doc = " @param xQueue The handle to the queue on which the item is to be posted."]
+    #[doc = ""]
+    #[doc = " @param pvItemToQueue A pointer to the item that is to be placed on the"]
+    #[doc = " queue.  The size of the items the queue will hold was defined when the"]
+    #[doc = " queue was created, so this many bytes will be copied from pvItemToQueue"]
+    #[doc = " into the queue storage area."]
+    #[doc = ""]
+    #[doc = " @param xTicksToWait The maximum amount of time the task should block"]
+    #[doc = " waiting for space to become available on the queue, should it already"]
+    #[doc = " be full.  The call will return immediately if this is set to 0 and the"]
+    #[doc = " queue is full.  The time is defined in tick periods so the constant"]
+    #[doc = " portTICK_PERIOD_MS should be used to convert to real time if this is required."]
+    #[doc = ""]
+    #[doc = " @param xCopyPosition Can take the value queueSEND_TO_BACK to place the"]
+    #[doc = " item at the back of the queue, or queueSEND_TO_FRONT to place the item"]
+    #[doc = " at the front of the queue (for high priority messages)."]
+    #[doc = ""]
+    #[doc = " @return pdTRUE if the item was successfully posted, otherwise errQUEUE_FULL."]
+    #[doc = ""]
+    #[doc = " Example usage:"]
+    #[doc = " @code{c}"]
+    #[doc = "  struct AMessage"]
+    #[doc = "  {"]
+    #[doc = "  char ucMessageID;"]
+    #[doc = "  char ucData[ 20 ];"]
+    #[doc = "  } xMessage;"]
+    #[doc = ""]
+    #[doc = "  uint32_t ulVar = 10UL;"]
+    #[doc = ""]
+    #[doc = "  void vATask( void *pvParameters )"]
+    #[doc = "  {"]
+    #[doc = "  QueueHandle_t xQueue1, xQueue2;"]
+    #[doc = "  struct AMessage *pxMessage;"]
+    #[doc = ""]
+    #[doc = "  // Create a queue capable of containing 10 uint32_t values."]
+    #[doc = "  xQueue1 = xQueueCreate( 10, sizeof( uint32_t ) );"]
+    #[doc = ""]
+    #[doc = "  // Create a queue capable of containing 10 pointers to AMessage structures."]
+    #[doc = "  // These should be passed by pointer as they contain a lot of data."]
+    #[doc = "  xQueue2 = xQueueCreate( 10, sizeof( struct AMessage * ) );"]
+    #[doc = ""]
+    #[doc = "  // ..."]
+    #[doc = ""]
+    #[doc = "  if( xQueue1 != 0 )"]
+    #[doc = "  {"]
+    #[doc = "      // Send an uint32_t.  Wait for 10 ticks for space to become"]
+    #[doc = "      // available if necessary."]
+    #[doc = "      if( xQueueGenericSend( xQueue1, ( void * ) &ulVar, ( TickType_t ) 10, queueSEND_TO_BACK ) != pdPASS )"]
+    #[doc = "      {"]
+    #[doc = "          // Failed to post the message, even after 10 ticks."]
+    #[doc = "      }"]
+    #[doc = "  }"]
+    #[doc = ""]
+    #[doc = "  if( xQueue2 != 0 )"]
+    #[doc = "  {"]
+    #[doc = "      // Send a pointer to a struct AMessage object.  Don't block if the"]
+    #[doc = "      // queue is already full."]
+    #[doc = "      pxMessage = & xMessage;"]
+    #[doc = "      xQueueGenericSend( xQueue2, ( void * ) &pxMessage, ( TickType_t ) 0, queueSEND_TO_BACK );"]
+    #[doc = "  }"]
+    #[doc = ""]
+    #[doc = "  // ... Rest of task code."]
+    #[doc = "  }"]
+    #[doc = " @endcode"]
+    #[doc = " \\ingroup QueueManagement"]
+    pub fn xQueueGenericSend(
+        xQueue: QueueHandle_t,
+        pvItemToQueue: *const crate::types::c_void,
+        xTicksToWait: TickType_t,
+        xCopyPosition: BaseType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = " A version of xQueuePeek() that can be called from an interrupt service"]
+    #[doc = " routine (ISR)."]
+    #[doc = ""]
+    #[doc = " Receive an item from a queue without removing the item from the queue."]
+    #[doc = " The item is received by copy so a buffer of adequate size must be"]
+    #[doc = " provided.  The number of bytes copied into the buffer was defined when"]
+    #[doc = " the queue was created."]
+    #[doc = ""]
+    #[doc = " Successfully received items remain on the queue so will be returned again"]
+    #[doc = " by the next call, or a call to xQueueReceive()."]
+    #[doc = ""]
+    #[doc = " @param xQueue The handle to the queue from which the item is to be"]
+    #[doc = " received."]
+    #[doc = ""]
+    #[doc = " @param pvBuffer Pointer to the buffer into which the received item will"]
+    #[doc = " be copied."]
+    #[doc = ""]
+    #[doc = " @return pdTRUE if an item was successfully received from the queue,"]
+    #[doc = " otherwise pdFALSE."]
+    #[doc = ""]
+    #[doc = " \\ingroup QueueManagement"]
+    pub fn xQueuePeekFromISR(
+        xQueue: QueueHandle_t,
+        pvBuffer: *mut crate::types::c_void,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = " It is preferred that the macro xQueueReceive() be used rather than calling"]
+    #[doc = " this function directly."]
+    #[doc = ""]
+    #[doc = " Receive an item from a queue.  The item is received by copy so a buffer of"]
+    #[doc = " adequate size must be provided.  The number of bytes copied into the buffer"]
+    #[doc = " was defined when the queue was created."]
+    #[doc = ""]
+    #[doc = " This function must not be used in an interrupt service routine.  See"]
+    #[doc = " xQueueReceiveFromISR for an alternative that can."]
+    #[doc = ""]
+    #[doc = " @param xQueue The handle to the queue from which the item is to be"]
+    #[doc = " received."]
+    #[doc = ""]
+    #[doc = " @param pvBuffer Pointer to the buffer into which the received item will"]
+    #[doc = " be copied."]
+    #[doc = ""]
+    #[doc = " @param xTicksToWait The maximum amount of time the task should block"]
+    #[doc = " waiting for an item to receive should the queue be empty at the time"]
+    #[doc = " of the call.\t The time is defined in tick periods so the constant"]
+    #[doc = " portTICK_PERIOD_MS should be used to convert to real time if this is required."]
+    #[doc = " xQueueGenericReceive() will return immediately if the queue is empty and"]
+    #[doc = " xTicksToWait is 0."]
+    #[doc = ""]
+    #[doc = " @param xJustPeek When set to true, the item received from the queue is not"]
+    #[doc = " actually removed from the queue - meaning a subsequent call to"]
+    #[doc = " xQueueReceive() will return the same item.  When set to false, the item"]
+    #[doc = " being received from the queue is also removed from the queue."]
+    #[doc = ""]
+    #[doc = " @return pdTRUE if an item was successfully received from the queue,"]
+    #[doc = " otherwise pdFALSE."]
+    #[doc = ""]
+    #[doc = " Example usage:"]
+    #[doc = " @code{c}"]
+    #[doc = "  struct AMessage"]
+    #[doc = "  {"]
+    #[doc = " \tchar ucMessageID;"]
+    #[doc = " \tchar ucData[ 20 ];"]
+    #[doc = "  } xMessage;"]
+    #[doc = ""]
+    #[doc = "  QueueHandle_t xQueue;"]
+    #[doc = ""]
+    #[doc = "  // Task to create a queue and post a value."]
+    #[doc = "  void vATask( void *pvParameters )"]
+    #[doc = "  {"]
+    #[doc = "  struct AMessage *pxMessage;"]
+    #[doc = ""]
+    #[doc = " \t// Create a queue capable of containing 10 pointers to AMessage structures."]
+    #[doc = " \t// These should be passed by pointer as they contain a lot of data."]
+    #[doc = " \txQueue = xQueueCreate( 10, sizeof( struct AMessage * ) );"]
+    #[doc = " \tif( xQueue == 0 )"]
+    #[doc = " \t{"]
+    #[doc = " \t\t// Failed to create the queue."]
+    #[doc = " \t}"]
+    #[doc = ""]
+    #[doc = " \t// ..."]
+    #[doc = ""]
+    #[doc = " \t// Send a pointer to a struct AMessage object.  Don't block if the"]
+    #[doc = " \t// queue is already full."]
+    #[doc = " \tpxMessage = & xMessage;"]
+    #[doc = " \txQueueSend( xQueue, ( void * ) &pxMessage, ( TickType_t ) 0 );"]
+    #[doc = ""]
+    #[doc = " \t// ... Rest of task code."]
+    #[doc = "  }"]
+    #[doc = ""]
+    #[doc = "  // Task to receive from the queue."]
+    #[doc = "  void vADifferentTask( void *pvParameters )"]
+    #[doc = "  {"]
+    #[doc = "  struct AMessage *pxRxedMessage;"]
+    #[doc = ""]
+    #[doc = " \tif( xQueue != 0 )"]
+    #[doc = " \t{"]
+    #[doc = " \t\t// Receive a message on the created queue.  Block for 10 ticks if a"]
+    #[doc = " \t\t// message is not immediately available."]
+    #[doc = " \t\tif( xQueueGenericReceive( xQueue, &( pxRxedMessage ), ( TickType_t ) 10 ) )"]
+    #[doc = " \t\t{"]
+    #[doc = " \t\t\t// pcRxedMessage now points to the struct AMessage variable posted"]
+    #[doc = " \t\t\t// by vATask."]
+    #[doc = " \t\t}"]
+    #[doc = " \t}"]
+    #[doc = ""]
+    #[doc = " \t// ... Rest of task code."]
+    #[doc = "  }"]
+    #[doc = " @endcode"]
+    #[doc = " \\ingroup QueueManagement"]
+    pub fn xQueueGenericReceive(
+        xQueue: QueueHandle_t,
+        pvBuffer: *mut crate::types::c_void,
+        xTicksToWait: TickType_t,
+        xJustPeek: BaseType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = " Return the number of messages stored in a queue."]
+    #[doc = ""]
+    #[doc = " @param xQueue A handle to the queue being queried."]
+    #[doc = ""]
+    #[doc = " @return The number of messages available in the queue."]
+    #[doc = ""]
+    #[doc = " \\ingroup QueueManagement"]
+    pub fn uxQueueMessagesWaiting(xQueue: QueueHandle_t) -> UBaseType_t;
+}
+extern "C" {
+    #[doc = " Return the number of free spaces available in a queue.  This is equal to the"]
+    #[doc = " number of items that can be sent to the queue before the queue becomes full"]
+    #[doc = " if no items are removed."]
+    #[doc = ""]
+    #[doc = " @param xQueue A handle to the queue being queried."]
+    #[doc = ""]
+    #[doc = " @return The number of spaces available in the queue."]
+    #[doc = ""]
+    #[doc = " \\ingroup QueueManagement"]
+    pub fn uxQueueSpacesAvailable(xQueue: QueueHandle_t) -> UBaseType_t;
+}
+extern "C" {
+    #[doc = " Delete a queue - freeing all the memory allocated for storing of items"]
+    #[doc = " placed on the queue."]
+    #[doc = ""]
+    #[doc = " @param xQueue A handle to the queue to be deleted."]
+    #[doc = ""]
+    #[doc = " \\ingroup QueueManagement"]
+    pub fn vQueueDelete(xQueue: QueueHandle_t);
+}
+extern "C" {
+    #[doc = "@{*/"]
+    #[doc = " It is preferred that the macros xQueueSendFromISR(),"]
+    #[doc = " xQueueSendToFrontFromISR() and xQueueSendToBackFromISR() be used in place"]
+    #[doc = " of calling this function directly.  xQueueGiveFromISR() is an"]
+    #[doc = " equivalent for use by semaphores that don't actually copy any data."]
+    #[doc = ""]
+    #[doc = " Post an item on a queue.  It is safe to use this function from within an"]
+    #[doc = " interrupt service routine."]
+    #[doc = ""]
+    #[doc = " Items are queued by copy not reference so it is preferable to only"]
+    #[doc = " queue small items, especially when called from an ISR.  In most cases"]
+    #[doc = " it would be preferable to store a pointer to the item being queued."]
+    #[doc = ""]
+    #[doc = " @param xQueue The handle to the queue on which the item is to be posted."]
+    #[doc = ""]
+    #[doc = " @param pvItemToQueue A pointer to the item that is to be placed on the"]
+    #[doc = " queue.  The size of the items the queue will hold was defined when the"]
+    #[doc = " queue was created, so this many bytes will be copied from pvItemToQueue"]
+    #[doc = " into the queue storage area."]
+    #[doc = ""]
+    #[doc = " @param[out] pxHigherPriorityTaskWoken xQueueGenericSendFromISR() will set"]
+    #[doc = " *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task"]
+    #[doc = " to unblock, and the unblocked task has a priority higher than the currently"]
+    #[doc = " running task.  If xQueueGenericSendFromISR() sets this value to pdTRUE then"]
+    #[doc = " a context switch should be requested before the interrupt is exited."]
+    #[doc = ""]
+    #[doc = " @param xCopyPosition Can take the value queueSEND_TO_BACK to place the"]
+    #[doc = " item at the back of the queue, or queueSEND_TO_FRONT to place the item"]
+    #[doc = " at the front of the queue (for high priority messages)."]
+    #[doc = ""]
+    #[doc = " @return pdTRUE if the data was successfully sent to the queue, otherwise"]
+    #[doc = " errQUEUE_FULL."]
+    #[doc = ""]
+    #[doc = " Example usage for buffered IO (where the ISR can obtain more than one value"]
+    #[doc = " per call):"]
+    #[doc = " @code{c}"]
+    #[doc = "  void vBufferISR( void )"]
+    #[doc = "  {"]
+    #[doc = "  char cIn;"]
+    #[doc = "  BaseType_t xHigherPriorityTaskWokenByPost;"]
+    #[doc = ""]
+    #[doc = " \t// We have not woken a task at the start of the ISR."]
+    #[doc = " \txHigherPriorityTaskWokenByPost = pdFALSE;"]
+    #[doc = ""]
+    #[doc = " \t// Loop until the buffer is empty."]
+    #[doc = " \tdo"]
+    #[doc = " \t{"]
+    #[doc = " \t\t// Obtain a byte from the buffer."]
+    #[doc = " \t\tcIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );"]
+    #[doc = ""]
+    #[doc = " \t\t// Post each byte."]
+    #[doc = " \t\txQueueGenericSendFromISR( xRxQueue, &cIn, &xHigherPriorityTaskWokenByPost, queueSEND_TO_BACK );"]
+    #[doc = ""]
+    #[doc = " \t} while( portINPUT_BYTE( BUFFER_COUNT ) );"]
+    #[doc = ""]
+    #[doc = " \t// Now the buffer is empty we can switch context if necessary.  Note that the"]
+    #[doc = " \t// name of the yield function required is port specific."]
+    #[doc = " \tif( xHigherPriorityTaskWokenByPost )"]
+    #[doc = " \t{"]
+    #[doc = " \t\ttaskYIELD_YIELD_FROM_ISR();"]
+    #[doc = " \t}"]
+    #[doc = "  }"]
+    #[doc = " @endcode"]
+    #[doc = " \\ingroup QueueManagement"]
+    pub fn xQueueGenericSendFromISR(
+        xQueue: QueueHandle_t,
+        pvItemToQueue: *const crate::types::c_void,
+        pxHigherPriorityTaskWoken: *mut BaseType_t,
+        xCopyPosition: BaseType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    pub fn xQueueGiveFromISR(
+        xQueue: QueueHandle_t,
+        pxHigherPriorityTaskWoken: *mut BaseType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = " Receive an item from a queue.  It is safe to use this function from within an"]
+    #[doc = " interrupt service routine."]
+    #[doc = ""]
+    #[doc = " @param xQueue The handle to the queue from which the item is to be"]
+    #[doc = " received."]
+    #[doc = ""]
+    #[doc = " @param pvBuffer Pointer to the buffer into which the received item will"]
+    #[doc = " be copied."]
+    #[doc = ""]
+    #[doc = " @param[out] pxHigherPriorityTaskWoken A task may be blocked waiting for space to become"]
+    #[doc = " available on the queue.  If xQueueReceiveFromISR causes such a task to"]
+    #[doc = " unblock *pxTaskWoken will get set to pdTRUE, otherwise *pxTaskWoken will"]
+    #[doc = " remain unchanged."]
+    #[doc = ""]
+    #[doc = " @return pdTRUE if an item was successfully received from the queue,"]
+    #[doc = " otherwise pdFALSE."]
+    #[doc = ""]
+    #[doc = " Example usage:"]
+    #[doc = " @code{c}"]
+    #[doc = "  QueueHandle_t xQueue;"]
+    #[doc = ""]
+    #[doc = "  // Function to create a queue and post some values."]
+    #[doc = "  void vAFunction( void *pvParameters )"]
+    #[doc = "  {"]
+    #[doc = "  char cValueToPost;"]
+    #[doc = "  const TickType_t xTicksToWait = ( TickType_t )0xff;"]
+    #[doc = ""]
+    #[doc = " \t// Create a queue capable of containing 10 characters."]
+    #[doc = " \txQueue = xQueueCreate( 10, sizeof( char ) );"]
+    #[doc = " \tif( xQueue == 0 )"]
+    #[doc = " \t{"]
+    #[doc = " \t\t// Failed to create the queue."]
+    #[doc = " \t}"]
+    #[doc = ""]
+    #[doc = " \t// ..."]
+    #[doc = ""]
+    #[doc = " \t// Post some characters that will be used within an ISR.  If the queue"]
+    #[doc = " \t// is full then this task will block for xTicksToWait ticks."]
+    #[doc = " \tcValueToPost = 'a';"]
+    #[doc = " \txQueueSend( xQueue, ( void * ) &cValueToPost, xTicksToWait );"]
+    #[doc = " \tcValueToPost = 'b';"]
+    #[doc = " \txQueueSend( xQueue, ( void * ) &cValueToPost, xTicksToWait );"]
+    #[doc = ""]
+    #[doc = " \t// ... keep posting characters ... this task may block when the queue"]
+    #[doc = " \t// becomes full."]
+    #[doc = ""]
+    #[doc = " \tcValueToPost = 'c';"]
+    #[doc = " \txQueueSend( xQueue, ( void * ) &cValueToPost, xTicksToWait );"]
+    #[doc = "  }"]
+    #[doc = ""]
+    #[doc = "  // ISR that outputs all the characters received on the queue."]
+    #[doc = "  void vISR_Routine( void )"]
+    #[doc = "  {"]
+    #[doc = "  BaseType_t xTaskWokenByReceive = pdFALSE;"]
+    #[doc = "  char cRxedChar;"]
+    #[doc = ""]
+    #[doc = " \twhile( xQueueReceiveFromISR( xQueue, ( void * ) &cRxedChar, &xTaskWokenByReceive) )"]
+    #[doc = " \t{"]
+    #[doc = " \t\t// A character was received.  Output the character now."]
+    #[doc = " \t\tvOutputCharacter( cRxedChar );"]
+    #[doc = ""]
+    #[doc = " \t\t// If removing the character from the queue woke the task that was"]
+    #[doc = " \t\t// posting onto the queue cTaskWokenByReceive will have been set to"]
+    #[doc = " \t\t// pdTRUE.  No matter how many times this loop iterates only one"]
+    #[doc = " \t\t// task will be woken."]
+    #[doc = " \t}"]
+    #[doc = ""]
+    #[doc = " \tif( cTaskWokenByPost != ( char ) pdFALSE;"]
+    #[doc = " \t{"]
+    #[doc = " \t\ttaskYIELD ();"]
+    #[doc = " \t}"]
+    #[doc = "  }"]
+    #[doc = " @endcode"]
+    #[doc = " \\ingroup QueueManagement"]
+    pub fn xQueueReceiveFromISR(
+        xQueue: QueueHandle_t,
+        pvBuffer: *mut crate::types::c_void,
+        pxHigherPriorityTaskWoken: *mut BaseType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = "@{*/"]
+    #[doc = " Utilities to query queues that are safe to use from an ISR.  These utilities"]
+    #[doc = " should be used only from witin an ISR, or within a critical section."]
+    pub fn xQueueIsQueueEmptyFromISR(xQueue: QueueHandle_t) -> BaseType_t;
+}
+extern "C" {
+    pub fn xQueueIsQueueFullFromISR(xQueue: QueueHandle_t) -> BaseType_t;
+}
+extern "C" {
+    pub fn uxQueueMessagesWaitingFromISR(xQueue: QueueHandle_t) -> UBaseType_t;
+}
+extern "C" {
+    #[doc = " @cond */"]
+    #[doc = " xQueueAltGenericSend() is an alternative version of xQueueGenericSend()."]
+    #[doc = " Likewise xQueueAltGenericReceive() is an alternative version of"]
+    #[doc = " xQueueGenericReceive()."]
+    #[doc = ""]
+    #[doc = " The source code that implements the alternative (Alt) API is much"]
+    #[doc = " simpler\tbecause it executes everything from within a critical section."]
+    #[doc = " This is\tthe approach taken by many other RTOSes, but FreeRTOS.org has the"]
+    #[doc = " preferred fully featured API too.  The fully featured API has more"]
+    #[doc = " complex\tcode that takes longer to execute, but makes much less use of"]
+    #[doc = " critical sections.  Therefore the alternative API sacrifices interrupt"]
+    #[doc = " responsiveness to gain execution speed, whereas the fully featured API"]
+    #[doc = " sacrifices execution speed to ensure better interrupt responsiveness."]
+    pub fn xQueueAltGenericSend(
+        xQueue: QueueHandle_t,
+        pvItemToQueue: *const crate::types::c_void,
+        xTicksToWait: TickType_t,
+        xCopyPosition: BaseType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    pub fn xQueueAltGenericReceive(
+        xQueue: QueueHandle_t,
+        pvBuffer: *mut crate::types::c_void,
+        xTicksToWait: TickType_t,
+        xJustPeeking: BaseType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    pub fn xQueueCRSendFromISR(
+        xQueue: QueueHandle_t,
+        pvItemToQueue: *const crate::types::c_void,
+        xCoRoutinePreviouslyWoken: BaseType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    pub fn xQueueCRReceiveFromISR(
+        xQueue: QueueHandle_t,
+        pvBuffer: *mut crate::types::c_void,
+        pxTaskWoken: *mut BaseType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    pub fn xQueueCRSend(
+        xQueue: QueueHandle_t,
+        pvItemToQueue: *const crate::types::c_void,
+        xTicksToWait: TickType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    pub fn xQueueCRReceive(
+        xQueue: QueueHandle_t,
+        pvBuffer: *mut crate::types::c_void,
+        xTicksToWait: TickType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    pub fn xQueueCreateMutex(ucQueueType: u8) -> QueueHandle_t;
+}
+extern "C" {
+    pub fn xQueueCreateMutexStatic(
+        ucQueueType: u8,
+        pxStaticQueue: *mut StaticQueue_t,
+    ) -> QueueHandle_t;
+}
+extern "C" {
+    pub fn xQueueCreateCountingSemaphore(
+        uxMaxCount: UBaseType_t,
+        uxInitialCount: UBaseType_t,
+    ) -> QueueHandle_t;
+}
+extern "C" {
+    pub fn xQueueCreateCountingSemaphoreStatic(
+        uxMaxCount: UBaseType_t,
+        uxInitialCount: UBaseType_t,
+        pxStaticQueue: *mut StaticQueue_t,
+    ) -> QueueHandle_t;
+}
+extern "C" {
+    pub fn xQueueGetMutexHolder(xSemaphore: QueueHandle_t) -> *mut crate::types::c_void;
+}
+extern "C" {
+    pub fn xQueueTakeMutexRecursive(xMutex: QueueHandle_t, xTicksToWait: TickType_t) -> BaseType_t;
+}
+extern "C" {
+    pub fn xQueueGiveMutexRecursive(pxMutex: QueueHandle_t) -> BaseType_t;
+}
+extern "C" {
+    pub fn xQueueGenericCreate(
+        uxQueueLength: UBaseType_t,
+        uxItemSize: UBaseType_t,
+        ucQueueType: u8,
+    ) -> QueueHandle_t;
+}
+extern "C" {
+    #[doc = " Queue sets provide a mechanism to allow a task to block (pend) on a read"]
+    #[doc = " operation from multiple queues or semaphores simultaneously."]
+    #[doc = ""]
+    #[doc = " See FreeRTOS/Source/Demo/Common/Minimal/QueueSet.c for an example using this"]
+    #[doc = " function."]
+    #[doc = ""]
+    #[doc = " A queue set must be explicitly created using a call to xQueueCreateSet()"]
+    #[doc = " before it can be used.  Once created, standard FreeRTOS queues and semaphores"]
+    #[doc = " can be added to the set using calls to xQueueAddToSet()."]
+    #[doc = " xQueueSelectFromSet() is then used to determine which, if any, of the queues"]
+    #[doc = " or semaphores contained in the set is in a state where a queue read or"]
+    #[doc = " semaphore take operation would be successful."]
+    #[doc = ""]
+    #[doc = " Note 1:  See the documentation on http://wwwFreeRTOS.org/RTOS-queue-sets.html"]
+    #[doc = " for reasons why queue sets are very rarely needed in practice as there are"]
+    #[doc = " simpler methods of blocking on multiple objects."]
+    #[doc = ""]
+    #[doc = " Note 2:  Blocking on a queue set that contains a mutex will not cause the"]
+    #[doc = " mutex holder to inherit the priority of the blocked task."]
+    #[doc = ""]
+    #[doc = " Note 3:  An additional 4 bytes of RAM is required for each space in a every"]
+    #[doc = " queue added to a queue set.  Therefore counting semaphores that have a high"]
+    #[doc = " maximum count value should not be added to a queue set."]
+    #[doc = ""]
+    #[doc = " Note 4:  A receive (in the case of a queue) or take (in the case of a"]
+    #[doc = " semaphore) operation must not be performed on a member of a queue set unless"]
+    #[doc = " a call to xQueueSelectFromSet() has first returned a handle to that set member."]
+    #[doc = ""]
+    #[doc = " @param uxEventQueueLength Queue sets store events that occur on"]
+    #[doc = " the queues and semaphores contained in the set.  uxEventQueueLength specifies"]
+    #[doc = " the maximum number of events that can be queued at once.  To be absolutely"]
+    #[doc = " certain that events are not lost uxEventQueueLength should be set to the"]
+    #[doc = " total sum of the length of the queues added to the set, where binary"]
+    #[doc = " semaphores and mutexes have a length of 1, and counting semaphores have a"]
+    #[doc = " length set by their maximum count value.  Examples:"]
+    #[doc = "  + If a queue set is to hold a queue of length 5, another queue of length 12,"]
+    #[doc = "    and a binary semaphore, then uxEventQueueLength should be set to"]
+    #[doc = "    (5 + 12 + 1), or 18."]
+    #[doc = "  + If a queue set is to hold three binary semaphores then uxEventQueueLength"]
+    #[doc = "    should be set to (1 + 1 + 1 ), or 3."]
+    #[doc = "  + If a queue set is to hold a counting semaphore that has a maximum count of"]
+    #[doc = "    5, and a counting semaphore that has a maximum count of 3, then"]
+    #[doc = "    uxEventQueueLength should be set to (5 + 3), or 8."]
+    #[doc = ""]
+    #[doc = " @return If the queue set is created successfully then a handle to the created"]
+    #[doc = " queue set is returned.  Otherwise NULL is returned."]
+    pub fn xQueueCreateSet(uxEventQueueLength: UBaseType_t) -> QueueSetHandle_t;
+}
+extern "C" {
+    #[doc = " Adds a queue or semaphore to a queue set that was previously created by a"]
+    #[doc = " call to xQueueCreateSet()."]
+    #[doc = ""]
+    #[doc = " See FreeRTOS/Source/Demo/Common/Minimal/QueueSet.c for an example using this"]
+    #[doc = " function."]
+    #[doc = ""]
+    #[doc = " Note 1:  A receive (in the case of a queue) or take (in the case of a"]
+    #[doc = " semaphore) operation must not be performed on a member of a queue set unless"]
+    #[doc = " a call to xQueueSelectFromSet() has first returned a handle to that set member."]
+    #[doc = ""]
+    #[doc = " @param xQueueOrSemaphore The handle of the queue or semaphore being added to"]
+    #[doc = " the queue set (cast to an QueueSetMemberHandle_t type)."]
+    #[doc = ""]
+    #[doc = " @param xQueueSet The handle of the queue set to which the queue or semaphore"]
+    #[doc = " is being added."]
+    #[doc = ""]
+    #[doc = " @return If the queue or semaphore was successfully added to the queue set"]
+    #[doc = " then pdPASS is returned.  If the queue could not be successfully added to the"]
+    #[doc = " queue set because it is already a member of a different queue set then pdFAIL"]
+    #[doc = " is returned."]
+    pub fn xQueueAddToSet(
+        xQueueOrSemaphore: QueueSetMemberHandle_t,
+        xQueueSet: QueueSetHandle_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = " Removes a queue or semaphore from a queue set.  A queue or semaphore can only"]
+    #[doc = " be removed from a set if the queue or semaphore is empty."]
+    #[doc = ""]
+    #[doc = " See FreeRTOS/Source/Demo/Common/Minimal/QueueSet.c for an example using this"]
+    #[doc = " function."]
+    #[doc = ""]
+    #[doc = " @param xQueueOrSemaphore The handle of the queue or semaphore being removed"]
+    #[doc = " from the queue set (cast to an QueueSetMemberHandle_t type)."]
+    #[doc = ""]
+    #[doc = " @param xQueueSet The handle of the queue set in which the queue or semaphore"]
+    #[doc = " is included."]
+    #[doc = ""]
+    #[doc = " @return If the queue or semaphore was successfully removed from the queue set"]
+    #[doc = " then pdPASS is returned.  If the queue was not in the queue set, or the"]
+    #[doc = " queue (or semaphore) was not empty, then pdFAIL is returned."]
+    pub fn xQueueRemoveFromSet(
+        xQueueOrSemaphore: QueueSetMemberHandle_t,
+        xQueueSet: QueueSetHandle_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = " xQueueSelectFromSet() selects from the members of a queue set a queue or"]
+    #[doc = " semaphore that either contains data (in the case of a queue) or is available"]
+    #[doc = " to take (in the case of a semaphore).  xQueueSelectFromSet() effectively"]
+    #[doc = " allows a task to block (pend) on a read operation on all the queues and"]
+    #[doc = " semaphores in a queue set simultaneously."]
+    #[doc = ""]
+    #[doc = " See FreeRTOS/Source/Demo/Common/Minimal/QueueSet.c for an example using this"]
+    #[doc = " function."]
+    #[doc = ""]
+    #[doc = " Note 1:  See the documentation on http://wwwFreeRTOS.org/RTOS-queue-sets.html"]
+    #[doc = " for reasons why queue sets are very rarely needed in practice as there are"]
+    #[doc = " simpler methods of blocking on multiple objects."]
+    #[doc = ""]
+    #[doc = " Note 2:  Blocking on a queue set that contains a mutex will not cause the"]
+    #[doc = " mutex holder to inherit the priority of the blocked task."]
+    #[doc = ""]
+    #[doc = " Note 3:  A receive (in the case of a queue) or take (in the case of a"]
+    #[doc = " semaphore) operation must not be performed on a member of a queue set unless"]
+    #[doc = " a call to xQueueSelectFromSet() has first returned a handle to that set member."]
+    #[doc = ""]
+    #[doc = " @param xQueueSet The queue set on which the task will (potentially) block."]
+    #[doc = ""]
+    #[doc = " @param xTicksToWait The maximum time, in ticks, that the calling task will"]
+    #[doc = " remain in the Blocked state (with other tasks executing) to wait for a member"]
+    #[doc = " of the queue set to be ready for a successful queue read or semaphore take"]
+    #[doc = " operation."]
+    #[doc = ""]
+    #[doc = " @return xQueueSelectFromSet() will return the handle of a queue (cast to"]
+    #[doc = " a QueueSetMemberHandle_t type) contained in the queue set that contains data,"]
+    #[doc = " or the handle of a semaphore (cast to a QueueSetMemberHandle_t type) contained"]
+    #[doc = " in the queue set that is available, or NULL if no such queue or semaphore"]
+    #[doc = " exists before before the specified block time expires."]
+    pub fn xQueueSelectFromSet(
+        xQueueSet: QueueSetHandle_t,
+        xTicksToWait: TickType_t,
+    ) -> QueueSetMemberHandle_t;
+}
+extern "C" {
+    #[doc = " A version of xQueueSelectFromSet() that can be used from an ISR."]
+    pub fn xQueueSelectFromSetFromISR(xQueueSet: QueueSetHandle_t) -> QueueSetMemberHandle_t;
+}
+extern "C" {
+    #[doc = " @cond"]
+    pub fn vQueueWaitForMessageRestricted(xQueue: QueueHandle_t, xTicksToWait: TickType_t);
+}
+extern "C" {
+    pub fn xQueueGenericReset(xQueue: QueueHandle_t, xNewQueue: BaseType_t) -> BaseType_t;
+}
+extern "C" {
+    pub fn vQueueSetQueueNumber(xQueue: QueueHandle_t, uxQueueNumber: UBaseType_t);
+}
+extern "C" {
+    pub fn uxQueueGetQueueNumber(xQueue: QueueHandle_t) -> UBaseType_t;
+}
+extern "C" {
+    pub fn ucQueueGetQueueType(xQueue: QueueHandle_t) -> u8;
+}
+pub type SemaphoreHandle_t = QueueHandle_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct xLIST_ITEM {
@@ -16003,669 +17078,5894 @@ extern "C" {
         pxTcbSz: *mut UBaseType_t,
     ) -> UBaseType_t;
 }
-#[doc = " Type by which queues are referenced.  For example, a call to xQueueCreate()"]
-#[doc = " returns an QueueHandle_t variable that can then be used as a parameter to"]
-#[doc = " xQueueSend(), xQueueReceive(), etc."]
-pub type QueueHandle_t = *mut crate::types::c_void;
-#[doc = " Type by which queue sets are referenced.  For example, a call to"]
-#[doc = " xQueueCreateSet() returns an xQueueSet variable that can then be used as a"]
-#[doc = " parameter to xQueueSelectFromSet(), xQueueAddToSet(), etc."]
-pub type QueueSetHandle_t = *mut crate::types::c_void;
-#[doc = " Queue sets can contain both queues and semaphores, so the"]
-#[doc = " QueueSetMemberHandle_t is defined as a type to be used where a parameter or"]
-#[doc = " return value can be either an QueueHandle_t or an SemaphoreHandle_t."]
-pub type QueueSetMemberHandle_t = *mut crate::types::c_void;
+#[doc = " Type by which ring buffers are referenced. For example, a call to xRingbufferCreate()"]
+#[doc = " returns a RingbufHandle_t variable that can then be used as a parameter to"]
+#[doc = " xRingbufferSend(), xRingbufferReceive(), etc."]
+pub type RingbufHandle_t = *mut crate::types::c_void;
+#[doc = " No-split buffers will only store an item in contiguous memory and will"]
+#[doc = " never split an item. Each item requires an 8 byte overhead for a header"]
+#[doc = " and will always internally occupy a 32-bit aligned size of space."]
+pub const RingbufferType_t_RINGBUF_TYPE_NOSPLIT: RingbufferType_t = 0;
+#[doc = " Allow-split buffers will split an item into two parts if necessary in"]
+#[doc = " order to store it. Each item requires an 8 byte overhead for a header,"]
+#[doc = " splitting incurs an extra header. Each item will always internally occupy"]
+#[doc = " a 32-bit aligned size of space."]
+pub const RingbufferType_t_RINGBUF_TYPE_ALLOWSPLIT: RingbufferType_t = 1;
+#[doc = " Byte buffers store data as a sequence of bytes and do not maintain separate"]
+#[doc = " items, therefore byte buffers have no overhead. All data is stored as a"]
+#[doc = " sequence of byte and any number of bytes can be sent or retrieved each"]
+#[doc = " time."]
+pub const RingbufferType_t_RINGBUF_TYPE_BYTEBUF: RingbufferType_t = 2;
+#[doc = " Byte buffers store data as a sequence of bytes and do not maintain separate"]
+#[doc = " items, therefore byte buffers have no overhead. All data is stored as a"]
+#[doc = " sequence of byte and any number of bytes can be sent or retrieved each"]
+#[doc = " time."]
+pub const RingbufferType_t_RINGBUF_TYPE_MAX: RingbufferType_t = 3;
+pub type RingbufferType_t = u32;
 extern "C" {
-    #[doc = " It is preferred that the macros xQueueSend(), xQueueSendToFront() and"]
-    #[doc = " xQueueSendToBack() are used in place of calling this function directly."]
+    #[doc = " @brief       Create a ring buffer"]
     #[doc = ""]
-    #[doc = " Post an item on a queue.  The item is queued by copy, not by reference."]
-    #[doc = " This function must not be called from an interrupt service routine."]
-    #[doc = " See xQueueSendFromISR () for an alternative which may be used in an ISR."]
+    #[doc = " @param[in]   xBufferSize Size of the buffer in bytes. Note that items require"]
+    #[doc = "              space for overhead in no-split/allow-split buffers"]
+    #[doc = " @param[in]   xBufferType Type of ring buffer, see documentation."]
     #[doc = ""]
-    #[doc = " @param xQueue The handle to the queue on which the item is to be posted."]
+    #[doc = " @note    xBufferSize of no-split/allow-split buffers will be rounded up to the nearest 32-bit aligned size."]
     #[doc = ""]
-    #[doc = " @param pvItemToQueue A pointer to the item that is to be placed on the"]
-    #[doc = " queue.  The size of the items the queue will hold was defined when the"]
-    #[doc = " queue was created, so this many bytes will be copied from pvItemToQueue"]
-    #[doc = " into the queue storage area."]
+    #[doc = " @return  A handle to the created ring buffer, or NULL in case of error."]
+    pub fn xRingbufferCreate(xBufferSize: size_t, xBufferType: RingbufferType_t)
+        -> RingbufHandle_t;
+}
+extern "C" {
+    #[doc = " @brief Create a ring buffer of type RINGBUF_TYPE_NOSPLIT for a fixed item_size"]
     #[doc = ""]
-    #[doc = " @param xTicksToWait The maximum amount of time the task should block"]
-    #[doc = " waiting for space to become available on the queue, should it already"]
-    #[doc = " be full.  The call will return immediately if this is set to 0 and the"]
-    #[doc = " queue is full.  The time is defined in tick periods so the constant"]
-    #[doc = " portTICK_PERIOD_MS should be used to convert to real time if this is required."]
+    #[doc = " This API is similar to xRingbufferCreate(), but it will internally allocate"]
+    #[doc = " additional space for the headers."]
     #[doc = ""]
-    #[doc = " @param xCopyPosition Can take the value queueSEND_TO_BACK to place the"]
-    #[doc = " item at the back of the queue, or queueSEND_TO_FRONT to place the item"]
-    #[doc = " at the front of the queue (for high priority messages)."]
+    #[doc = " @param[in]   xItemSize   Size of each item to be put into the ring buffer"]
+    #[doc = " @param[in]   xItemNum    Maximum number of items the buffer needs to hold simultaneously"]
     #[doc = ""]
-    #[doc = " @return pdTRUE if the item was successfully posted, otherwise errQUEUE_FULL."]
+    #[doc = " @return  A RingbufHandle_t handle to the created ring buffer, or NULL in case of error."]
+    pub fn xRingbufferCreateNoSplit(xItemSize: size_t, xItemNum: size_t) -> RingbufHandle_t;
+}
+extern "C" {
+    #[doc = " @brief       Insert an item into the ring buffer"]
     #[doc = ""]
-    #[doc = " Example usage:"]
-    #[doc = " @code{c}"]
-    #[doc = "  struct AMessage"]
-    #[doc = "  {"]
-    #[doc = "  char ucMessageID;"]
-    #[doc = "  char ucData[ 20 ];"]
-    #[doc = "  } xMessage;"]
+    #[doc = " Attempt to insert an item into the ring buffer. This function will block until"]
+    #[doc = " enough free space is available or until it times out."]
     #[doc = ""]
-    #[doc = "  uint32_t ulVar = 10UL;"]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to insert the item into"]
+    #[doc = " @param[in]   pvItem          Pointer to data to insert. NULL is allowed if xItemSize is 0."]
+    #[doc = " @param[in]   xItemSize       Size of data to insert."]
+    #[doc = " @param[in]   xTicksToWait    Ticks to wait for room in the ring buffer."]
     #[doc = ""]
-    #[doc = "  void vATask( void *pvParameters )"]
-    #[doc = "  {"]
-    #[doc = "  QueueHandle_t xQueue1, xQueue2;"]
-    #[doc = "  struct AMessage *pxMessage;"]
+    #[doc = " @note    For no-split/allow-split ring buffers, the actual size of memory that"]
+    #[doc = "          the item will occupy will be rounded up to the nearest 32-bit aligned"]
+    #[doc = "          size. This is done to ensure all items are always stored in 32-bit"]
+    #[doc = "          aligned fashion."]
     #[doc = ""]
-    #[doc = "  // Create a queue capable of containing 10 uint32_t values."]
-    #[doc = "  xQueue1 = xQueueCreate( 10, sizeof( uint32_t ) );"]
-    #[doc = ""]
-    #[doc = "  // Create a queue capable of containing 10 pointers to AMessage structures."]
-    #[doc = "  // These should be passed by pointer as they contain a lot of data."]
-    #[doc = "  xQueue2 = xQueueCreate( 10, sizeof( struct AMessage * ) );"]
-    #[doc = ""]
-    #[doc = "  // ..."]
-    #[doc = ""]
-    #[doc = "  if( xQueue1 != 0 )"]
-    #[doc = "  {"]
-    #[doc = "      // Send an uint32_t.  Wait for 10 ticks for space to become"]
-    #[doc = "      // available if necessary."]
-    #[doc = "      if( xQueueGenericSend( xQueue1, ( void * ) &ulVar, ( TickType_t ) 10, queueSEND_TO_BACK ) != pdPASS )"]
-    #[doc = "      {"]
-    #[doc = "          // Failed to post the message, even after 10 ticks."]
-    #[doc = "      }"]
-    #[doc = "  }"]
-    #[doc = ""]
-    #[doc = "  if( xQueue2 != 0 )"]
-    #[doc = "  {"]
-    #[doc = "      // Send a pointer to a struct AMessage object.  Don't block if the"]
-    #[doc = "      // queue is already full."]
-    #[doc = "      pxMessage = & xMessage;"]
-    #[doc = "      xQueueGenericSend( xQueue2, ( void * ) &pxMessage, ( TickType_t ) 0, queueSEND_TO_BACK );"]
-    #[doc = "  }"]
-    #[doc = ""]
-    #[doc = "  // ... Rest of task code."]
-    #[doc = "  }"]
-    #[doc = " @endcode"]
-    #[doc = " \\ingroup QueueManagement"]
-    pub fn xQueueGenericSend(
-        xQueue: QueueHandle_t,
-        pvItemToQueue: *const crate::types::c_void,
+    #[doc = " @return"]
+    #[doc = "      - pdTRUE if succeeded"]
+    #[doc = "      - pdFALSE on time-out or when the data is larger than the maximum permissible size of the buffer"]
+    pub fn xRingbufferSend(
+        xRingbuffer: RingbufHandle_t,
+        pvItem: *const crate::types::c_void,
+        xItemSize: size_t,
         xTicksToWait: TickType_t,
-        xCopyPosition: BaseType_t,
     ) -> BaseType_t;
 }
 extern "C" {
-    #[doc = " A version of xQueuePeek() that can be called from an interrupt service"]
-    #[doc = " routine (ISR)."]
+    #[doc = " @brief       Insert an item into the ring buffer in an ISR"]
     #[doc = ""]
-    #[doc = " Receive an item from a queue without removing the item from the queue."]
-    #[doc = " The item is received by copy so a buffer of adequate size must be"]
-    #[doc = " provided.  The number of bytes copied into the buffer was defined when"]
-    #[doc = " the queue was created."]
+    #[doc = " Attempt to insert an item into the ring buffer from an ISR. This function"]
+    #[doc = " will return immediately if there is insufficient free space in the buffer."]
     #[doc = ""]
-    #[doc = " Successfully received items remain on the queue so will be returned again"]
-    #[doc = " by the next call, or a call to xQueueReceive()."]
+    #[doc = " @param[in]   xRingbuffer Ring buffer to insert the item into"]
+    #[doc = " @param[in]   pvItem      Pointer to data to insert. NULL is allowed if xItemSize is 0."]
+    #[doc = " @param[in]   xItemSize   Size of data to insert."]
+    #[doc = " @param[out]  pxHigherPriorityTaskWoken   Value pointed to will be set to pdTRUE if the function woke up a higher priority task."]
     #[doc = ""]
-    #[doc = " @param xQueue The handle to the queue from which the item is to be"]
-    #[doc = " received."]
+    #[doc = " @note    For no-split/allow-split ring buffers, the actual size of memory that"]
+    #[doc = "          the item will occupy will be rounded up to the nearest 32-bit aligned"]
+    #[doc = "          size. This is done to ensure all items are always stored in 32-bit"]
+    #[doc = "          aligned fashion."]
     #[doc = ""]
-    #[doc = " @param pvBuffer Pointer to the buffer into which the received item will"]
-    #[doc = " be copied."]
-    #[doc = ""]
-    #[doc = " @return pdTRUE if an item was successfully received from the queue,"]
-    #[doc = " otherwise pdFALSE."]
-    #[doc = ""]
-    #[doc = " \\ingroup QueueManagement"]
-    pub fn xQueuePeekFromISR(
-        xQueue: QueueHandle_t,
-        pvBuffer: *mut crate::types::c_void,
-    ) -> BaseType_t;
-}
-extern "C" {
-    #[doc = " It is preferred that the macro xQueueReceive() be used rather than calling"]
-    #[doc = " this function directly."]
-    #[doc = ""]
-    #[doc = " Receive an item from a queue.  The item is received by copy so a buffer of"]
-    #[doc = " adequate size must be provided.  The number of bytes copied into the buffer"]
-    #[doc = " was defined when the queue was created."]
-    #[doc = ""]
-    #[doc = " This function must not be used in an interrupt service routine.  See"]
-    #[doc = " xQueueReceiveFromISR for an alternative that can."]
-    #[doc = ""]
-    #[doc = " @param xQueue The handle to the queue from which the item is to be"]
-    #[doc = " received."]
-    #[doc = ""]
-    #[doc = " @param pvBuffer Pointer to the buffer into which the received item will"]
-    #[doc = " be copied."]
-    #[doc = ""]
-    #[doc = " @param xTicksToWait The maximum amount of time the task should block"]
-    #[doc = " waiting for an item to receive should the queue be empty at the time"]
-    #[doc = " of the call.\t The time is defined in tick periods so the constant"]
-    #[doc = " portTICK_PERIOD_MS should be used to convert to real time if this is required."]
-    #[doc = " xQueueGenericReceive() will return immediately if the queue is empty and"]
-    #[doc = " xTicksToWait is 0."]
-    #[doc = ""]
-    #[doc = " @param xJustPeek When set to true, the item received from the queue is not"]
-    #[doc = " actually removed from the queue - meaning a subsequent call to"]
-    #[doc = " xQueueReceive() will return the same item.  When set to false, the item"]
-    #[doc = " being received from the queue is also removed from the queue."]
-    #[doc = ""]
-    #[doc = " @return pdTRUE if an item was successfully received from the queue,"]
-    #[doc = " otherwise pdFALSE."]
-    #[doc = ""]
-    #[doc = " Example usage:"]
-    #[doc = " @code{c}"]
-    #[doc = "  struct AMessage"]
-    #[doc = "  {"]
-    #[doc = " \tchar ucMessageID;"]
-    #[doc = " \tchar ucData[ 20 ];"]
-    #[doc = "  } xMessage;"]
-    #[doc = ""]
-    #[doc = "  QueueHandle_t xQueue;"]
-    #[doc = ""]
-    #[doc = "  // Task to create a queue and post a value."]
-    #[doc = "  void vATask( void *pvParameters )"]
-    #[doc = "  {"]
-    #[doc = "  struct AMessage *pxMessage;"]
-    #[doc = ""]
-    #[doc = " \t// Create a queue capable of containing 10 pointers to AMessage structures."]
-    #[doc = " \t// These should be passed by pointer as they contain a lot of data."]
-    #[doc = " \txQueue = xQueueCreate( 10, sizeof( struct AMessage * ) );"]
-    #[doc = " \tif( xQueue == 0 )"]
-    #[doc = " \t{"]
-    #[doc = " \t\t// Failed to create the queue."]
-    #[doc = " \t}"]
-    #[doc = ""]
-    #[doc = " \t// ..."]
-    #[doc = ""]
-    #[doc = " \t// Send a pointer to a struct AMessage object.  Don't block if the"]
-    #[doc = " \t// queue is already full."]
-    #[doc = " \tpxMessage = & xMessage;"]
-    #[doc = " \txQueueSend( xQueue, ( void * ) &pxMessage, ( TickType_t ) 0 );"]
-    #[doc = ""]
-    #[doc = " \t// ... Rest of task code."]
-    #[doc = "  }"]
-    #[doc = ""]
-    #[doc = "  // Task to receive from the queue."]
-    #[doc = "  void vADifferentTask( void *pvParameters )"]
-    #[doc = "  {"]
-    #[doc = "  struct AMessage *pxRxedMessage;"]
-    #[doc = ""]
-    #[doc = " \tif( xQueue != 0 )"]
-    #[doc = " \t{"]
-    #[doc = " \t\t// Receive a message on the created queue.  Block for 10 ticks if a"]
-    #[doc = " \t\t// message is not immediately available."]
-    #[doc = " \t\tif( xQueueGenericReceive( xQueue, &( pxRxedMessage ), ( TickType_t ) 10 ) )"]
-    #[doc = " \t\t{"]
-    #[doc = " \t\t\t// pcRxedMessage now points to the struct AMessage variable posted"]
-    #[doc = " \t\t\t// by vATask."]
-    #[doc = " \t\t}"]
-    #[doc = " \t}"]
-    #[doc = ""]
-    #[doc = " \t// ... Rest of task code."]
-    #[doc = "  }"]
-    #[doc = " @endcode"]
-    #[doc = " \\ingroup QueueManagement"]
-    pub fn xQueueGenericReceive(
-        xQueue: QueueHandle_t,
-        pvBuffer: *mut crate::types::c_void,
-        xTicksToWait: TickType_t,
-        xJustPeek: BaseType_t,
-    ) -> BaseType_t;
-}
-extern "C" {
-    #[doc = " Return the number of messages stored in a queue."]
-    #[doc = ""]
-    #[doc = " @param xQueue A handle to the queue being queried."]
-    #[doc = ""]
-    #[doc = " @return The number of messages available in the queue."]
-    #[doc = ""]
-    #[doc = " \\ingroup QueueManagement"]
-    pub fn uxQueueMessagesWaiting(xQueue: QueueHandle_t) -> UBaseType_t;
-}
-extern "C" {
-    #[doc = " Return the number of free spaces available in a queue.  This is equal to the"]
-    #[doc = " number of items that can be sent to the queue before the queue becomes full"]
-    #[doc = " if no items are removed."]
-    #[doc = ""]
-    #[doc = " @param xQueue A handle to the queue being queried."]
-    #[doc = ""]
-    #[doc = " @return The number of spaces available in the queue."]
-    #[doc = ""]
-    #[doc = " \\ingroup QueueManagement"]
-    pub fn uxQueueSpacesAvailable(xQueue: QueueHandle_t) -> UBaseType_t;
-}
-extern "C" {
-    #[doc = " Delete a queue - freeing all the memory allocated for storing of items"]
-    #[doc = " placed on the queue."]
-    #[doc = ""]
-    #[doc = " @param xQueue A handle to the queue to be deleted."]
-    #[doc = ""]
-    #[doc = " \\ingroup QueueManagement"]
-    pub fn vQueueDelete(xQueue: QueueHandle_t);
-}
-extern "C" {
-    #[doc = "@{*/"]
-    #[doc = " It is preferred that the macros xQueueSendFromISR(),"]
-    #[doc = " xQueueSendToFrontFromISR() and xQueueSendToBackFromISR() be used in place"]
-    #[doc = " of calling this function directly.  xQueueGiveFromISR() is an"]
-    #[doc = " equivalent for use by semaphores that don't actually copy any data."]
-    #[doc = ""]
-    #[doc = " Post an item on a queue.  It is safe to use this function from within an"]
-    #[doc = " interrupt service routine."]
-    #[doc = ""]
-    #[doc = " Items are queued by copy not reference so it is preferable to only"]
-    #[doc = " queue small items, especially when called from an ISR.  In most cases"]
-    #[doc = " it would be preferable to store a pointer to the item being queued."]
-    #[doc = ""]
-    #[doc = " @param xQueue The handle to the queue on which the item is to be posted."]
-    #[doc = ""]
-    #[doc = " @param pvItemToQueue A pointer to the item that is to be placed on the"]
-    #[doc = " queue.  The size of the items the queue will hold was defined when the"]
-    #[doc = " queue was created, so this many bytes will be copied from pvItemToQueue"]
-    #[doc = " into the queue storage area."]
-    #[doc = ""]
-    #[doc = " @param[out] pxHigherPriorityTaskWoken xQueueGenericSendFromISR() will set"]
-    #[doc = " *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task"]
-    #[doc = " to unblock, and the unblocked task has a priority higher than the currently"]
-    #[doc = " running task.  If xQueueGenericSendFromISR() sets this value to pdTRUE then"]
-    #[doc = " a context switch should be requested before the interrupt is exited."]
-    #[doc = ""]
-    #[doc = " @param xCopyPosition Can take the value queueSEND_TO_BACK to place the"]
-    #[doc = " item at the back of the queue, or queueSEND_TO_FRONT to place the item"]
-    #[doc = " at the front of the queue (for high priority messages)."]
-    #[doc = ""]
-    #[doc = " @return pdTRUE if the data was successfully sent to the queue, otherwise"]
-    #[doc = " errQUEUE_FULL."]
-    #[doc = ""]
-    #[doc = " Example usage for buffered IO (where the ISR can obtain more than one value"]
-    #[doc = " per call):"]
-    #[doc = " @code{c}"]
-    #[doc = "  void vBufferISR( void )"]
-    #[doc = "  {"]
-    #[doc = "  char cIn;"]
-    #[doc = "  BaseType_t xHigherPriorityTaskWokenByPost;"]
-    #[doc = ""]
-    #[doc = " \t// We have not woken a task at the start of the ISR."]
-    #[doc = " \txHigherPriorityTaskWokenByPost = pdFALSE;"]
-    #[doc = ""]
-    #[doc = " \t// Loop until the buffer is empty."]
-    #[doc = " \tdo"]
-    #[doc = " \t{"]
-    #[doc = " \t\t// Obtain a byte from the buffer."]
-    #[doc = " \t\tcIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );"]
-    #[doc = ""]
-    #[doc = " \t\t// Post each byte."]
-    #[doc = " \t\txQueueGenericSendFromISR( xRxQueue, &cIn, &xHigherPriorityTaskWokenByPost, queueSEND_TO_BACK );"]
-    #[doc = ""]
-    #[doc = " \t} while( portINPUT_BYTE( BUFFER_COUNT ) );"]
-    #[doc = ""]
-    #[doc = " \t// Now the buffer is empty we can switch context if necessary.  Note that the"]
-    #[doc = " \t// name of the yield function required is port specific."]
-    #[doc = " \tif( xHigherPriorityTaskWokenByPost )"]
-    #[doc = " \t{"]
-    #[doc = " \t\ttaskYIELD_YIELD_FROM_ISR();"]
-    #[doc = " \t}"]
-    #[doc = "  }"]
-    #[doc = " @endcode"]
-    #[doc = " \\ingroup QueueManagement"]
-    pub fn xQueueGenericSendFromISR(
-        xQueue: QueueHandle_t,
-        pvItemToQueue: *const crate::types::c_void,
-        pxHigherPriorityTaskWoken: *mut BaseType_t,
-        xCopyPosition: BaseType_t,
-    ) -> BaseType_t;
-}
-extern "C" {
-    pub fn xQueueGiveFromISR(
-        xQueue: QueueHandle_t,
+    #[doc = " @return"]
+    #[doc = "      - pdTRUE if succeeded"]
+    #[doc = "      - pdFALSE when the ring buffer does not have space."]
+    pub fn xRingbufferSendFromISR(
+        xRingbuffer: RingbufHandle_t,
+        pvItem: *const crate::types::c_void,
+        xItemSize: size_t,
         pxHigherPriorityTaskWoken: *mut BaseType_t,
     ) -> BaseType_t;
 }
 extern "C" {
-    #[doc = " Receive an item from a queue.  It is safe to use this function from within an"]
-    #[doc = " interrupt service routine."]
+    #[doc = " @brief Acquire memory from the ring buffer to be written to by an external"]
+    #[doc = "        source and to be sent later."]
     #[doc = ""]
-    #[doc = " @param xQueue The handle to the queue from which the item is to be"]
-    #[doc = " received."]
+    #[doc = " Attempt to allocate buffer for an item to be sent into the ring buffer. This"]
+    #[doc = " function will block until enough free space is available or until it"]
+    #[doc = " timesout."]
     #[doc = ""]
-    #[doc = " @param pvBuffer Pointer to the buffer into which the received item will"]
-    #[doc = " be copied."]
+    #[doc = " The item, as well as the following items ``SendAcquire`` or ``Send`` after it,"]
+    #[doc = " will not be able to be read from the ring buffer until this item is actually"]
+    #[doc = " sent into the ring buffer."]
     #[doc = ""]
-    #[doc = " @param[out] pxHigherPriorityTaskWoken A task may be blocked waiting for space to become"]
-    #[doc = " available on the queue.  If xQueueReceiveFromISR causes such a task to"]
-    #[doc = " unblock *pxTaskWoken will get set to pdTRUE, otherwise *pxTaskWoken will"]
-    #[doc = " remain unchanged."]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to allocate the memory"]
+    #[doc = " @param[out]  ppvItem         Double pointer to memory acquired (set to NULL if no memory were retrieved)"]
+    #[doc = " @param[in]   xItemSize       Size of item to acquire."]
+    #[doc = " @param[in]   xTicksToWait    Ticks to wait for room in the ring buffer."]
     #[doc = ""]
-    #[doc = " @return pdTRUE if an item was successfully received from the queue,"]
-    #[doc = " otherwise pdFALSE."]
+    #[doc = " @note Only applicable for no-split ring buffers now, the actual size of"]
+    #[doc = "       memory that the item will occupy will be rounded up to the nearest 32-bit"]
+    #[doc = "       aligned size. This is done to ensure all items are always stored in 32-bit"]
+    #[doc = "       aligned fashion."]
     #[doc = ""]
-    #[doc = " Example usage:"]
-    #[doc = " @code{c}"]
-    #[doc = "  QueueHandle_t xQueue;"]
+    #[doc = " @return"]
+    #[doc = "      - pdTRUE if succeeded"]
+    #[doc = "      - pdFALSE on time-out or when the data is larger than the maximum permissible size of the buffer"]
+    pub fn xRingbufferSendAcquire(
+        xRingbuffer: RingbufHandle_t,
+        ppvItem: *mut *mut crate::types::c_void,
+        xItemSize: size_t,
+        xTicksToWait: TickType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = " @brief       Actually send an item into the ring buffer allocated before by"]
+    #[doc = "              ``xRingbufferSendAcquire``."]
     #[doc = ""]
-    #[doc = "  // Function to create a queue and post some values."]
-    #[doc = "  void vAFunction( void *pvParameters )"]
-    #[doc = "  {"]
-    #[doc = "  char cValueToPost;"]
-    #[doc = "  const TickType_t xTicksToWait = ( TickType_t )0xff;"]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to insert the item into"]
+    #[doc = " @param[in]   pvItem          Pointer to item in allocated memory to insert."]
     #[doc = ""]
-    #[doc = " \t// Create a queue capable of containing 10 characters."]
-    #[doc = " \txQueue = xQueueCreate( 10, sizeof( char ) );"]
-    #[doc = " \tif( xQueue == 0 )"]
-    #[doc = " \t{"]
-    #[doc = " \t\t// Failed to create the queue."]
-    #[doc = " \t}"]
+    #[doc = " @note Only applicable for no-split ring buffers. Only call for items"]
+    #[doc = "       allocated by ``xRingbufferSendAcquire``."]
     #[doc = ""]
-    #[doc = " \t// ..."]
+    #[doc = " @return"]
+    #[doc = "      - pdTRUE if succeeded"]
+    #[doc = "      - pdFALSE if fail for some reason."]
+    pub fn xRingbufferSendComplete(
+        xRingbuffer: RingbufHandle_t,
+        pvItem: *mut crate::types::c_void,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = " @brief   Retrieve an item from the ring buffer"]
     #[doc = ""]
-    #[doc = " \t// Post some characters that will be used within an ISR.  If the queue"]
-    #[doc = " \t// is full then this task will block for xTicksToWait ticks."]
-    #[doc = " \tcValueToPost = 'a';"]
-    #[doc = " \txQueueSend( xQueue, ( void * ) &cValueToPost, xTicksToWait );"]
-    #[doc = " \tcValueToPost = 'b';"]
-    #[doc = " \txQueueSend( xQueue, ( void * ) &cValueToPost, xTicksToWait );"]
+    #[doc = " Attempt to retrieve an item from the ring buffer. This function will block"]
+    #[doc = " until an item is available or until it times out."]
     #[doc = ""]
-    #[doc = " \t// ... keep posting characters ... this task may block when the queue"]
-    #[doc = " \t// becomes full."]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to retrieve the item from"]
+    #[doc = " @param[out]  pxItemSize      Pointer to a variable to which the size of the retrieved item will be written."]
+    #[doc = " @param[in]   xTicksToWait    Ticks to wait for items in the ring buffer."]
     #[doc = ""]
-    #[doc = " \tcValueToPost = 'c';"]
-    #[doc = " \txQueueSend( xQueue, ( void * ) &cValueToPost, xTicksToWait );"]
-    #[doc = "  }"]
+    #[doc = " @note    A call to vRingbufferReturnItem() is required after this to free the item retrieved."]
     #[doc = ""]
-    #[doc = "  // ISR that outputs all the characters received on the queue."]
-    #[doc = "  void vISR_Routine( void )"]
-    #[doc = "  {"]
-    #[doc = "  BaseType_t xTaskWokenByReceive = pdFALSE;"]
-    #[doc = "  char cRxedChar;"]
+    #[doc = " @return"]
+    #[doc = "      - Pointer to the retrieved item on success; *pxItemSize filled with the length of the item."]
+    #[doc = "      - NULL on timeout, *pxItemSize is untouched in that case."]
+    pub fn xRingbufferReceive(
+        xRingbuffer: RingbufHandle_t,
+        pxItemSize: *mut size_t,
+        xTicksToWait: TickType_t,
+    ) -> *mut crate::types::c_void;
+}
+extern "C" {
+    #[doc = " @brief   Retrieve an item from the ring buffer in an ISR"]
     #[doc = ""]
-    #[doc = " \twhile( xQueueReceiveFromISR( xQueue, ( void * ) &cRxedChar, &xTaskWokenByReceive) )"]
-    #[doc = " \t{"]
-    #[doc = " \t\t// A character was received.  Output the character now."]
-    #[doc = " \t\tvOutputCharacter( cRxedChar );"]
+    #[doc = " Attempt to retrieve an item from the ring buffer. This function returns immediately"]
+    #[doc = " if there are no items available for retrieval"]
     #[doc = ""]
-    #[doc = " \t\t// If removing the character from the queue woke the task that was"]
-    #[doc = " \t\t// posting onto the queue cTaskWokenByReceive will have been set to"]
-    #[doc = " \t\t// pdTRUE.  No matter how many times this loop iterates only one"]
-    #[doc = " \t\t// task will be woken."]
-    #[doc = " \t}"]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to retrieve the item from"]
+    #[doc = " @param[out]  pxItemSize      Pointer to a variable to which the size of the"]
+    #[doc = "                              retrieved item will be written."]
     #[doc = ""]
-    #[doc = " \tif( cTaskWokenByPost != ( char ) pdFALSE;"]
-    #[doc = " \t{"]
-    #[doc = " \t\ttaskYIELD ();"]
-    #[doc = " \t}"]
-    #[doc = "  }"]
-    #[doc = " @endcode"]
-    #[doc = " \\ingroup QueueManagement"]
-    pub fn xQueueReceiveFromISR(
-        xQueue: QueueHandle_t,
-        pvBuffer: *mut crate::types::c_void,
+    #[doc = " @note    A call to vRingbufferReturnItemFromISR() is required after this to free the item retrieved."]
+    #[doc = " @note    Byte buffers do not allow multiple retrievals before returning an item"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "      - Pointer to the retrieved item on success; *pxItemSize filled with the length of the item."]
+    #[doc = "      - NULL when the ring buffer is empty, *pxItemSize is untouched in that case."]
+    pub fn xRingbufferReceiveFromISR(
+        xRingbuffer: RingbufHandle_t,
+        pxItemSize: *mut size_t,
+    ) -> *mut crate::types::c_void;
+}
+extern "C" {
+    #[doc = " @brief   Retrieve a split item from an allow-split ring buffer"]
+    #[doc = ""]
+    #[doc = " Attempt to retrieve a split item from an allow-split ring buffer. If the item"]
+    #[doc = " is not split, only a single item is retried. If the item is split, both parts"]
+    #[doc = " will be retrieved. This function will block until an item is available or"]
+    #[doc = " until it times out."]
+    #[doc = ""]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to retrieve the item from"]
+    #[doc = " @param[out]  ppvHeadItem     Double pointer to first part (set to NULL if no items were retrieved)"]
+    #[doc = " @param[out]  ppvTailItem     Double pointer to second part (set to NULL if item is not split)"]
+    #[doc = " @param[out]  pxHeadItemSize  Pointer to size of first part (unmodified if no items were retrieved)"]
+    #[doc = " @param[out]  pxTailItemSize  Pointer to size of second part (unmodified if item is not split)"]
+    #[doc = " @param[in]   xTicksToWait    Ticks to wait for items in the ring buffer."]
+    #[doc = ""]
+    #[doc = " @note    Call(s) to vRingbufferReturnItem() is required after this to free up the item(s) retrieved."]
+    #[doc = " @note    This function should only be called on allow-split buffers"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "      - pdTRUE if an item (split or unsplit) was retrieved"]
+    #[doc = "      - pdFALSE when no item was retrieved"]
+    pub fn xRingbufferReceiveSplit(
+        xRingbuffer: RingbufHandle_t,
+        ppvHeadItem: *mut *mut crate::types::c_void,
+        ppvTailItem: *mut *mut crate::types::c_void,
+        pxHeadItemSize: *mut size_t,
+        pxTailItemSize: *mut size_t,
+        xTicksToWait: TickType_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = " @brief   Retrieve a split item from an allow-split ring buffer in an ISR"]
+    #[doc = ""]
+    #[doc = " Attempt to retrieve a split item from an allow-split ring buffer. If the item"]
+    #[doc = " is not split, only a single item is retried. If the item is split, both parts"]
+    #[doc = " will be retrieved. This function returns immediately if there are no items"]
+    #[doc = " available for retrieval"]
+    #[doc = ""]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to retrieve the item from"]
+    #[doc = " @param[out]  ppvHeadItem     Double pointer to first part (set to NULL if no items were retrieved)"]
+    #[doc = " @param[out]  ppvTailItem     Double pointer to second part (set to NULL if item is not split)"]
+    #[doc = " @param[out]  pxHeadItemSize  Pointer to size of first part (unmodified if no items were retrieved)"]
+    #[doc = " @param[out]  pxTailItemSize  Pointer to size of second part (unmodified if item is not split)"]
+    #[doc = ""]
+    #[doc = " @note    Calls to vRingbufferReturnItemFromISR() is required after this to free up the item(s) retrieved."]
+    #[doc = " @note    This function should only be called on allow-split buffers"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "      - pdTRUE if an item (split or unsplit) was retrieved"]
+    #[doc = "      - pdFALSE when no item was retrieved"]
+    pub fn xRingbufferReceiveSplitFromISR(
+        xRingbuffer: RingbufHandle_t,
+        ppvHeadItem: *mut *mut crate::types::c_void,
+        ppvTailItem: *mut *mut crate::types::c_void,
+        pxHeadItemSize: *mut size_t,
+        pxTailItemSize: *mut size_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = " @brief   Retrieve bytes from a byte buffer, specifying the maximum amount of bytes to retrieve"]
+    #[doc = ""]
+    #[doc = " Attempt to retrieve data from a byte buffer whilst specifying a maximum number"]
+    #[doc = " of bytes to retrieve. This function will block until there is data available"]
+    #[doc = " for retrieval or until it times out."]
+    #[doc = ""]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to retrieve the item from"]
+    #[doc = " @param[out]  pxItemSize      Pointer to a variable to which the size of the retrieved item will be written."]
+    #[doc = " @param[in]   xTicksToWait    Ticks to wait for items in the ring buffer."]
+    #[doc = " @param[in]   xMaxSize        Maximum number of bytes to return."]
+    #[doc = ""]
+    #[doc = " @note    A call to vRingbufferReturnItem() is required after this to free up the data retrieved."]
+    #[doc = " @note    This function should only be called on byte buffers"]
+    #[doc = " @note    Byte buffers do not allow multiple retrievals before returning an item"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "      - Pointer to the retrieved item on success; *pxItemSize filled with"]
+    #[doc = "        the length of the item."]
+    #[doc = "      - NULL on timeout, *pxItemSize is untouched in that case."]
+    pub fn xRingbufferReceiveUpTo(
+        xRingbuffer: RingbufHandle_t,
+        pxItemSize: *mut size_t,
+        xTicksToWait: TickType_t,
+        xMaxSize: size_t,
+    ) -> *mut crate::types::c_void;
+}
+extern "C" {
+    #[doc = " @brief   Retrieve bytes from a byte buffer, specifying the maximum amount of"]
+    #[doc = "          bytes to retrieve. Call this from an ISR."]
+    #[doc = ""]
+    #[doc = " Attempt to retrieve bytes from a byte buffer whilst specifying a maximum number"]
+    #[doc = " of bytes to retrieve. This function will return immediately if there is no data"]
+    #[doc = " available for retrieval."]
+    #[doc = ""]
+    #[doc = " @param[in]   xRingbuffer Ring buffer to retrieve the item from"]
+    #[doc = " @param[out]  pxItemSize  Pointer to a variable to which the size of the retrieved item will be written."]
+    #[doc = " @param[in]   xMaxSize    Maximum number of bytes to return."]
+    #[doc = ""]
+    #[doc = " @note    A call to vRingbufferReturnItemFromISR() is required after this to free up the data received."]
+    #[doc = " @note    This function should only be called on byte buffers"]
+    #[doc = " @note    Byte buffers do not allow multiple retrievals before returning an item"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "      - Pointer to the retrieved item on success; *pxItemSize filled with"]
+    #[doc = "        the length of the item."]
+    #[doc = "      - NULL when the ring buffer is empty, *pxItemSize is untouched in that case."]
+    pub fn xRingbufferReceiveUpToFromISR(
+        xRingbuffer: RingbufHandle_t,
+        pxItemSize: *mut size_t,
+        xMaxSize: size_t,
+    ) -> *mut crate::types::c_void;
+}
+extern "C" {
+    #[doc = " @brief   Return a previously-retrieved item to the ring buffer"]
+    #[doc = ""]
+    #[doc = " @param[in]   xRingbuffer Ring buffer the item was retrieved from"]
+    #[doc = " @param[in]   pvItem      Item that was received earlier"]
+    #[doc = ""]
+    #[doc = " @note    If a split item is retrieved, both parts should be returned by calling this function twice"]
+    pub fn vRingbufferReturnItem(xRingbuffer: RingbufHandle_t, pvItem: *mut crate::types::c_void);
+}
+extern "C" {
+    #[doc = " @brief   Return a previously-retrieved item to the ring buffer from an ISR"]
+    #[doc = ""]
+    #[doc = " @param[in]   xRingbuffer Ring buffer the item was retrieved from"]
+    #[doc = " @param[in]   pvItem      Item that was received earlier"]
+    #[doc = " @param[out]  pxHigherPriorityTaskWoken   Value pointed to will be set to pdTRUE"]
+    #[doc = "                                          if the function woke up a higher priority task."]
+    #[doc = ""]
+    #[doc = " @note    If a split item is retrieved, both parts should be returned by calling this function twice"]
+    pub fn vRingbufferReturnItemFromISR(
+        xRingbuffer: RingbufHandle_t,
+        pvItem: *mut crate::types::c_void,
         pxHigherPriorityTaskWoken: *mut BaseType_t,
-    ) -> BaseType_t;
+    );
 }
 extern "C" {
-    #[doc = "@{*/"]
-    #[doc = " Utilities to query queues that are safe to use from an ISR.  These utilities"]
-    #[doc = " should be used only from witin an ISR, or within a critical section."]
-    pub fn xQueueIsQueueEmptyFromISR(xQueue: QueueHandle_t) -> BaseType_t;
-}
-extern "C" {
-    pub fn xQueueIsQueueFullFromISR(xQueue: QueueHandle_t) -> BaseType_t;
-}
-extern "C" {
-    pub fn uxQueueMessagesWaitingFromISR(xQueue: QueueHandle_t) -> UBaseType_t;
-}
-extern "C" {
-    #[doc = " @cond */"]
-    #[doc = " xQueueAltGenericSend() is an alternative version of xQueueGenericSend()."]
-    #[doc = " Likewise xQueueAltGenericReceive() is an alternative version of"]
-    #[doc = " xQueueGenericReceive()."]
+    #[doc = " @brief   Delete a ring buffer"]
     #[doc = ""]
-    #[doc = " The source code that implements the alternative (Alt) API is much"]
-    #[doc = " simpler\tbecause it executes everything from within a critical section."]
-    #[doc = " This is\tthe approach taken by many other RTOSes, but FreeRTOS.org has the"]
-    #[doc = " preferred fully featured API too.  The fully featured API has more"]
-    #[doc = " complex\tcode that takes longer to execute, but makes much less use of"]
-    #[doc = " critical sections.  Therefore the alternative API sacrifices interrupt"]
-    #[doc = " responsiveness to gain execution speed, whereas the fully featured API"]
-    #[doc = " sacrifices execution speed to ensure better interrupt responsiveness."]
-    pub fn xQueueAltGenericSend(
-        xQueue: QueueHandle_t,
-        pvItemToQueue: *const crate::types::c_void,
-        xTicksToWait: TickType_t,
-        xCopyPosition: BaseType_t,
-    ) -> BaseType_t;
-}
-extern "C" {
-    pub fn xQueueAltGenericReceive(
-        xQueue: QueueHandle_t,
-        pvBuffer: *mut crate::types::c_void,
-        xTicksToWait: TickType_t,
-        xJustPeeking: BaseType_t,
-    ) -> BaseType_t;
-}
-extern "C" {
-    pub fn xQueueCRSendFromISR(
-        xQueue: QueueHandle_t,
-        pvItemToQueue: *const crate::types::c_void,
-        xCoRoutinePreviouslyWoken: BaseType_t,
-    ) -> BaseType_t;
-}
-extern "C" {
-    pub fn xQueueCRReceiveFromISR(
-        xQueue: QueueHandle_t,
-        pvBuffer: *mut crate::types::c_void,
-        pxTaskWoken: *mut BaseType_t,
-    ) -> BaseType_t;
-}
-extern "C" {
-    pub fn xQueueCRSend(
-        xQueue: QueueHandle_t,
-        pvItemToQueue: *const crate::types::c_void,
-        xTicksToWait: TickType_t,
-    ) -> BaseType_t;
-}
-extern "C" {
-    pub fn xQueueCRReceive(
-        xQueue: QueueHandle_t,
-        pvBuffer: *mut crate::types::c_void,
-        xTicksToWait: TickType_t,
-    ) -> BaseType_t;
-}
-extern "C" {
-    pub fn xQueueCreateMutex(ucQueueType: u8) -> QueueHandle_t;
-}
-extern "C" {
-    pub fn xQueueCreateMutexStatic(
-        ucQueueType: u8,
-        pxStaticQueue: *mut StaticQueue_t,
-    ) -> QueueHandle_t;
-}
-extern "C" {
-    pub fn xQueueCreateCountingSemaphore(
-        uxMaxCount: UBaseType_t,
-        uxInitialCount: UBaseType_t,
-    ) -> QueueHandle_t;
-}
-extern "C" {
-    pub fn xQueueCreateCountingSemaphoreStatic(
-        uxMaxCount: UBaseType_t,
-        uxInitialCount: UBaseType_t,
-        pxStaticQueue: *mut StaticQueue_t,
-    ) -> QueueHandle_t;
-}
-extern "C" {
-    pub fn xQueueGetMutexHolder(xSemaphore: QueueHandle_t) -> *mut crate::types::c_void;
-}
-extern "C" {
-    pub fn xQueueTakeMutexRecursive(xMutex: QueueHandle_t, xTicksToWait: TickType_t) -> BaseType_t;
-}
-extern "C" {
-    pub fn xQueueGiveMutexRecursive(pxMutex: QueueHandle_t) -> BaseType_t;
-}
-extern "C" {
-    pub fn xQueueGenericCreate(
-        uxQueueLength: UBaseType_t,
-        uxItemSize: UBaseType_t,
-        ucQueueType: u8,
-    ) -> QueueHandle_t;
-}
-extern "C" {
-    #[doc = " Queue sets provide a mechanism to allow a task to block (pend) on a read"]
-    #[doc = " operation from multiple queues or semaphores simultaneously."]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to delete"]
     #[doc = ""]
-    #[doc = " See FreeRTOS/Source/Demo/Common/Minimal/QueueSet.c for an example using this"]
-    #[doc = " function."]
-    #[doc = ""]
-    #[doc = " A queue set must be explicitly created using a call to xQueueCreateSet()"]
-    #[doc = " before it can be used.  Once created, standard FreeRTOS queues and semaphores"]
-    #[doc = " can be added to the set using calls to xQueueAddToSet()."]
-    #[doc = " xQueueSelectFromSet() is then used to determine which, if any, of the queues"]
-    #[doc = " or semaphores contained in the set is in a state where a queue read or"]
-    #[doc = " semaphore take operation would be successful."]
-    #[doc = ""]
-    #[doc = " Note 1:  See the documentation on http://wwwFreeRTOS.org/RTOS-queue-sets.html"]
-    #[doc = " for reasons why queue sets are very rarely needed in practice as there are"]
-    #[doc = " simpler methods of blocking on multiple objects."]
-    #[doc = ""]
-    #[doc = " Note 2:  Blocking on a queue set that contains a mutex will not cause the"]
-    #[doc = " mutex holder to inherit the priority of the blocked task."]
-    #[doc = ""]
-    #[doc = " Note 3:  An additional 4 bytes of RAM is required for each space in a every"]
-    #[doc = " queue added to a queue set.  Therefore counting semaphores that have a high"]
-    #[doc = " maximum count value should not be added to a queue set."]
-    #[doc = ""]
-    #[doc = " Note 4:  A receive (in the case of a queue) or take (in the case of a"]
-    #[doc = " semaphore) operation must not be performed on a member of a queue set unless"]
-    #[doc = " a call to xQueueSelectFromSet() has first returned a handle to that set member."]
-    #[doc = ""]
-    #[doc = " @param uxEventQueueLength Queue sets store events that occur on"]
-    #[doc = " the queues and semaphores contained in the set.  uxEventQueueLength specifies"]
-    #[doc = " the maximum number of events that can be queued at once.  To be absolutely"]
-    #[doc = " certain that events are not lost uxEventQueueLength should be set to the"]
-    #[doc = " total sum of the length of the queues added to the set, where binary"]
-    #[doc = " semaphores and mutexes have a length of 1, and counting semaphores have a"]
-    #[doc = " length set by their maximum count value.  Examples:"]
-    #[doc = "  + If a queue set is to hold a queue of length 5, another queue of length 12,"]
-    #[doc = "    and a binary semaphore, then uxEventQueueLength should be set to"]
-    #[doc = "    (5 + 12 + 1), or 18."]
-    #[doc = "  + If a queue set is to hold three binary semaphores then uxEventQueueLength"]
-    #[doc = "    should be set to (1 + 1 + 1 ), or 3."]
-    #[doc = "  + If a queue set is to hold a counting semaphore that has a maximum count of"]
-    #[doc = "    5, and a counting semaphore that has a maximum count of 3, then"]
-    #[doc = "    uxEventQueueLength should be set to (5 + 3), or 8."]
-    #[doc = ""]
-    #[doc = " @return If the queue set is created successfully then a handle to the created"]
-    #[doc = " queue set is returned.  Otherwise NULL is returned."]
-    pub fn xQueueCreateSet(uxEventQueueLength: UBaseType_t) -> QueueSetHandle_t;
+    #[doc = " @note    This function will not deallocate any memory if the ring buffer was"]
+    #[doc = "          created using xRingbufferCreateStatic(). Deallocation must be done"]
+    #[doc = "          manually be the user."]
+    pub fn vRingbufferDelete(xRingbuffer: RingbufHandle_t);
 }
 extern "C" {
-    #[doc = " Adds a queue or semaphore to a queue set that was previously created by a"]
-    #[doc = " call to xQueueCreateSet()."]
+    #[doc = " @brief   Get maximum size of an item that can be placed in the ring buffer"]
     #[doc = ""]
-    #[doc = " See FreeRTOS/Source/Demo/Common/Minimal/QueueSet.c for an example using this"]
-    #[doc = " function."]
+    #[doc = " This function returns the maximum size an item can have if it was placed in"]
+    #[doc = " an empty ring buffer."]
     #[doc = ""]
-    #[doc = " Note 1:  A receive (in the case of a queue) or take (in the case of a"]
-    #[doc = " semaphore) operation must not be performed on a member of a queue set unless"]
-    #[doc = " a call to xQueueSelectFromSet() has first returned a handle to that set member."]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to query"]
     #[doc = ""]
-    #[doc = " @param xQueueOrSemaphore The handle of the queue or semaphore being added to"]
-    #[doc = " the queue set (cast to an QueueSetMemberHandle_t type)."]
+    #[doc = " @note    The max item size for a no-split buffer is limited to"]
+    #[doc = "          ((buffer_size/2)-header_size). This limit is imposed so that an item"]
+    #[doc = "          of max item size can always be sent to the an empty no-split buffer"]
+    #[doc = "          regardless of the internal positions of the buffer's read/write/free"]
+    #[doc = "          pointers."]
     #[doc = ""]
-    #[doc = " @param xQueueSet The handle of the queue set to which the queue or semaphore"]
-    #[doc = " is being added."]
+    #[doc = " @return  Maximum size, in bytes, of an item that can be placed in a ring buffer."]
+    pub fn xRingbufferGetMaxItemSize(xRingbuffer: RingbufHandle_t) -> size_t;
+}
+extern "C" {
+    #[doc = " @brief   Get current free size available for an item/data in the buffer"]
     #[doc = ""]
-    #[doc = " @return If the queue or semaphore was successfully added to the queue set"]
-    #[doc = " then pdPASS is returned.  If the queue could not be successfully added to the"]
-    #[doc = " queue set because it is already a member of a different queue set then pdFAIL"]
-    #[doc = " is returned."]
-    pub fn xQueueAddToSet(
-        xQueueOrSemaphore: QueueSetMemberHandle_t,
+    #[doc = " This gives the real time free space available for an item/data in the ring"]
+    #[doc = " buffer. This represents the maximum size an item/data can have if it was"]
+    #[doc = " currently sent to the ring buffer."]
+    #[doc = ""]
+    #[doc = " @warning This API is not thread safe. So, if multiple threads are accessing"]
+    #[doc = "          the same ring buffer, it is the application's responsibility to"]
+    #[doc = "          ensure atomic access to this API and the subsequent Send"]
+    #[doc = ""]
+    #[doc = " @note    An empty no-split buffer has a max current free size for an item"]
+    #[doc = "          that is limited to ((buffer_size/2)-header_size). See API reference"]
+    #[doc = "          for xRingbufferGetMaxItemSize()."]
+    #[doc = ""]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to query"]
+    #[doc = ""]
+    #[doc = " @return  Current free size, in bytes, available for an entry"]
+    pub fn xRingbufferGetCurFreeSize(xRingbuffer: RingbufHandle_t) -> size_t;
+}
+extern "C" {
+    #[doc = " @brief   Add the ring buffer's read semaphore to a queue set."]
+    #[doc = ""]
+    #[doc = " The ring buffer's read semaphore indicates that data has been written"]
+    #[doc = " to the ring buffer. This function adds the ring buffer's read semaphore to"]
+    #[doc = " a queue set."]
+    #[doc = ""]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to add to the queue set"]
+    #[doc = " @param[in]   xQueueSet       Queue set to add the ring buffer's read semaphore to"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "      - pdTRUE on success, pdFALSE otherwise"]
+    pub fn xRingbufferAddToQueueSetRead(
+        xRingbuffer: RingbufHandle_t,
         xQueueSet: QueueSetHandle_t,
     ) -> BaseType_t;
 }
 extern "C" {
-    #[doc = " Removes a queue or semaphore from a queue set.  A queue or semaphore can only"]
-    #[doc = " be removed from a set if the queue or semaphore is empty."]
+    #[doc = " @brief   Check if the selected queue set member is the ring buffer's read semaphore"]
     #[doc = ""]
-    #[doc = " See FreeRTOS/Source/Demo/Common/Minimal/QueueSet.c for an example using this"]
-    #[doc = " function."]
+    #[doc = " This API checks if queue set member returned from xQueueSelectFromSet()"]
+    #[doc = " is the read semaphore of this ring buffer. If so, this indicates the ring buffer"]
+    #[doc = " has items waiting to be retrieved."]
     #[doc = ""]
-    #[doc = " @param xQueueOrSemaphore The handle of the queue or semaphore being removed"]
-    #[doc = " from the queue set (cast to an QueueSetMemberHandle_t type)."]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer which should be checked"]
+    #[doc = " @param[in]   xMember         Member returned from xQueueSelectFromSet"]
     #[doc = ""]
-    #[doc = " @param xQueueSet The handle of the queue set in which the queue or semaphore"]
-    #[doc = " is included."]
+    #[doc = " @return"]
+    #[doc = "      - pdTRUE when semaphore belongs to ring buffer"]
+    #[doc = "      - pdFALSE otherwise."]
+    pub fn xRingbufferCanRead(
+        xRingbuffer: RingbufHandle_t,
+        xMember: QueueSetMemberHandle_t,
+    ) -> BaseType_t;
+}
+extern "C" {
+    #[doc = " @brief   Remove the ring buffer's read semaphore from a queue set."]
     #[doc = ""]
-    #[doc = " @return If the queue or semaphore was successfully removed from the queue set"]
-    #[doc = " then pdPASS is returned.  If the queue was not in the queue set, or the"]
-    #[doc = " queue (or semaphore) was not empty, then pdFAIL is returned."]
-    pub fn xQueueRemoveFromSet(
-        xQueueOrSemaphore: QueueSetMemberHandle_t,
+    #[doc = " This specifically removes a ring buffer's read semaphore from a queue set. The"]
+    #[doc = " read semaphore is used to indicate when data has been written to the ring buffer"]
+    #[doc = ""]
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to remove from the queue set"]
+    #[doc = " @param[in]   xQueueSet       Queue set to remove the ring buffer's read semaphore from"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "      - pdTRUE on success"]
+    #[doc = "      - pdFALSE otherwise"]
+    pub fn xRingbufferRemoveFromQueueSetRead(
+        xRingbuffer: RingbufHandle_t,
         xQueueSet: QueueSetHandle_t,
     ) -> BaseType_t;
 }
 extern "C" {
-    #[doc = " xQueueSelectFromSet() selects from the members of a queue set a queue or"]
-    #[doc = " semaphore that either contains data (in the case of a queue) or is available"]
-    #[doc = " to take (in the case of a semaphore).  xQueueSelectFromSet() effectively"]
-    #[doc = " allows a task to block (pend) on a read operation on all the queues and"]
-    #[doc = " semaphores in a queue set simultaneously."]
+    #[doc = " @brief   Get information about ring buffer status"]
     #[doc = ""]
-    #[doc = " See FreeRTOS/Source/Demo/Common/Minimal/QueueSet.c for an example using this"]
-    #[doc = " function."]
+    #[doc = " Get information of the a ring buffer's current status such as"]
+    #[doc = " free/read/write pointer positions, and number of items waiting to be retrieved."]
+    #[doc = " Arguments can be set to NULL if they are not required."]
     #[doc = ""]
-    #[doc = " Note 1:  See the documentation on http://wwwFreeRTOS.org/RTOS-queue-sets.html"]
-    #[doc = " for reasons why queue sets are very rarely needed in practice as there are"]
-    #[doc = " simpler methods of blocking on multiple objects."]
-    #[doc = ""]
-    #[doc = " Note 2:  Blocking on a queue set that contains a mutex will not cause the"]
-    #[doc = " mutex holder to inherit the priority of the blocked task."]
-    #[doc = ""]
-    #[doc = " Note 3:  A receive (in the case of a queue) or take (in the case of a"]
-    #[doc = " semaphore) operation must not be performed on a member of a queue set unless"]
-    #[doc = " a call to xQueueSelectFromSet() has first returned a handle to that set member."]
-    #[doc = ""]
-    #[doc = " @param xQueueSet The queue set on which the task will (potentially) block."]
-    #[doc = ""]
-    #[doc = " @param xTicksToWait The maximum time, in ticks, that the calling task will"]
-    #[doc = " remain in the Blocked state (with other tasks executing) to wait for a member"]
-    #[doc = " of the queue set to be ready for a successful queue read or semaphore take"]
-    #[doc = " operation."]
-    #[doc = ""]
-    #[doc = " @return xQueueSelectFromSet() will return the handle of a queue (cast to"]
-    #[doc = " a QueueSetMemberHandle_t type) contained in the queue set that contains data,"]
-    #[doc = " or the handle of a semaphore (cast to a QueueSetMemberHandle_t type) contained"]
-    #[doc = " in the queue set that is available, or NULL if no such queue or semaphore"]
-    #[doc = " exists before before the specified block time expires."]
-    pub fn xQueueSelectFromSet(
-        xQueueSet: QueueSetHandle_t,
-        xTicksToWait: TickType_t,
-    ) -> QueueSetMemberHandle_t;
+    #[doc = " @param[in]   xRingbuffer     Ring buffer to remove from the queue set"]
+    #[doc = " @param[out]  uxFree          Pointer use to store free pointer position"]
+    #[doc = " @param[out]  uxRead          Pointer use to store read pointer position"]
+    #[doc = " @param[out]  uxWrite         Pointer use to store write pointer position"]
+    #[doc = " @param[out]  uxAcquire       Pointer use to store acquire pointer position"]
+    #[doc = " @param[out]  uxItemsWaiting  Pointer use to store number of items (bytes for byte buffer) waiting to be retrieved"]
+    pub fn vRingbufferGetInfo(
+        xRingbuffer: RingbufHandle_t,
+        uxFree: *mut UBaseType_t,
+        uxRead: *mut UBaseType_t,
+        uxWrite: *mut UBaseType_t,
+        uxAcquire: *mut UBaseType_t,
+        uxItemsWaiting: *mut UBaseType_t,
+    );
 }
 extern "C" {
-    #[doc = " A version of xQueueSelectFromSet() that can be used from an ISR."]
-    pub fn xQueueSelectFromSetFromISR(xQueueSet: QueueSetHandle_t) -> QueueSetMemberHandle_t;
+    #[doc = " @brief   Debugging function to print the internal pointers in the ring buffer"]
+    #[doc = ""]
+    #[doc = " @param   xRingbuffer Ring buffer to show"]
+    pub fn xRingbufferPrintInfo(xRingbuffer: RingbufHandle_t);
+}
+#[doc = "< I2C slave mode"]
+pub const i2c_mode_t_I2C_MODE_SLAVE: i2c_mode_t = 0;
+#[doc = "< I2C master mode"]
+pub const i2c_mode_t_I2C_MODE_MASTER: i2c_mode_t = 1;
+pub const i2c_mode_t_I2C_MODE_MAX: i2c_mode_t = 2;
+pub type i2c_mode_t = u32;
+#[doc = "< I2C write data"]
+pub const i2c_rw_t_I2C_MASTER_WRITE: i2c_rw_t = 0;
+#[doc = "< I2C read data"]
+pub const i2c_rw_t_I2C_MASTER_READ: i2c_rw_t = 1;
+pub type i2c_rw_t = u32;
+#[doc = "< I2C data msb first"]
+pub const i2c_trans_mode_t_I2C_DATA_MODE_MSB_FIRST: i2c_trans_mode_t = 0;
+#[doc = "< I2C data lsb first"]
+pub const i2c_trans_mode_t_I2C_DATA_MODE_LSB_FIRST: i2c_trans_mode_t = 1;
+pub const i2c_trans_mode_t_I2C_DATA_MODE_MAX: i2c_trans_mode_t = 2;
+pub type i2c_trans_mode_t = u32;
+#[doc = "<I2C restart command"]
+pub const i2c_opmode_t_I2C_CMD_RESTART: i2c_opmode_t = 0;
+#[doc = "<I2C write command"]
+pub const i2c_opmode_t_I2C_CMD_WRITE: i2c_opmode_t = 1;
+#[doc = "<I2C read command"]
+pub const i2c_opmode_t_I2C_CMD_READ: i2c_opmode_t = 2;
+#[doc = "<I2C stop command"]
+pub const i2c_opmode_t_I2C_CMD_STOP: i2c_opmode_t = 3;
+#[doc = "<I2C end command"]
+pub const i2c_opmode_t_I2C_CMD_END: i2c_opmode_t = 4;
+pub type i2c_opmode_t = u32;
+#[doc = "< I2C port 0"]
+pub const i2c_port_t_I2C_NUM_0: i2c_port_t = 0;
+#[doc = "< I2C port 1"]
+pub const i2c_port_t_I2C_NUM_1: i2c_port_t = 1;
+pub const i2c_port_t_I2C_NUM_MAX: i2c_port_t = 2;
+pub type i2c_port_t = u32;
+#[doc = "< I2C 7bit address for slave mode"]
+pub const i2c_addr_mode_t_I2C_ADDR_BIT_7: i2c_addr_mode_t = 0;
+#[doc = "< I2C 10bit address for slave mode"]
+pub const i2c_addr_mode_t_I2C_ADDR_BIT_10: i2c_addr_mode_t = 1;
+pub const i2c_addr_mode_t_I2C_ADDR_BIT_MAX: i2c_addr_mode_t = 2;
+pub type i2c_addr_mode_t = u32;
+#[doc = "< I2C ack for each byte read"]
+pub const i2c_ack_type_t_I2C_MASTER_ACK: i2c_ack_type_t = 0;
+#[doc = "< I2C nack for each byte read"]
+pub const i2c_ack_type_t_I2C_MASTER_NACK: i2c_ack_type_t = 1;
+#[doc = "< I2C nack for the last byte"]
+pub const i2c_ack_type_t_I2C_MASTER_LAST_NACK: i2c_ack_type_t = 2;
+pub const i2c_ack_type_t_I2C_MASTER_ACK_MAX: i2c_ack_type_t = 3;
+pub type i2c_ack_type_t = u32;
+#[doc = " @brief I2C initialization parameters"]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct i2c_config_t {
+    #[doc = "< I2C mode"]
+    pub mode: i2c_mode_t,
+    #[doc = "< GPIO number for I2C sda signal"]
+    pub sda_io_num: gpio_num_t,
+    #[doc = "< Internal GPIO pull mode for I2C sda signal"]
+    pub sda_pullup_en: gpio_pullup_t,
+    #[doc = "< GPIO number for I2C scl signal"]
+    pub scl_io_num: gpio_num_t,
+    #[doc = "< Internal GPIO pull mode for I2C scl signal"]
+    pub scl_pullup_en: gpio_pullup_t,
+    pub __bindgen_anon_1: i2c_config_t__bindgen_ty_1,
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union i2c_config_t__bindgen_ty_1 {
+    pub master: i2c_config_t__bindgen_ty_1__bindgen_ty_1,
+    pub slave: i2c_config_t__bindgen_ty_1__bindgen_ty_2,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct i2c_config_t__bindgen_ty_1__bindgen_ty_1 {
+    #[doc = "< I2C clock frequency for master mode, (no higher than 1MHz for now)"]
+    pub clk_speed: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct i2c_config_t__bindgen_ty_1__bindgen_ty_2 {
+    #[doc = "< I2C 10bit address mode enable for slave mode"]
+    pub addr_10bit_en: u8,
+    #[doc = "< I2C address for slave mode"]
+    pub slave_addr: u16,
+}
+pub type i2c_cmd_handle_t = *mut crate::types::c_void;
+extern "C" {
+    #[doc = " @brief I2C driver install"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param mode I2C mode( master or slave )"]
+    #[doc = " @param slv_rx_buf_len receiving buffer size for slave mode"]
+    #[doc = "        @note"]
+    #[doc = "        Only slave mode will use this value, driver will ignore this value in master mode."]
+    #[doc = " @param slv_tx_buf_len sending buffer size for slave mode"]
+    #[doc = "        @note"]
+    #[doc = "        Only slave mode will use this value, driver will ignore this value in master mode."]
+    #[doc = " @param intr_alloc_flags Flags used to allocate the interrupt. One or multiple (ORred)"]
+    #[doc = "            ESP_INTR_FLAG_* values. See esp_intr_alloc.h for more info."]
+    #[doc = "        @note"]
+    #[doc = "        In master mode, if the cache is likely to be disabled(such as write flash) and the slave is time-sensitive,"]
+    #[doc = "        `ESP_INTR_FLAG_IRAM` is suggested to be used. In this case, please use the memory allocated from internal RAM in i2c read and write function,"]
+    #[doc = "        because we can not access the psram(if psram is enabled) in interrupt handle function when cache is disabled."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    #[doc = "     - ESP_FAIL Driver install error"]
+    pub fn i2c_driver_install(
+        i2c_num: i2c_port_t,
+        mode: i2c_mode_t,
+        slv_rx_buf_len: size_t,
+        slv_tx_buf_len: size_t,
+        intr_alloc_flags: crate::types::c_int,
+    ) -> esp_err_t;
 }
 extern "C" {
-    #[doc = " @cond"]
-    pub fn vQueueWaitForMessageRestricted(xQueue: QueueHandle_t, xTicksToWait: TickType_t);
+    #[doc = " @brief I2C driver delete"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_driver_delete(i2c_num: i2c_port_t) -> esp_err_t;
 }
 extern "C" {
-    pub fn xQueueGenericReset(xQueue: QueueHandle_t, xNewQueue: BaseType_t) -> BaseType_t;
+    #[doc = " @brief I2C parameter initialization"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param i2c_conf pointer to I2C parameter settings"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_param_config(i2c_num: i2c_port_t, i2c_conf: *const i2c_config_t) -> esp_err_t;
 }
 extern "C" {
-    pub fn vQueueSetQueueNumber(xQueue: QueueHandle_t, uxQueueNumber: UBaseType_t);
+    #[doc = " @brief reset I2C tx hardware fifo"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_reset_tx_fifo(i2c_num: i2c_port_t) -> esp_err_t;
 }
 extern "C" {
-    pub fn uxQueueGetQueueNumber(xQueue: QueueHandle_t) -> UBaseType_t;
+    #[doc = " @brief reset I2C rx fifo"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_reset_rx_fifo(i2c_num: i2c_port_t) -> esp_err_t;
 }
 extern "C" {
-    pub fn ucQueueGetQueueType(xQueue: QueueHandle_t) -> u8;
+    #[doc = " @brief I2C isr handler register"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param fn isr handler function"]
+    #[doc = " @param arg parameter for isr handler function"]
+    #[doc = " @param intr_alloc_flags Flags used to allocate the interrupt. One or multiple (ORred)"]
+    #[doc = "            ESP_INTR_FLAG_* values. See esp_intr_alloc.h for more info."]
+    #[doc = " @param handle handle return from esp_intr_alloc."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_isr_register(
+        i2c_num: i2c_port_t,
+        fn_: ::core::option::Option<unsafe extern "C" fn(arg1: *mut crate::types::c_void)>,
+        arg: *mut crate::types::c_void,
+        intr_alloc_flags: crate::types::c_int,
+        handle: *mut intr_handle_t,
+    ) -> esp_err_t;
 }
-pub type SemaphoreHandle_t = QueueHandle_t;
+extern "C" {
+    #[doc = " @brief to delete and free I2C isr."]
+    #[doc = ""]
+    #[doc = " @param handle handle of isr."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_isr_free(handle: intr_handle_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Configure GPIO signal for I2C sck and sda"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param sda_io_num GPIO number for I2C sda signal"]
+    #[doc = " @param scl_io_num GPIO number for I2C scl signal"]
+    #[doc = " @param sda_pullup_en Whether to enable the internal pullup for sda pin"]
+    #[doc = " @param scl_pullup_en Whether to enable the internal pullup for scl pin"]
+    #[doc = " @param mode I2C mode"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_set_pin(
+        i2c_num: i2c_port_t,
+        sda_io_num: crate::types::c_int,
+        scl_io_num: crate::types::c_int,
+        sda_pullup_en: gpio_pullup_t,
+        scl_pullup_en: gpio_pullup_t,
+        mode: i2c_mode_t,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Create and init I2C command link"]
+    #[doc = "        @note"]
+    #[doc = "        Before we build I2C command link, we need to call i2c_cmd_link_create() to create"]
+    #[doc = "        a command link."]
+    #[doc = "        After we finish sending the commands, we need to call i2c_cmd_link_delete() to"]
+    #[doc = "        release and return the resources."]
+    #[doc = ""]
+    #[doc = " @return i2c command link handler"]
+    pub fn i2c_cmd_link_create() -> i2c_cmd_handle_t;
+}
+extern "C" {
+    #[doc = " @brief Free I2C command link"]
+    #[doc = "        @note"]
+    #[doc = "        Before we build I2C command link, we need to call i2c_cmd_link_create() to create"]
+    #[doc = "        a command link."]
+    #[doc = "        After we finish sending the commands, we need to call i2c_cmd_link_delete() to"]
+    #[doc = "        release and return the resources."]
+    #[doc = ""]
+    #[doc = " @param cmd_handle I2C command handle"]
+    pub fn i2c_cmd_link_delete(cmd_handle: i2c_cmd_handle_t);
+}
+extern "C" {
+    #[doc = " @brief Queue command for I2C master to generate a start signal"]
+    #[doc = "        @note"]
+    #[doc = "        Only call this function in I2C master mode"]
+    #[doc = "        Call i2c_master_cmd_begin() to send all queued commands"]
+    #[doc = ""]
+    #[doc = " @param cmd_handle I2C cmd link"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_master_start(cmd_handle: i2c_cmd_handle_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Queue command for I2C master to write one byte to I2C bus"]
+    #[doc = "        @note"]
+    #[doc = "        Only call this function in I2C master mode"]
+    #[doc = "        Call i2c_master_cmd_begin() to send all queued commands"]
+    #[doc = ""]
+    #[doc = " @param cmd_handle I2C cmd link"]
+    #[doc = " @param data I2C one byte command to write to bus"]
+    #[doc = " @param ack_en enable ack check for master"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_master_write_byte(cmd_handle: i2c_cmd_handle_t, data: u8, ack_en: bool)
+        -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Queue command for I2C master to write buffer to I2C bus"]
+    #[doc = "        @note"]
+    #[doc = "        Only call this function in I2C master mode"]
+    #[doc = "        Call i2c_master_cmd_begin() to send all queued commands"]
+    #[doc = ""]
+    #[doc = " @param cmd_handle I2C cmd link"]
+    #[doc = " @param data data to send"]
+    #[doc = "        @note"]
+    #[doc = "        If the psram is enabled and intr_flag is `ESP_INTR_FLAG_IRAM`, please use the memory allocated from internal RAM."]
+    #[doc = " @param data_len data length"]
+    #[doc = " @param ack_en enable ack check for master"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_master_write(
+        cmd_handle: i2c_cmd_handle_t,
+        data: *mut u8,
+        data_len: size_t,
+        ack_en: bool,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Queue command for I2C master to read one byte from I2C bus"]
+    #[doc = "        @note"]
+    #[doc = "        Only call this function in I2C master mode"]
+    #[doc = "        Call i2c_master_cmd_begin() to send all queued commands"]
+    #[doc = ""]
+    #[doc = " @param cmd_handle I2C cmd link"]
+    #[doc = " @param data pointer accept the data byte"]
+    #[doc = "        @note"]
+    #[doc = "        If the psram is enabled and intr_flag is `ESP_INTR_FLAG_IRAM`, please use the memory allocated from internal RAM."]
+    #[doc = " @param ack ack value for read command"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_master_read_byte(
+        cmd_handle: i2c_cmd_handle_t,
+        data: *mut u8,
+        ack: i2c_ack_type_t,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Queue command for I2C master to read data from I2C bus"]
+    #[doc = "        @note"]
+    #[doc = "        Only call this function in I2C master mode"]
+    #[doc = "        Call i2c_master_cmd_begin() to send all queued commands"]
+    #[doc = ""]
+    #[doc = " @param cmd_handle I2C cmd link"]
+    #[doc = " @param data data buffer to accept the data from bus"]
+    #[doc = "        @note"]
+    #[doc = "        If the psram is enabled and intr_flag is `ESP_INTR_FLAG_IRAM`, please use the memory allocated from internal RAM."]
+    #[doc = " @param data_len read data length"]
+    #[doc = " @param ack ack value for read command"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_master_read(
+        cmd_handle: i2c_cmd_handle_t,
+        data: *mut u8,
+        data_len: size_t,
+        ack: i2c_ack_type_t,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Queue command for I2C master to generate a stop signal"]
+    #[doc = "        @note"]
+    #[doc = "        Only call this function in I2C master mode"]
+    #[doc = "        Call i2c_master_cmd_begin() to send all queued commands"]
+    #[doc = ""]
+    #[doc = " @param cmd_handle I2C cmd link"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_master_stop(cmd_handle: i2c_cmd_handle_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief I2C master send queued commands."]
+    #[doc = "        This function will trigger sending all queued commands."]
+    #[doc = "        The task will be blocked until all the commands have been sent out."]
+    #[doc = "        The I2C APIs are not thread-safe, if you want to use one I2C port in different tasks,"]
+    #[doc = "        you need to take care of the multi-thread issue."]
+    #[doc = "        @note"]
+    #[doc = "        Only call this function in I2C master mode"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param cmd_handle I2C command handler"]
+    #[doc = " @param ticks_to_wait maximum wait ticks."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    #[doc = "     - ESP_FAIL Sending command error, slave doesn't ACK the transfer."]
+    #[doc = "     - ESP_ERR_INVALID_STATE I2C driver not installed or not in master mode."]
+    #[doc = "     - ESP_ERR_TIMEOUT Operation timeout because the bus is busy."]
+    pub fn i2c_master_cmd_begin(
+        i2c_num: i2c_port_t,
+        cmd_handle: i2c_cmd_handle_t,
+        ticks_to_wait: TickType_t,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief I2C slave write data to internal ringbuffer, when tx fifo empty, isr will fill the hardware"]
+    #[doc = "        fifo from the internal ringbuffer"]
+    #[doc = "        @note"]
+    #[doc = "        Only call this function in I2C slave mode"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param data data pointer to write into internal buffer"]
+    #[doc = " @param size data size"]
+    #[doc = " @param ticks_to_wait Maximum waiting ticks"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_FAIL(-1) Parameter error"]
+    #[doc = "     - Others(>=0) The number of data bytes that pushed to the I2C slave buffer."]
+    pub fn i2c_slave_write_buffer(
+        i2c_num: i2c_port_t,
+        data: *mut u8,
+        size: crate::types::c_int,
+        ticks_to_wait: TickType_t,
+    ) -> crate::types::c_int;
+}
+extern "C" {
+    #[doc = " @brief I2C slave read data from internal buffer. When I2C slave receive data, isr will copy received data"]
+    #[doc = "        from hardware rx fifo to internal ringbuffer. Then users can read from internal ringbuffer."]
+    #[doc = "        @note"]
+    #[doc = "        Only call this function in I2C slave mode"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param data data pointer to accept data from internal buffer"]
+    #[doc = " @param max_size Maximum data size to read"]
+    #[doc = " @param ticks_to_wait Maximum waiting ticks"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_FAIL(-1) Parameter error"]
+    #[doc = "     - Others(>=0) The number of data bytes that read from I2C slave buffer."]
+    pub fn i2c_slave_read_buffer(
+        i2c_num: i2c_port_t,
+        data: *mut u8,
+        max_size: size_t,
+        ticks_to_wait: TickType_t,
+    ) -> crate::types::c_int;
+}
+extern "C" {
+    #[doc = " @brief set I2C master clock period"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param high_period clock cycle number during SCL is high level, high_period is a 14 bit value"]
+    #[doc = " @param low_period clock cycle number during SCL is low level, low_period is a 14 bit value"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_set_period(
+        i2c_num: i2c_port_t,
+        high_period: crate::types::c_int,
+        low_period: crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief get I2C master clock period"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param high_period pointer to get clock cycle number during SCL is high level, will get a 14 bit value"]
+    #[doc = " @param low_period pointer to get clock cycle number during SCL is low level, will get a 14 bit value"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_get_period(
+        i2c_num: i2c_port_t,
+        high_period: *mut crate::types::c_int,
+        low_period: *mut crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief enable hardware filter on I2C bus"]
+    #[doc = "        Sometimes the I2C bus is disturbed by high frequency noise(about 20ns), or the rising edge of"]
+    #[doc = "        the SCL clock is very slow, these may cause the master state machine broken. enable hardware"]
+    #[doc = "        filter can filter out high frequency interference and make the master more stable."]
+    #[doc = "        @note"]
+    #[doc = "        Enable filter will slow the SCL clock."]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param cyc_num the APB cycles need to be filtered(0<= cyc_num <=7)."]
+    #[doc = "        When the period of a pulse is less than cyc_num * APB_cycle, the I2C controller will ignore this pulse."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_filter_enable(i2c_num: i2c_port_t, cyc_num: u8) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief disable filter on I2C bus"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_filter_disable(i2c_num: i2c_port_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief set I2C master start signal timing"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param setup_time clock number between the falling-edge of SDA and rising-edge of SCL for start mark, it's a 10-bit value."]
+    #[doc = " @param hold_time clock num between the falling-edge of SDA and falling-edge of SCL for start mark, it's a 10-bit value."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_set_start_timing(
+        i2c_num: i2c_port_t,
+        setup_time: crate::types::c_int,
+        hold_time: crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief get I2C master start signal timing"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param setup_time pointer to get setup time"]
+    #[doc = " @param hold_time pointer to get hold time"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_get_start_timing(
+        i2c_num: i2c_port_t,
+        setup_time: *mut crate::types::c_int,
+        hold_time: *mut crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief set I2C master stop signal timing"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param setup_time clock num between the rising-edge of SCL and the rising-edge of SDA, it's a 10-bit value."]
+    #[doc = " @param hold_time clock number after the STOP bit's rising-edge, it's a 14-bit value."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_set_stop_timing(
+        i2c_num: i2c_port_t,
+        setup_time: crate::types::c_int,
+        hold_time: crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief get I2C master stop signal timing"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param setup_time pointer to get setup time."]
+    #[doc = " @param hold_time pointer to get hold time."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_get_stop_timing(
+        i2c_num: i2c_port_t,
+        setup_time: *mut crate::types::c_int,
+        hold_time: *mut crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief set I2C data signal timing"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param sample_time clock number I2C used to sample data on SDA after the rising-edge of SCL, it's a 10-bit value"]
+    #[doc = " @param hold_time clock number I2C used to hold the data after the falling-edge of SCL, it's a 10-bit value"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_set_data_timing(
+        i2c_num: i2c_port_t,
+        sample_time: crate::types::c_int,
+        hold_time: crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief get I2C data signal timing"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param sample_time pointer to get sample time"]
+    #[doc = " @param hold_time pointer to get hold time"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_get_data_timing(
+        i2c_num: i2c_port_t,
+        sample_time: *mut crate::types::c_int,
+        hold_time: *mut crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief set I2C timeout value"]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param timeout timeout value for I2C bus (unit: APB 80Mhz clock cycle)"]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_set_timeout(i2c_num: i2c_port_t, timeout: crate::types::c_int) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief get I2C timeout value"]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param timeout pointer to get timeout value"]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_get_timeout(i2c_num: i2c_port_t, timeout: *mut crate::types::c_int) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief set I2C data transfer mode"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param tx_trans_mode I2C sending data mode"]
+    #[doc = " @param rx_trans_mode I2C receving data mode"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_set_data_mode(
+        i2c_num: i2c_port_t,
+        tx_trans_mode: i2c_trans_mode_t,
+        rx_trans_mode: i2c_trans_mode_t,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief get I2C data transfer mode"]
+    #[doc = ""]
+    #[doc = " @param i2c_num I2C port number"]
+    #[doc = " @param tx_trans_mode pointer to get I2C sending data mode"]
+    #[doc = " @param rx_trans_mode pointer to get I2C receiving data mode"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn i2c_get_data_mode(
+        i2c_num: i2c_port_t,
+        tx_trans_mode: *mut i2c_trans_mode_t,
+        rx_trans_mode: *mut i2c_trans_mode_t,
+    ) -> esp_err_t;
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct uart_dev_s {
+    pub fifo: uart_dev_s__bindgen_ty_1,
+    pub int_raw: uart_dev_s__bindgen_ty_2,
+    pub int_st: uart_dev_s__bindgen_ty_3,
+    pub int_ena: uart_dev_s__bindgen_ty_4,
+    pub int_clr: uart_dev_s__bindgen_ty_5,
+    pub clk_div: uart_dev_s__bindgen_ty_6,
+    pub auto_baud: uart_dev_s__bindgen_ty_7,
+    pub status: uart_dev_s__bindgen_ty_8,
+    pub conf0: uart_dev_s__bindgen_ty_9,
+    pub conf1: uart_dev_s__bindgen_ty_10,
+    pub lowpulse: uart_dev_s__bindgen_ty_11,
+    pub highpulse: uart_dev_s__bindgen_ty_12,
+    pub rxd_cnt: uart_dev_s__bindgen_ty_13,
+    pub flow_conf: uart_dev_s__bindgen_ty_14,
+    pub sleep_conf: uart_dev_s__bindgen_ty_15,
+    pub swfc_conf: uart_dev_s__bindgen_ty_16,
+    pub idle_conf: uart_dev_s__bindgen_ty_17,
+    pub rs485_conf: uart_dev_s__bindgen_ty_18,
+    pub at_cmd_precnt: uart_dev_s__bindgen_ty_19,
+    pub at_cmd_postcnt: uart_dev_s__bindgen_ty_20,
+    pub at_cmd_gaptout: uart_dev_s__bindgen_ty_21,
+    pub at_cmd_char: uart_dev_s__bindgen_ty_22,
+    pub mem_conf: uart_dev_s__bindgen_ty_23,
+    pub mem_tx_status: uart_dev_s__bindgen_ty_24,
+    pub mem_rx_status: uart_dev_s__bindgen_ty_25,
+    pub mem_cnt_status: uart_dev_s__bindgen_ty_26,
+    pub pospulse: uart_dev_s__bindgen_ty_27,
+    pub negpulse: uart_dev_s__bindgen_ty_28,
+    pub reserved_70: u32,
+    pub reserved_74: u32,
+    pub date: u32,
+    pub id: u32,
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_1 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_1__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_1__bindgen_ty_1 {
+    pub rw_byte: u8,
+    pub reserved: [u8; 3usize],
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_2 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_2__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_2__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u16>,
+}
+impl uart_dev_s__bindgen_ty_2__bindgen_ty_1 {
+    #[inline]
+    pub fn rxfifo_full(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_full(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn txfifo_empty(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_txfifo_empty(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn parity_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_parity_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn frm_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_frm_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(3usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rxfifo_ovf(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_ovf(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(4usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn dsr_chg(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(5usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_dsr_chg(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(5usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn cts_chg(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(6usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_cts_chg(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(6usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn brk_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(7usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_brk_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(7usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rxfifo_tout(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_tout(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(8usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn sw_xon(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(9usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_sw_xon(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(9usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn sw_xoff(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(10usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_sw_xoff(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(10usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn glitch_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(11usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_glitch_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(11usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_brk_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(12usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_brk_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(12usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_brk_idle_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(13usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_brk_idle_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(13usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(14usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(14usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_parity_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(15usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_parity_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(15usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_frm_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(16usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_frm_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(16usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_clash(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(17usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_clash(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(17usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn at_cmd_char_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(18usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_at_cmd_char_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(18usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved19(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(19usize, 13u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved19(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(19usize, 13u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        rxfifo_full: u32,
+        txfifo_empty: u32,
+        parity_err: u32,
+        frm_err: u32,
+        rxfifo_ovf: u32,
+        dsr_chg: u32,
+        cts_chg: u32,
+        brk_det: u32,
+        rxfifo_tout: u32,
+        sw_xon: u32,
+        sw_xoff: u32,
+        glitch_det: u32,
+        tx_brk_done: u32,
+        tx_brk_idle_done: u32,
+        tx_done: u32,
+        rs485_parity_err: u32,
+        rs485_frm_err: u32,
+        rs485_clash: u32,
+        at_cmd_char_det: u32,
+        reserved19: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u16> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u16> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let rxfifo_full: u32 = unsafe { ::core::mem::transmute(rxfifo_full) };
+            rxfifo_full as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let txfifo_empty: u32 = unsafe { ::core::mem::transmute(txfifo_empty) };
+            txfifo_empty as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let parity_err: u32 = unsafe { ::core::mem::transmute(parity_err) };
+            parity_err as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 1u8, {
+            let frm_err: u32 = unsafe { ::core::mem::transmute(frm_err) };
+            frm_err as u64
+        });
+        __bindgen_bitfield_unit.set(4usize, 1u8, {
+            let rxfifo_ovf: u32 = unsafe { ::core::mem::transmute(rxfifo_ovf) };
+            rxfifo_ovf as u64
+        });
+        __bindgen_bitfield_unit.set(5usize, 1u8, {
+            let dsr_chg: u32 = unsafe { ::core::mem::transmute(dsr_chg) };
+            dsr_chg as u64
+        });
+        __bindgen_bitfield_unit.set(6usize, 1u8, {
+            let cts_chg: u32 = unsafe { ::core::mem::transmute(cts_chg) };
+            cts_chg as u64
+        });
+        __bindgen_bitfield_unit.set(7usize, 1u8, {
+            let brk_det: u32 = unsafe { ::core::mem::transmute(brk_det) };
+            brk_det as u64
+        });
+        __bindgen_bitfield_unit.set(8usize, 1u8, {
+            let rxfifo_tout: u32 = unsafe { ::core::mem::transmute(rxfifo_tout) };
+            rxfifo_tout as u64
+        });
+        __bindgen_bitfield_unit.set(9usize, 1u8, {
+            let sw_xon: u32 = unsafe { ::core::mem::transmute(sw_xon) };
+            sw_xon as u64
+        });
+        __bindgen_bitfield_unit.set(10usize, 1u8, {
+            let sw_xoff: u32 = unsafe { ::core::mem::transmute(sw_xoff) };
+            sw_xoff as u64
+        });
+        __bindgen_bitfield_unit.set(11usize, 1u8, {
+            let glitch_det: u32 = unsafe { ::core::mem::transmute(glitch_det) };
+            glitch_det as u64
+        });
+        __bindgen_bitfield_unit.set(12usize, 1u8, {
+            let tx_brk_done: u32 = unsafe { ::core::mem::transmute(tx_brk_done) };
+            tx_brk_done as u64
+        });
+        __bindgen_bitfield_unit.set(13usize, 1u8, {
+            let tx_brk_idle_done: u32 = unsafe { ::core::mem::transmute(tx_brk_idle_done) };
+            tx_brk_idle_done as u64
+        });
+        __bindgen_bitfield_unit.set(14usize, 1u8, {
+            let tx_done: u32 = unsafe { ::core::mem::transmute(tx_done) };
+            tx_done as u64
+        });
+        __bindgen_bitfield_unit.set(15usize, 1u8, {
+            let rs485_parity_err: u32 = unsafe { ::core::mem::transmute(rs485_parity_err) };
+            rs485_parity_err as u64
+        });
+        __bindgen_bitfield_unit.set(16usize, 1u8, {
+            let rs485_frm_err: u32 = unsafe { ::core::mem::transmute(rs485_frm_err) };
+            rs485_frm_err as u64
+        });
+        __bindgen_bitfield_unit.set(17usize, 1u8, {
+            let rs485_clash: u32 = unsafe { ::core::mem::transmute(rs485_clash) };
+            rs485_clash as u64
+        });
+        __bindgen_bitfield_unit.set(18usize, 1u8, {
+            let at_cmd_char_det: u32 = unsafe { ::core::mem::transmute(at_cmd_char_det) };
+            at_cmd_char_det as u64
+        });
+        __bindgen_bitfield_unit.set(19usize, 13u8, {
+            let reserved19: u32 = unsafe { ::core::mem::transmute(reserved19) };
+            reserved19 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_3 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_3__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_3__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u16>,
+}
+impl uart_dev_s__bindgen_ty_3__bindgen_ty_1 {
+    #[inline]
+    pub fn rxfifo_full(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_full(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn txfifo_empty(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_txfifo_empty(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn parity_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_parity_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn frm_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_frm_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(3usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rxfifo_ovf(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_ovf(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(4usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn dsr_chg(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(5usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_dsr_chg(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(5usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn cts_chg(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(6usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_cts_chg(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(6usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn brk_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(7usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_brk_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(7usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rxfifo_tout(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_tout(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(8usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn sw_xon(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(9usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_sw_xon(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(9usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn sw_xoff(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(10usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_sw_xoff(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(10usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn glitch_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(11usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_glitch_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(11usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_brk_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(12usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_brk_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(12usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_brk_idle_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(13usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_brk_idle_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(13usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(14usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(14usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_parity_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(15usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_parity_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(15usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_frm_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(16usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_frm_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(16usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_clash(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(17usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_clash(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(17usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn at_cmd_char_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(18usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_at_cmd_char_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(18usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved19(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(19usize, 13u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved19(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(19usize, 13u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        rxfifo_full: u32,
+        txfifo_empty: u32,
+        parity_err: u32,
+        frm_err: u32,
+        rxfifo_ovf: u32,
+        dsr_chg: u32,
+        cts_chg: u32,
+        brk_det: u32,
+        rxfifo_tout: u32,
+        sw_xon: u32,
+        sw_xoff: u32,
+        glitch_det: u32,
+        tx_brk_done: u32,
+        tx_brk_idle_done: u32,
+        tx_done: u32,
+        rs485_parity_err: u32,
+        rs485_frm_err: u32,
+        rs485_clash: u32,
+        at_cmd_char_det: u32,
+        reserved19: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u16> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u16> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let rxfifo_full: u32 = unsafe { ::core::mem::transmute(rxfifo_full) };
+            rxfifo_full as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let txfifo_empty: u32 = unsafe { ::core::mem::transmute(txfifo_empty) };
+            txfifo_empty as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let parity_err: u32 = unsafe { ::core::mem::transmute(parity_err) };
+            parity_err as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 1u8, {
+            let frm_err: u32 = unsafe { ::core::mem::transmute(frm_err) };
+            frm_err as u64
+        });
+        __bindgen_bitfield_unit.set(4usize, 1u8, {
+            let rxfifo_ovf: u32 = unsafe { ::core::mem::transmute(rxfifo_ovf) };
+            rxfifo_ovf as u64
+        });
+        __bindgen_bitfield_unit.set(5usize, 1u8, {
+            let dsr_chg: u32 = unsafe { ::core::mem::transmute(dsr_chg) };
+            dsr_chg as u64
+        });
+        __bindgen_bitfield_unit.set(6usize, 1u8, {
+            let cts_chg: u32 = unsafe { ::core::mem::transmute(cts_chg) };
+            cts_chg as u64
+        });
+        __bindgen_bitfield_unit.set(7usize, 1u8, {
+            let brk_det: u32 = unsafe { ::core::mem::transmute(brk_det) };
+            brk_det as u64
+        });
+        __bindgen_bitfield_unit.set(8usize, 1u8, {
+            let rxfifo_tout: u32 = unsafe { ::core::mem::transmute(rxfifo_tout) };
+            rxfifo_tout as u64
+        });
+        __bindgen_bitfield_unit.set(9usize, 1u8, {
+            let sw_xon: u32 = unsafe { ::core::mem::transmute(sw_xon) };
+            sw_xon as u64
+        });
+        __bindgen_bitfield_unit.set(10usize, 1u8, {
+            let sw_xoff: u32 = unsafe { ::core::mem::transmute(sw_xoff) };
+            sw_xoff as u64
+        });
+        __bindgen_bitfield_unit.set(11usize, 1u8, {
+            let glitch_det: u32 = unsafe { ::core::mem::transmute(glitch_det) };
+            glitch_det as u64
+        });
+        __bindgen_bitfield_unit.set(12usize, 1u8, {
+            let tx_brk_done: u32 = unsafe { ::core::mem::transmute(tx_brk_done) };
+            tx_brk_done as u64
+        });
+        __bindgen_bitfield_unit.set(13usize, 1u8, {
+            let tx_brk_idle_done: u32 = unsafe { ::core::mem::transmute(tx_brk_idle_done) };
+            tx_brk_idle_done as u64
+        });
+        __bindgen_bitfield_unit.set(14usize, 1u8, {
+            let tx_done: u32 = unsafe { ::core::mem::transmute(tx_done) };
+            tx_done as u64
+        });
+        __bindgen_bitfield_unit.set(15usize, 1u8, {
+            let rs485_parity_err: u32 = unsafe { ::core::mem::transmute(rs485_parity_err) };
+            rs485_parity_err as u64
+        });
+        __bindgen_bitfield_unit.set(16usize, 1u8, {
+            let rs485_frm_err: u32 = unsafe { ::core::mem::transmute(rs485_frm_err) };
+            rs485_frm_err as u64
+        });
+        __bindgen_bitfield_unit.set(17usize, 1u8, {
+            let rs485_clash: u32 = unsafe { ::core::mem::transmute(rs485_clash) };
+            rs485_clash as u64
+        });
+        __bindgen_bitfield_unit.set(18usize, 1u8, {
+            let at_cmd_char_det: u32 = unsafe { ::core::mem::transmute(at_cmd_char_det) };
+            at_cmd_char_det as u64
+        });
+        __bindgen_bitfield_unit.set(19usize, 13u8, {
+            let reserved19: u32 = unsafe { ::core::mem::transmute(reserved19) };
+            reserved19 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_4 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_4__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_4__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u16>,
+}
+impl uart_dev_s__bindgen_ty_4__bindgen_ty_1 {
+    #[inline]
+    pub fn rxfifo_full(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_full(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn txfifo_empty(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_txfifo_empty(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn parity_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_parity_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn frm_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_frm_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(3usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rxfifo_ovf(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_ovf(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(4usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn dsr_chg(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(5usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_dsr_chg(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(5usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn cts_chg(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(6usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_cts_chg(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(6usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn brk_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(7usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_brk_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(7usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rxfifo_tout(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_tout(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(8usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn sw_xon(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(9usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_sw_xon(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(9usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn sw_xoff(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(10usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_sw_xoff(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(10usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn glitch_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(11usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_glitch_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(11usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_brk_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(12usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_brk_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(12usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_brk_idle_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(13usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_brk_idle_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(13usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(14usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(14usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_parity_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(15usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_parity_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(15usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_frm_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(16usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_frm_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(16usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_clash(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(17usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_clash(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(17usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn at_cmd_char_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(18usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_at_cmd_char_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(18usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved19(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(19usize, 13u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved19(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(19usize, 13u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        rxfifo_full: u32,
+        txfifo_empty: u32,
+        parity_err: u32,
+        frm_err: u32,
+        rxfifo_ovf: u32,
+        dsr_chg: u32,
+        cts_chg: u32,
+        brk_det: u32,
+        rxfifo_tout: u32,
+        sw_xon: u32,
+        sw_xoff: u32,
+        glitch_det: u32,
+        tx_brk_done: u32,
+        tx_brk_idle_done: u32,
+        tx_done: u32,
+        rs485_parity_err: u32,
+        rs485_frm_err: u32,
+        rs485_clash: u32,
+        at_cmd_char_det: u32,
+        reserved19: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u16> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u16> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let rxfifo_full: u32 = unsafe { ::core::mem::transmute(rxfifo_full) };
+            rxfifo_full as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let txfifo_empty: u32 = unsafe { ::core::mem::transmute(txfifo_empty) };
+            txfifo_empty as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let parity_err: u32 = unsafe { ::core::mem::transmute(parity_err) };
+            parity_err as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 1u8, {
+            let frm_err: u32 = unsafe { ::core::mem::transmute(frm_err) };
+            frm_err as u64
+        });
+        __bindgen_bitfield_unit.set(4usize, 1u8, {
+            let rxfifo_ovf: u32 = unsafe { ::core::mem::transmute(rxfifo_ovf) };
+            rxfifo_ovf as u64
+        });
+        __bindgen_bitfield_unit.set(5usize, 1u8, {
+            let dsr_chg: u32 = unsafe { ::core::mem::transmute(dsr_chg) };
+            dsr_chg as u64
+        });
+        __bindgen_bitfield_unit.set(6usize, 1u8, {
+            let cts_chg: u32 = unsafe { ::core::mem::transmute(cts_chg) };
+            cts_chg as u64
+        });
+        __bindgen_bitfield_unit.set(7usize, 1u8, {
+            let brk_det: u32 = unsafe { ::core::mem::transmute(brk_det) };
+            brk_det as u64
+        });
+        __bindgen_bitfield_unit.set(8usize, 1u8, {
+            let rxfifo_tout: u32 = unsafe { ::core::mem::transmute(rxfifo_tout) };
+            rxfifo_tout as u64
+        });
+        __bindgen_bitfield_unit.set(9usize, 1u8, {
+            let sw_xon: u32 = unsafe { ::core::mem::transmute(sw_xon) };
+            sw_xon as u64
+        });
+        __bindgen_bitfield_unit.set(10usize, 1u8, {
+            let sw_xoff: u32 = unsafe { ::core::mem::transmute(sw_xoff) };
+            sw_xoff as u64
+        });
+        __bindgen_bitfield_unit.set(11usize, 1u8, {
+            let glitch_det: u32 = unsafe { ::core::mem::transmute(glitch_det) };
+            glitch_det as u64
+        });
+        __bindgen_bitfield_unit.set(12usize, 1u8, {
+            let tx_brk_done: u32 = unsafe { ::core::mem::transmute(tx_brk_done) };
+            tx_brk_done as u64
+        });
+        __bindgen_bitfield_unit.set(13usize, 1u8, {
+            let tx_brk_idle_done: u32 = unsafe { ::core::mem::transmute(tx_brk_idle_done) };
+            tx_brk_idle_done as u64
+        });
+        __bindgen_bitfield_unit.set(14usize, 1u8, {
+            let tx_done: u32 = unsafe { ::core::mem::transmute(tx_done) };
+            tx_done as u64
+        });
+        __bindgen_bitfield_unit.set(15usize, 1u8, {
+            let rs485_parity_err: u32 = unsafe { ::core::mem::transmute(rs485_parity_err) };
+            rs485_parity_err as u64
+        });
+        __bindgen_bitfield_unit.set(16usize, 1u8, {
+            let rs485_frm_err: u32 = unsafe { ::core::mem::transmute(rs485_frm_err) };
+            rs485_frm_err as u64
+        });
+        __bindgen_bitfield_unit.set(17usize, 1u8, {
+            let rs485_clash: u32 = unsafe { ::core::mem::transmute(rs485_clash) };
+            rs485_clash as u64
+        });
+        __bindgen_bitfield_unit.set(18usize, 1u8, {
+            let at_cmd_char_det: u32 = unsafe { ::core::mem::transmute(at_cmd_char_det) };
+            at_cmd_char_det as u64
+        });
+        __bindgen_bitfield_unit.set(19usize, 13u8, {
+            let reserved19: u32 = unsafe { ::core::mem::transmute(reserved19) };
+            reserved19 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_5 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_5__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_5__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u16>,
+}
+impl uart_dev_s__bindgen_ty_5__bindgen_ty_1 {
+    #[inline]
+    pub fn rxfifo_full(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_full(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn txfifo_empty(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_txfifo_empty(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn parity_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_parity_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn frm_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_frm_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(3usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rxfifo_ovf(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_ovf(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(4usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn dsr_chg(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(5usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_dsr_chg(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(5usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn cts_chg(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(6usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_cts_chg(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(6usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn brk_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(7usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_brk_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(7usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rxfifo_tout(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_tout(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(8usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn sw_xon(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(9usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_sw_xon(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(9usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn sw_xoff(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(10usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_sw_xoff(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(10usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn glitch_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(11usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_glitch_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(11usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_brk_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(12usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_brk_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(12usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_brk_idle_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(13usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_brk_idle_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(13usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_done(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(14usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_done(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(14usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_parity_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(15usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_parity_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(15usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_frm_err(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(16usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_frm_err(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(16usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rs485_clash(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(17usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rs485_clash(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(17usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn at_cmd_char_det(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(18usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_at_cmd_char_det(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(18usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved19(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(19usize, 13u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved19(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(19usize, 13u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        rxfifo_full: u32,
+        txfifo_empty: u32,
+        parity_err: u32,
+        frm_err: u32,
+        rxfifo_ovf: u32,
+        dsr_chg: u32,
+        cts_chg: u32,
+        brk_det: u32,
+        rxfifo_tout: u32,
+        sw_xon: u32,
+        sw_xoff: u32,
+        glitch_det: u32,
+        tx_brk_done: u32,
+        tx_brk_idle_done: u32,
+        tx_done: u32,
+        rs485_parity_err: u32,
+        rs485_frm_err: u32,
+        rs485_clash: u32,
+        at_cmd_char_det: u32,
+        reserved19: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u16> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u16> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let rxfifo_full: u32 = unsafe { ::core::mem::transmute(rxfifo_full) };
+            rxfifo_full as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let txfifo_empty: u32 = unsafe { ::core::mem::transmute(txfifo_empty) };
+            txfifo_empty as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let parity_err: u32 = unsafe { ::core::mem::transmute(parity_err) };
+            parity_err as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 1u8, {
+            let frm_err: u32 = unsafe { ::core::mem::transmute(frm_err) };
+            frm_err as u64
+        });
+        __bindgen_bitfield_unit.set(4usize, 1u8, {
+            let rxfifo_ovf: u32 = unsafe { ::core::mem::transmute(rxfifo_ovf) };
+            rxfifo_ovf as u64
+        });
+        __bindgen_bitfield_unit.set(5usize, 1u8, {
+            let dsr_chg: u32 = unsafe { ::core::mem::transmute(dsr_chg) };
+            dsr_chg as u64
+        });
+        __bindgen_bitfield_unit.set(6usize, 1u8, {
+            let cts_chg: u32 = unsafe { ::core::mem::transmute(cts_chg) };
+            cts_chg as u64
+        });
+        __bindgen_bitfield_unit.set(7usize, 1u8, {
+            let brk_det: u32 = unsafe { ::core::mem::transmute(brk_det) };
+            brk_det as u64
+        });
+        __bindgen_bitfield_unit.set(8usize, 1u8, {
+            let rxfifo_tout: u32 = unsafe { ::core::mem::transmute(rxfifo_tout) };
+            rxfifo_tout as u64
+        });
+        __bindgen_bitfield_unit.set(9usize, 1u8, {
+            let sw_xon: u32 = unsafe { ::core::mem::transmute(sw_xon) };
+            sw_xon as u64
+        });
+        __bindgen_bitfield_unit.set(10usize, 1u8, {
+            let sw_xoff: u32 = unsafe { ::core::mem::transmute(sw_xoff) };
+            sw_xoff as u64
+        });
+        __bindgen_bitfield_unit.set(11usize, 1u8, {
+            let glitch_det: u32 = unsafe { ::core::mem::transmute(glitch_det) };
+            glitch_det as u64
+        });
+        __bindgen_bitfield_unit.set(12usize, 1u8, {
+            let tx_brk_done: u32 = unsafe { ::core::mem::transmute(tx_brk_done) };
+            tx_brk_done as u64
+        });
+        __bindgen_bitfield_unit.set(13usize, 1u8, {
+            let tx_brk_idle_done: u32 = unsafe { ::core::mem::transmute(tx_brk_idle_done) };
+            tx_brk_idle_done as u64
+        });
+        __bindgen_bitfield_unit.set(14usize, 1u8, {
+            let tx_done: u32 = unsafe { ::core::mem::transmute(tx_done) };
+            tx_done as u64
+        });
+        __bindgen_bitfield_unit.set(15usize, 1u8, {
+            let rs485_parity_err: u32 = unsafe { ::core::mem::transmute(rs485_parity_err) };
+            rs485_parity_err as u64
+        });
+        __bindgen_bitfield_unit.set(16usize, 1u8, {
+            let rs485_frm_err: u32 = unsafe { ::core::mem::transmute(rs485_frm_err) };
+            rs485_frm_err as u64
+        });
+        __bindgen_bitfield_unit.set(17usize, 1u8, {
+            let rs485_clash: u32 = unsafe { ::core::mem::transmute(rs485_clash) };
+            rs485_clash as u64
+        });
+        __bindgen_bitfield_unit.set(18usize, 1u8, {
+            let at_cmd_char_det: u32 = unsafe { ::core::mem::transmute(at_cmd_char_det) };
+            at_cmd_char_det as u64
+        });
+        __bindgen_bitfield_unit.set(19usize, 13u8, {
+            let reserved19: u32 = unsafe { ::core::mem::transmute(reserved19) };
+            reserved19 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_6 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_6__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_6__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_6__bindgen_ty_1 {
+    #[inline]
+    pub fn div_int(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 20u8) as u32) }
+    }
+    #[inline]
+    pub fn set_div_int(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 20u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn div_frag(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(20usize, 4u8) as u32) }
+    }
+    #[inline]
+    pub fn set_div_frag(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(20usize, 4u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved24(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(24usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved24(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(24usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        div_int: u32,
+        div_frag: u32,
+        reserved24: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 20u8, {
+            let div_int: u32 = unsafe { ::core::mem::transmute(div_int) };
+            div_int as u64
+        });
+        __bindgen_bitfield_unit.set(20usize, 4u8, {
+            let div_frag: u32 = unsafe { ::core::mem::transmute(div_frag) };
+            div_frag as u64
+        });
+        __bindgen_bitfield_unit.set(24usize, 8u8, {
+            let reserved24: u32 = unsafe { ::core::mem::transmute(reserved24) };
+            reserved24 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_7 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_7__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_7__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u16>,
+}
+impl uart_dev_s__bindgen_ty_7__bindgen_ty_1 {
+    #[inline]
+    pub fn en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved1(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 7u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved1(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(1usize, 7u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn glitch_filt(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_glitch_filt(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(8usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved16(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(16usize, 16u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved16(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(16usize, 16u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        en: u32,
+        reserved1: u32,
+        glitch_filt: u32,
+        reserved16: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u16> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u16> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let en: u32 = unsafe { ::core::mem::transmute(en) };
+            en as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 7u8, {
+            let reserved1: u32 = unsafe { ::core::mem::transmute(reserved1) };
+            reserved1 as u64
+        });
+        __bindgen_bitfield_unit.set(8usize, 8u8, {
+            let glitch_filt: u32 = unsafe { ::core::mem::transmute(glitch_filt) };
+            glitch_filt as u64
+        });
+        __bindgen_bitfield_unit.set(16usize, 16u8, {
+            let reserved16: u32 = unsafe { ::core::mem::transmute(reserved16) };
+            reserved16 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_8 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_8__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_8__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u8>,
+}
+impl uart_dev_s__bindgen_ty_8__bindgen_ty_1 {
+    #[inline]
+    pub fn rxfifo_cnt(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_cnt(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn st_urx_out(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 4u8) as u32) }
+    }
+    #[inline]
+    pub fn set_st_urx_out(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(8usize, 4u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved12(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(12usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved12(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(12usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn dsrn(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(13usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_dsrn(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(13usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn ctsn(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(14usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_ctsn(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(14usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rxd(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(15usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxd(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(15usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn txfifo_cnt(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(16usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_txfifo_cnt(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(16usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn st_utx_out(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(24usize, 4u8) as u32) }
+    }
+    #[inline]
+    pub fn set_st_utx_out(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(24usize, 4u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved28(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(28usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved28(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(28usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn dtrn(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(29usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_dtrn(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(29usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rtsn(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(30usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rtsn(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(30usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn txd(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(31usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_txd(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(31usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        rxfifo_cnt: u32,
+        st_urx_out: u32,
+        reserved12: u32,
+        dsrn: u32,
+        ctsn: u32,
+        rxd: u32,
+        txfifo_cnt: u32,
+        st_utx_out: u32,
+        reserved28: u32,
+        dtrn: u32,
+        rtsn: u32,
+        txd: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u8> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u8> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 8u8, {
+            let rxfifo_cnt: u32 = unsafe { ::core::mem::transmute(rxfifo_cnt) };
+            rxfifo_cnt as u64
+        });
+        __bindgen_bitfield_unit.set(8usize, 4u8, {
+            let st_urx_out: u32 = unsafe { ::core::mem::transmute(st_urx_out) };
+            st_urx_out as u64
+        });
+        __bindgen_bitfield_unit.set(12usize, 1u8, {
+            let reserved12: u32 = unsafe { ::core::mem::transmute(reserved12) };
+            reserved12 as u64
+        });
+        __bindgen_bitfield_unit.set(13usize, 1u8, {
+            let dsrn: u32 = unsafe { ::core::mem::transmute(dsrn) };
+            dsrn as u64
+        });
+        __bindgen_bitfield_unit.set(14usize, 1u8, {
+            let ctsn: u32 = unsafe { ::core::mem::transmute(ctsn) };
+            ctsn as u64
+        });
+        __bindgen_bitfield_unit.set(15usize, 1u8, {
+            let rxd: u32 = unsafe { ::core::mem::transmute(rxd) };
+            rxd as u64
+        });
+        __bindgen_bitfield_unit.set(16usize, 8u8, {
+            let txfifo_cnt: u32 = unsafe { ::core::mem::transmute(txfifo_cnt) };
+            txfifo_cnt as u64
+        });
+        __bindgen_bitfield_unit.set(24usize, 4u8, {
+            let st_utx_out: u32 = unsafe { ::core::mem::transmute(st_utx_out) };
+            st_utx_out as u64
+        });
+        __bindgen_bitfield_unit.set(28usize, 1u8, {
+            let reserved28: u32 = unsafe { ::core::mem::transmute(reserved28) };
+            reserved28 as u64
+        });
+        __bindgen_bitfield_unit.set(29usize, 1u8, {
+            let dtrn: u32 = unsafe { ::core::mem::transmute(dtrn) };
+            dtrn as u64
+        });
+        __bindgen_bitfield_unit.set(30usize, 1u8, {
+            let rtsn: u32 = unsafe { ::core::mem::transmute(rtsn) };
+            rtsn as u64
+        });
+        __bindgen_bitfield_unit.set(31usize, 1u8, {
+            let txd: u32 = unsafe { ::core::mem::transmute(txd) };
+            txd as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_9 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_9__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_9__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u8>,
+}
+impl uart_dev_s__bindgen_ty_9__bindgen_ty_1 {
+    #[inline]
+    pub fn parity(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_parity(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn parity_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_parity_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn bit_num(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 2u8) as u32) }
+    }
+    #[inline]
+    pub fn set_bit_num(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(2usize, 2u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn stop_bit_num(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(4usize, 2u8) as u32) }
+    }
+    #[inline]
+    pub fn set_stop_bit_num(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(4usize, 2u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn sw_rts(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(6usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_sw_rts(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(6usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn sw_dtr(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(7usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_sw_dtr(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(7usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn txd_brk(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_txd_brk(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(8usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn irda_dplx(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(9usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_irda_dplx(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(9usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn irda_tx_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(10usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_irda_tx_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(10usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn irda_wctl(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(11usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_irda_wctl(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(11usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn irda_tx_inv(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(12usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_irda_tx_inv(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(12usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn irda_rx_inv(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(13usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_irda_rx_inv(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(13usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn loopback(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(14usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_loopback(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(14usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_flow_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(15usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_flow_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(15usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn irda_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(16usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_irda_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(16usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rxfifo_rst(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(17usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_rst(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(17usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn txfifo_rst(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(18usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_txfifo_rst(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(18usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rxd_inv(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(19usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxd_inv(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(19usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn cts_inv(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(20usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_cts_inv(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(20usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn dsr_inv(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(21usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_dsr_inv(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(21usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn txd_inv(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(22usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_txd_inv(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(22usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rts_inv(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(23usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rts_inv(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(23usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn dtr_inv(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(24usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_dtr_inv(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(24usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn clk_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(25usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_clk_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(25usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn err_wr_mask(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(26usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_err_wr_mask(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(26usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tick_ref_always_on(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(27usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tick_ref_always_on(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(27usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved28(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(28usize, 4u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved28(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(28usize, 4u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        parity: u32,
+        parity_en: u32,
+        bit_num: u32,
+        stop_bit_num: u32,
+        sw_rts: u32,
+        sw_dtr: u32,
+        txd_brk: u32,
+        irda_dplx: u32,
+        irda_tx_en: u32,
+        irda_wctl: u32,
+        irda_tx_inv: u32,
+        irda_rx_inv: u32,
+        loopback: u32,
+        tx_flow_en: u32,
+        irda_en: u32,
+        rxfifo_rst: u32,
+        txfifo_rst: u32,
+        rxd_inv: u32,
+        cts_inv: u32,
+        dsr_inv: u32,
+        txd_inv: u32,
+        rts_inv: u32,
+        dtr_inv: u32,
+        clk_en: u32,
+        err_wr_mask: u32,
+        tick_ref_always_on: u32,
+        reserved28: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u8> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u8> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let parity: u32 = unsafe { ::core::mem::transmute(parity) };
+            parity as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let parity_en: u32 = unsafe { ::core::mem::transmute(parity_en) };
+            parity_en as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 2u8, {
+            let bit_num: u32 = unsafe { ::core::mem::transmute(bit_num) };
+            bit_num as u64
+        });
+        __bindgen_bitfield_unit.set(4usize, 2u8, {
+            let stop_bit_num: u32 = unsafe { ::core::mem::transmute(stop_bit_num) };
+            stop_bit_num as u64
+        });
+        __bindgen_bitfield_unit.set(6usize, 1u8, {
+            let sw_rts: u32 = unsafe { ::core::mem::transmute(sw_rts) };
+            sw_rts as u64
+        });
+        __bindgen_bitfield_unit.set(7usize, 1u8, {
+            let sw_dtr: u32 = unsafe { ::core::mem::transmute(sw_dtr) };
+            sw_dtr as u64
+        });
+        __bindgen_bitfield_unit.set(8usize, 1u8, {
+            let txd_brk: u32 = unsafe { ::core::mem::transmute(txd_brk) };
+            txd_brk as u64
+        });
+        __bindgen_bitfield_unit.set(9usize, 1u8, {
+            let irda_dplx: u32 = unsafe { ::core::mem::transmute(irda_dplx) };
+            irda_dplx as u64
+        });
+        __bindgen_bitfield_unit.set(10usize, 1u8, {
+            let irda_tx_en: u32 = unsafe { ::core::mem::transmute(irda_tx_en) };
+            irda_tx_en as u64
+        });
+        __bindgen_bitfield_unit.set(11usize, 1u8, {
+            let irda_wctl: u32 = unsafe { ::core::mem::transmute(irda_wctl) };
+            irda_wctl as u64
+        });
+        __bindgen_bitfield_unit.set(12usize, 1u8, {
+            let irda_tx_inv: u32 = unsafe { ::core::mem::transmute(irda_tx_inv) };
+            irda_tx_inv as u64
+        });
+        __bindgen_bitfield_unit.set(13usize, 1u8, {
+            let irda_rx_inv: u32 = unsafe { ::core::mem::transmute(irda_rx_inv) };
+            irda_rx_inv as u64
+        });
+        __bindgen_bitfield_unit.set(14usize, 1u8, {
+            let loopback: u32 = unsafe { ::core::mem::transmute(loopback) };
+            loopback as u64
+        });
+        __bindgen_bitfield_unit.set(15usize, 1u8, {
+            let tx_flow_en: u32 = unsafe { ::core::mem::transmute(tx_flow_en) };
+            tx_flow_en as u64
+        });
+        __bindgen_bitfield_unit.set(16usize, 1u8, {
+            let irda_en: u32 = unsafe { ::core::mem::transmute(irda_en) };
+            irda_en as u64
+        });
+        __bindgen_bitfield_unit.set(17usize, 1u8, {
+            let rxfifo_rst: u32 = unsafe { ::core::mem::transmute(rxfifo_rst) };
+            rxfifo_rst as u64
+        });
+        __bindgen_bitfield_unit.set(18usize, 1u8, {
+            let txfifo_rst: u32 = unsafe { ::core::mem::transmute(txfifo_rst) };
+            txfifo_rst as u64
+        });
+        __bindgen_bitfield_unit.set(19usize, 1u8, {
+            let rxd_inv: u32 = unsafe { ::core::mem::transmute(rxd_inv) };
+            rxd_inv as u64
+        });
+        __bindgen_bitfield_unit.set(20usize, 1u8, {
+            let cts_inv: u32 = unsafe { ::core::mem::transmute(cts_inv) };
+            cts_inv as u64
+        });
+        __bindgen_bitfield_unit.set(21usize, 1u8, {
+            let dsr_inv: u32 = unsafe { ::core::mem::transmute(dsr_inv) };
+            dsr_inv as u64
+        });
+        __bindgen_bitfield_unit.set(22usize, 1u8, {
+            let txd_inv: u32 = unsafe { ::core::mem::transmute(txd_inv) };
+            txd_inv as u64
+        });
+        __bindgen_bitfield_unit.set(23usize, 1u8, {
+            let rts_inv: u32 = unsafe { ::core::mem::transmute(rts_inv) };
+            rts_inv as u64
+        });
+        __bindgen_bitfield_unit.set(24usize, 1u8, {
+            let dtr_inv: u32 = unsafe { ::core::mem::transmute(dtr_inv) };
+            dtr_inv as u64
+        });
+        __bindgen_bitfield_unit.set(25usize, 1u8, {
+            let clk_en: u32 = unsafe { ::core::mem::transmute(clk_en) };
+            clk_en as u64
+        });
+        __bindgen_bitfield_unit.set(26usize, 1u8, {
+            let err_wr_mask: u32 = unsafe { ::core::mem::transmute(err_wr_mask) };
+            err_wr_mask as u64
+        });
+        __bindgen_bitfield_unit.set(27usize, 1u8, {
+            let tick_ref_always_on: u32 = unsafe { ::core::mem::transmute(tick_ref_always_on) };
+            tick_ref_always_on as u64
+        });
+        __bindgen_bitfield_unit.set(28usize, 4u8, {
+            let reserved28: u32 = unsafe { ::core::mem::transmute(reserved28) };
+            reserved28 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_10 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_10__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_10__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u8>,
+}
+impl uart_dev_s__bindgen_ty_10__bindgen_ty_1 {
+    #[inline]
+    pub fn rxfifo_full_thrhd(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 7u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rxfifo_full_thrhd(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 7u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved7(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(7usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved7(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(7usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn txfifo_empty_thrhd(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 7u8) as u32) }
+    }
+    #[inline]
+    pub fn set_txfifo_empty_thrhd(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(8usize, 7u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved15(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(15usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved15(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(15usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rx_flow_thrhd(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(16usize, 7u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_flow_thrhd(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(16usize, 7u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rx_flow_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(23usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_flow_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(23usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rx_tout_thrhd(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(24usize, 7u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_tout_thrhd(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(24usize, 7u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rx_tout_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(31usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_tout_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(31usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        rxfifo_full_thrhd: u32,
+        reserved7: u32,
+        txfifo_empty_thrhd: u32,
+        reserved15: u32,
+        rx_flow_thrhd: u32,
+        rx_flow_en: u32,
+        rx_tout_thrhd: u32,
+        rx_tout_en: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u8> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u8> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 7u8, {
+            let rxfifo_full_thrhd: u32 = unsafe { ::core::mem::transmute(rxfifo_full_thrhd) };
+            rxfifo_full_thrhd as u64
+        });
+        __bindgen_bitfield_unit.set(7usize, 1u8, {
+            let reserved7: u32 = unsafe { ::core::mem::transmute(reserved7) };
+            reserved7 as u64
+        });
+        __bindgen_bitfield_unit.set(8usize, 7u8, {
+            let txfifo_empty_thrhd: u32 = unsafe { ::core::mem::transmute(txfifo_empty_thrhd) };
+            txfifo_empty_thrhd as u64
+        });
+        __bindgen_bitfield_unit.set(15usize, 1u8, {
+            let reserved15: u32 = unsafe { ::core::mem::transmute(reserved15) };
+            reserved15 as u64
+        });
+        __bindgen_bitfield_unit.set(16usize, 7u8, {
+            let rx_flow_thrhd: u32 = unsafe { ::core::mem::transmute(rx_flow_thrhd) };
+            rx_flow_thrhd as u64
+        });
+        __bindgen_bitfield_unit.set(23usize, 1u8, {
+            let rx_flow_en: u32 = unsafe { ::core::mem::transmute(rx_flow_en) };
+            rx_flow_en as u64
+        });
+        __bindgen_bitfield_unit.set(24usize, 7u8, {
+            let rx_tout_thrhd: u32 = unsafe { ::core::mem::transmute(rx_tout_thrhd) };
+            rx_tout_thrhd as u64
+        });
+        __bindgen_bitfield_unit.set(31usize, 1u8, {
+            let rx_tout_en: u32 = unsafe { ::core::mem::transmute(rx_tout_en) };
+            rx_tout_en as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_11 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_11__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_11__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_11__bindgen_ty_1 {
+    #[inline]
+    pub fn min_cnt(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 20u8) as u32) }
+    }
+    #[inline]
+    pub fn set_min_cnt(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 20u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved20(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(20usize, 12u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved20(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(20usize, 12u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        min_cnt: u32,
+        reserved20: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 20u8, {
+            let min_cnt: u32 = unsafe { ::core::mem::transmute(min_cnt) };
+            min_cnt as u64
+        });
+        __bindgen_bitfield_unit.set(20usize, 12u8, {
+            let reserved20: u32 = unsafe { ::core::mem::transmute(reserved20) };
+            reserved20 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_12 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_12__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_12__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_12__bindgen_ty_1 {
+    #[inline]
+    pub fn min_cnt(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 20u8) as u32) }
+    }
+    #[inline]
+    pub fn set_min_cnt(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 20u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved20(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(20usize, 12u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved20(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(20usize, 12u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        min_cnt: u32,
+        reserved20: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 20u8, {
+            let min_cnt: u32 = unsafe { ::core::mem::transmute(min_cnt) };
+            min_cnt as u64
+        });
+        __bindgen_bitfield_unit.set(20usize, 12u8, {
+            let reserved20: u32 = unsafe { ::core::mem::transmute(reserved20) };
+            reserved20 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_13 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_13__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_13__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_13__bindgen_ty_1 {
+    #[inline]
+    pub fn edge_cnt(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 10u8) as u32) }
+    }
+    #[inline]
+    pub fn set_edge_cnt(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 10u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved10(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(10usize, 22u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved10(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(10usize, 22u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        edge_cnt: u32,
+        reserved10: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 10u8, {
+            let edge_cnt: u32 = unsafe { ::core::mem::transmute(edge_cnt) };
+            edge_cnt as u64
+        });
+        __bindgen_bitfield_unit.set(10usize, 22u8, {
+            let reserved10: u32 = unsafe { ::core::mem::transmute(reserved10) };
+            reserved10 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_14 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_14__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_14__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_14__bindgen_ty_1 {
+    #[inline]
+    pub fn sw_flow_con_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_sw_flow_con_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn xonoff_del(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_xonoff_del(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn force_xon(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_force_xon(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn force_xoff(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_force_xoff(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(3usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn send_xon(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_send_xon(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(4usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn send_xoff(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(5usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_send_xoff(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(5usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved6(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(6usize, 26u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved6(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(6usize, 26u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        sw_flow_con_en: u32,
+        xonoff_del: u32,
+        force_xon: u32,
+        force_xoff: u32,
+        send_xon: u32,
+        send_xoff: u32,
+        reserved6: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let sw_flow_con_en: u32 = unsafe { ::core::mem::transmute(sw_flow_con_en) };
+            sw_flow_con_en as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let xonoff_del: u32 = unsafe { ::core::mem::transmute(xonoff_del) };
+            xonoff_del as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let force_xon: u32 = unsafe { ::core::mem::transmute(force_xon) };
+            force_xon as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 1u8, {
+            let force_xoff: u32 = unsafe { ::core::mem::transmute(force_xoff) };
+            force_xoff as u64
+        });
+        __bindgen_bitfield_unit.set(4usize, 1u8, {
+            let send_xon: u32 = unsafe { ::core::mem::transmute(send_xon) };
+            send_xon as u64
+        });
+        __bindgen_bitfield_unit.set(5usize, 1u8, {
+            let send_xoff: u32 = unsafe { ::core::mem::transmute(send_xoff) };
+            send_xoff as u64
+        });
+        __bindgen_bitfield_unit.set(6usize, 26u8, {
+            let reserved6: u32 = unsafe { ::core::mem::transmute(reserved6) };
+            reserved6 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_15 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_15__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_15__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_15__bindgen_ty_1 {
+    #[inline]
+    pub fn active_threshold(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 10u8) as u32) }
+    }
+    #[inline]
+    pub fn set_active_threshold(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 10u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved10(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(10usize, 22u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved10(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(10usize, 22u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        active_threshold: u32,
+        reserved10: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 10u8, {
+            let active_threshold: u32 = unsafe { ::core::mem::transmute(active_threshold) };
+            active_threshold as u64
+        });
+        __bindgen_bitfield_unit.set(10usize, 22u8, {
+            let reserved10: u32 = unsafe { ::core::mem::transmute(reserved10) };
+            reserved10 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_16 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_16__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_16__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u8>,
+}
+impl uart_dev_s__bindgen_ty_16__bindgen_ty_1 {
+    #[inline]
+    pub fn xon_threshold(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_xon_threshold(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn xoff_threshold(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_xoff_threshold(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(8usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn xon_char(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(16usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_xon_char(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(16usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn xoff_char(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(24usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_xoff_char(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(24usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        xon_threshold: u32,
+        xoff_threshold: u32,
+        xon_char: u32,
+        xoff_char: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u8> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u8> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 8u8, {
+            let xon_threshold: u32 = unsafe { ::core::mem::transmute(xon_threshold) };
+            xon_threshold as u64
+        });
+        __bindgen_bitfield_unit.set(8usize, 8u8, {
+            let xoff_threshold: u32 = unsafe { ::core::mem::transmute(xoff_threshold) };
+            xoff_threshold as u64
+        });
+        __bindgen_bitfield_unit.set(16usize, 8u8, {
+            let xon_char: u32 = unsafe { ::core::mem::transmute(xon_char) };
+            xon_char as u64
+        });
+        __bindgen_bitfield_unit.set(24usize, 8u8, {
+            let xoff_char: u32 = unsafe { ::core::mem::transmute(xoff_char) };
+            xoff_char as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_17 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_17__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_17__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u16>,
+}
+impl uart_dev_s__bindgen_ty_17__bindgen_ty_1 {
+    #[inline]
+    pub fn rx_idle_thrhd(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 10u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_idle_thrhd(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 10u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_idle_num(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(10usize, 10u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_idle_num(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(10usize, 10u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_brk_num(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(20usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_brk_num(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(20usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved28(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(28usize, 4u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved28(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(28usize, 4u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        rx_idle_thrhd: u32,
+        tx_idle_num: u32,
+        tx_brk_num: u32,
+        reserved28: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u16> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u16> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 10u8, {
+            let rx_idle_thrhd: u32 = unsafe { ::core::mem::transmute(rx_idle_thrhd) };
+            rx_idle_thrhd as u64
+        });
+        __bindgen_bitfield_unit.set(10usize, 10u8, {
+            let tx_idle_num: u32 = unsafe { ::core::mem::transmute(tx_idle_num) };
+            tx_idle_num as u64
+        });
+        __bindgen_bitfield_unit.set(20usize, 8u8, {
+            let tx_brk_num: u32 = unsafe { ::core::mem::transmute(tx_brk_num) };
+            tx_brk_num as u64
+        });
+        __bindgen_bitfield_unit.set(28usize, 4u8, {
+            let reserved28: u32 = unsafe { ::core::mem::transmute(reserved28) };
+            reserved28 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_18 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_18__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_18__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_18__bindgen_ty_1 {
+    #[inline]
+    pub fn en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn dl0_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_dl0_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn dl1_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_dl1_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_rx_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_rx_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(3usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rx_busy_tx_en(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_busy_tx_en(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(4usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rx_dly_num(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(5usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_dly_num(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(5usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_dly_num(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(6usize, 4u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_dly_num(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(6usize, 4u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved10(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(10usize, 22u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved10(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(10usize, 22u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        en: u32,
+        dl0_en: u32,
+        dl1_en: u32,
+        tx_rx_en: u32,
+        rx_busy_tx_en: u32,
+        rx_dly_num: u32,
+        tx_dly_num: u32,
+        reserved10: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let en: u32 = unsafe { ::core::mem::transmute(en) };
+            en as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let dl0_en: u32 = unsafe { ::core::mem::transmute(dl0_en) };
+            dl0_en as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let dl1_en: u32 = unsafe { ::core::mem::transmute(dl1_en) };
+            dl1_en as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 1u8, {
+            let tx_rx_en: u32 = unsafe { ::core::mem::transmute(tx_rx_en) };
+            tx_rx_en as u64
+        });
+        __bindgen_bitfield_unit.set(4usize, 1u8, {
+            let rx_busy_tx_en: u32 = unsafe { ::core::mem::transmute(rx_busy_tx_en) };
+            rx_busy_tx_en as u64
+        });
+        __bindgen_bitfield_unit.set(5usize, 1u8, {
+            let rx_dly_num: u32 = unsafe { ::core::mem::transmute(rx_dly_num) };
+            rx_dly_num as u64
+        });
+        __bindgen_bitfield_unit.set(6usize, 4u8, {
+            let tx_dly_num: u32 = unsafe { ::core::mem::transmute(tx_dly_num) };
+            tx_dly_num as u64
+        });
+        __bindgen_bitfield_unit.set(10usize, 22u8, {
+            let reserved10: u32 = unsafe { ::core::mem::transmute(reserved10) };
+            reserved10 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_19 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_19__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_19__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_19__bindgen_ty_1 {
+    #[inline]
+    pub fn pre_idle_num(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 24u8) as u32) }
+    }
+    #[inline]
+    pub fn set_pre_idle_num(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 24u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved24(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(24usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved24(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(24usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        pre_idle_num: u32,
+        reserved24: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 24u8, {
+            let pre_idle_num: u32 = unsafe { ::core::mem::transmute(pre_idle_num) };
+            pre_idle_num as u64
+        });
+        __bindgen_bitfield_unit.set(24usize, 8u8, {
+            let reserved24: u32 = unsafe { ::core::mem::transmute(reserved24) };
+            reserved24 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_20 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_20__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_20__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_20__bindgen_ty_1 {
+    #[inline]
+    pub fn post_idle_num(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 24u8) as u32) }
+    }
+    #[inline]
+    pub fn set_post_idle_num(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 24u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved24(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(24usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved24(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(24usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        post_idle_num: u32,
+        reserved24: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 24u8, {
+            let post_idle_num: u32 = unsafe { ::core::mem::transmute(post_idle_num) };
+            post_idle_num as u64
+        });
+        __bindgen_bitfield_unit.set(24usize, 8u8, {
+            let reserved24: u32 = unsafe { ::core::mem::transmute(reserved24) };
+            reserved24 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_21 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_21__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_21__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_21__bindgen_ty_1 {
+    #[inline]
+    pub fn rx_gap_tout(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 24u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_gap_tout(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 24u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved24(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(24usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved24(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(24usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        rx_gap_tout: u32,
+        reserved24: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 24u8, {
+            let rx_gap_tout: u32 = unsafe { ::core::mem::transmute(rx_gap_tout) };
+            rx_gap_tout as u64
+        });
+        __bindgen_bitfield_unit.set(24usize, 8u8, {
+            let reserved24: u32 = unsafe { ::core::mem::transmute(reserved24) };
+            reserved24 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_22 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_22__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_22__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u16>,
+}
+impl uart_dev_s__bindgen_ty_22__bindgen_ty_1 {
+    #[inline]
+    pub fn data(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_data(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn char_num(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_char_num(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(8usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved16(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(16usize, 16u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved16(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(16usize, 16u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        data: u32,
+        char_num: u32,
+        reserved16: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u16> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u16> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 8u8, {
+            let data: u32 = unsafe { ::core::mem::transmute(data) };
+            data as u64
+        });
+        __bindgen_bitfield_unit.set(8usize, 8u8, {
+            let char_num: u32 = unsafe { ::core::mem::transmute(char_num) };
+            char_num as u64
+        });
+        __bindgen_bitfield_unit.set(16usize, 16u8, {
+            let reserved16: u32 = unsafe { ::core::mem::transmute(reserved16) };
+            reserved16 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_23 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_23__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_23__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u8>,
+}
+impl uart_dev_s__bindgen_ty_23__bindgen_ty_1 {
+    #[inline]
+    pub fn mem_pd(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_mem_pd(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved1(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved1(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(1usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved2(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved2(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(2usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rx_size(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(3usize, 4u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_size(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(3usize, 4u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_size(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(7usize, 4u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_size(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(7usize, 4u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved11(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(11usize, 4u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved11(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(11usize, 4u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rx_flow_thrhd_h3(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(15usize, 3u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_flow_thrhd_h3(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(15usize, 3u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rx_tout_thrhd_h3(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(18usize, 3u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_tout_thrhd_h3(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(18usize, 3u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn xon_threshold_h2(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(21usize, 2u8) as u32) }
+    }
+    #[inline]
+    pub fn set_xon_threshold_h2(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(21usize, 2u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn xoff_threshold_h2(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(23usize, 2u8) as u32) }
+    }
+    #[inline]
+    pub fn set_xoff_threshold_h2(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(23usize, 2u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rx_mem_full_thrhd(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(25usize, 3u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_mem_full_thrhd(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(25usize, 3u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_mem_empty_thrhd(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(28usize, 3u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_mem_empty_thrhd(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(28usize, 3u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved31(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(31usize, 1u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved31(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(31usize, 1u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        mem_pd: u32,
+        reserved1: u32,
+        reserved2: u32,
+        rx_size: u32,
+        tx_size: u32,
+        reserved11: u32,
+        rx_flow_thrhd_h3: u32,
+        rx_tout_thrhd_h3: u32,
+        xon_threshold_h2: u32,
+        xoff_threshold_h2: u32,
+        rx_mem_full_thrhd: u32,
+        tx_mem_empty_thrhd: u32,
+        reserved31: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u8> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u8> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 1u8, {
+            let mem_pd: u32 = unsafe { ::core::mem::transmute(mem_pd) };
+            mem_pd as u64
+        });
+        __bindgen_bitfield_unit.set(1usize, 1u8, {
+            let reserved1: u32 = unsafe { ::core::mem::transmute(reserved1) };
+            reserved1 as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 1u8, {
+            let reserved2: u32 = unsafe { ::core::mem::transmute(reserved2) };
+            reserved2 as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 4u8, {
+            let rx_size: u32 = unsafe { ::core::mem::transmute(rx_size) };
+            rx_size as u64
+        });
+        __bindgen_bitfield_unit.set(7usize, 4u8, {
+            let tx_size: u32 = unsafe { ::core::mem::transmute(tx_size) };
+            tx_size as u64
+        });
+        __bindgen_bitfield_unit.set(11usize, 4u8, {
+            let reserved11: u32 = unsafe { ::core::mem::transmute(reserved11) };
+            reserved11 as u64
+        });
+        __bindgen_bitfield_unit.set(15usize, 3u8, {
+            let rx_flow_thrhd_h3: u32 = unsafe { ::core::mem::transmute(rx_flow_thrhd_h3) };
+            rx_flow_thrhd_h3 as u64
+        });
+        __bindgen_bitfield_unit.set(18usize, 3u8, {
+            let rx_tout_thrhd_h3: u32 = unsafe { ::core::mem::transmute(rx_tout_thrhd_h3) };
+            rx_tout_thrhd_h3 as u64
+        });
+        __bindgen_bitfield_unit.set(21usize, 2u8, {
+            let xon_threshold_h2: u32 = unsafe { ::core::mem::transmute(xon_threshold_h2) };
+            xon_threshold_h2 as u64
+        });
+        __bindgen_bitfield_unit.set(23usize, 2u8, {
+            let xoff_threshold_h2: u32 = unsafe { ::core::mem::transmute(xoff_threshold_h2) };
+            xoff_threshold_h2 as u64
+        });
+        __bindgen_bitfield_unit.set(25usize, 3u8, {
+            let rx_mem_full_thrhd: u32 = unsafe { ::core::mem::transmute(rx_mem_full_thrhd) };
+            rx_mem_full_thrhd as u64
+        });
+        __bindgen_bitfield_unit.set(28usize, 3u8, {
+            let tx_mem_empty_thrhd: u32 = unsafe { ::core::mem::transmute(tx_mem_empty_thrhd) };
+            tx_mem_empty_thrhd as u64
+        });
+        __bindgen_bitfield_unit.set(31usize, 1u8, {
+            let reserved31: u32 = unsafe { ::core::mem::transmute(reserved31) };
+            reserved31 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_24 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_24__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_24__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_24__bindgen_ty_1 {
+    #[inline]
+    pub fn status(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 24u8) as u32) }
+    }
+    #[inline]
+    pub fn set_status(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 24u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved24(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(24usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved24(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(24usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        status: u32,
+        reserved24: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 24u8, {
+            let status: u32 = unsafe { ::core::mem::transmute(status) };
+            status as u64
+        });
+        __bindgen_bitfield_unit.set(24usize, 8u8, {
+            let reserved24: u32 = unsafe { ::core::mem::transmute(reserved24) };
+            reserved24 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_25 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_25__bindgen_ty_1,
+    pub __bindgen_anon_2: uart_dev_s__bindgen_ty_25__bindgen_ty_2,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_25__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_25__bindgen_ty_1 {
+    #[inline]
+    pub fn status(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 24u8) as u32) }
+    }
+    #[inline]
+    pub fn set_status(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 24u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved24(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(24usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved24(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(24usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        status: u32,
+        reserved24: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 24u8, {
+            let status: u32 = unsafe { ::core::mem::transmute(status) };
+            status as u64
+        });
+        __bindgen_bitfield_unit.set(24usize, 8u8, {
+            let reserved24: u32 = unsafe { ::core::mem::transmute(reserved24) };
+            reserved24 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_25__bindgen_ty_2 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u16>,
+}
+impl uart_dev_s__bindgen_ty_25__bindgen_ty_2 {
+    #[inline]
+    pub fn reserved0(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 2u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved0(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 2u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn rd_addr(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 11u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rd_addr(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(2usize, 11u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn wr_addr(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(13usize, 11u8) as u32) }
+    }
+    #[inline]
+    pub fn set_wr_addr(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(13usize, 11u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(24usize, 8u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(24usize, 8u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        reserved0: u32,
+        rd_addr: u32,
+        wr_addr: u32,
+        reserved: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u16> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u16> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 2u8, {
+            let reserved0: u32 = unsafe { ::core::mem::transmute(reserved0) };
+            reserved0 as u64
+        });
+        __bindgen_bitfield_unit.set(2usize, 11u8, {
+            let rd_addr: u32 = unsafe { ::core::mem::transmute(rd_addr) };
+            rd_addr as u64
+        });
+        __bindgen_bitfield_unit.set(13usize, 11u8, {
+            let wr_addr: u32 = unsafe { ::core::mem::transmute(wr_addr) };
+            wr_addr as u64
+        });
+        __bindgen_bitfield_unit.set(24usize, 8u8, {
+            let reserved: u32 = unsafe { ::core::mem::transmute(reserved) };
+            reserved as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_26 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_26__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_26__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_26__bindgen_ty_1 {
+    #[inline]
+    pub fn rx_cnt(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 3u8) as u32) }
+    }
+    #[inline]
+    pub fn set_rx_cnt(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 3u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn tx_cnt(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(3usize, 3u8) as u32) }
+    }
+    #[inline]
+    pub fn set_tx_cnt(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(3usize, 3u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved6(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(6usize, 26u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved6(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(6usize, 26u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        rx_cnt: u32,
+        tx_cnt: u32,
+        reserved6: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 3u8, {
+            let rx_cnt: u32 = unsafe { ::core::mem::transmute(rx_cnt) };
+            rx_cnt as u64
+        });
+        __bindgen_bitfield_unit.set(3usize, 3u8, {
+            let tx_cnt: u32 = unsafe { ::core::mem::transmute(tx_cnt) };
+            tx_cnt as u64
+        });
+        __bindgen_bitfield_unit.set(6usize, 26u8, {
+            let reserved6: u32 = unsafe { ::core::mem::transmute(reserved6) };
+            reserved6 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_27 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_27__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_27__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_27__bindgen_ty_1 {
+    #[inline]
+    pub fn min_cnt(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 20u8) as u32) }
+    }
+    #[inline]
+    pub fn set_min_cnt(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 20u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved20(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(20usize, 12u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved20(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(20usize, 12u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        min_cnt: u32,
+        reserved20: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 20u8, {
+            let min_cnt: u32 = unsafe { ::core::mem::transmute(min_cnt) };
+            min_cnt as u64
+        });
+        __bindgen_bitfield_unit.set(20usize, 12u8, {
+            let reserved20: u32 = unsafe { ::core::mem::transmute(reserved20) };
+            reserved20 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union uart_dev_s__bindgen_ty_28 {
+    pub __bindgen_anon_1: uart_dev_s__bindgen_ty_28__bindgen_ty_1,
+    pub val: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[repr(align(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_dev_s__bindgen_ty_28__bindgen_ty_1 {
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
+}
+impl uart_dev_s__bindgen_ty_28__bindgen_ty_1 {
+    #[inline]
+    pub fn min_cnt(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 20u8) as u32) }
+    }
+    #[inline]
+    pub fn set_min_cnt(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(0usize, 20u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn reserved20(&self) -> u32 {
+        unsafe { ::core::mem::transmute(self._bitfield_1.get(20usize, 12u8) as u32) }
+    }
+    #[inline]
+    pub fn set_reserved20(&mut self, val: u32) {
+        unsafe {
+            let val: u32 = ::core::mem::transmute(val);
+            self._bitfield_1.set(20usize, 12u8, val as u64)
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(
+        min_cnt: u32,
+        reserved20: u32,
+    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
+        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
+            Default::default();
+        __bindgen_bitfield_unit.set(0usize, 20u8, {
+            let min_cnt: u32 = unsafe { ::core::mem::transmute(min_cnt) };
+            min_cnt as u64
+        });
+        __bindgen_bitfield_unit.set(20usize, 12u8, {
+            let reserved20: u32 = unsafe { ::core::mem::transmute(reserved20) };
+            reserved20 as u64
+        });
+        __bindgen_bitfield_unit
+    }
+}
+pub type uart_dev_t = uart_dev_s;
+extern "C" {
+    pub static mut UART0: uart_dev_t;
+}
+extern "C" {
+    pub static mut UART1: uart_dev_t;
+}
+extern "C" {
+    pub static mut UART2: uart_dev_t;
+}
+pub const periph_module_t_PERIPH_LEDC_MODULE: periph_module_t = 0;
+pub const periph_module_t_PERIPH_UART0_MODULE: periph_module_t = 1;
+pub const periph_module_t_PERIPH_UART1_MODULE: periph_module_t = 2;
+pub const periph_module_t_PERIPH_UART2_MODULE: periph_module_t = 3;
+pub const periph_module_t_PERIPH_I2C0_MODULE: periph_module_t = 4;
+pub const periph_module_t_PERIPH_I2C1_MODULE: periph_module_t = 5;
+pub const periph_module_t_PERIPH_I2S0_MODULE: periph_module_t = 6;
+pub const periph_module_t_PERIPH_I2S1_MODULE: periph_module_t = 7;
+pub const periph_module_t_PERIPH_TIMG0_MODULE: periph_module_t = 8;
+pub const periph_module_t_PERIPH_TIMG1_MODULE: periph_module_t = 9;
+pub const periph_module_t_PERIPH_PWM0_MODULE: periph_module_t = 10;
+pub const periph_module_t_PERIPH_PWM1_MODULE: periph_module_t = 11;
+pub const periph_module_t_PERIPH_PWM2_MODULE: periph_module_t = 12;
+pub const periph_module_t_PERIPH_PWM3_MODULE: periph_module_t = 13;
+pub const periph_module_t_PERIPH_UHCI0_MODULE: periph_module_t = 14;
+pub const periph_module_t_PERIPH_UHCI1_MODULE: periph_module_t = 15;
+pub const periph_module_t_PERIPH_RMT_MODULE: periph_module_t = 16;
+pub const periph_module_t_PERIPH_PCNT_MODULE: periph_module_t = 17;
+pub const periph_module_t_PERIPH_SPI_MODULE: periph_module_t = 18;
+pub const periph_module_t_PERIPH_HSPI_MODULE: periph_module_t = 19;
+pub const periph_module_t_PERIPH_VSPI_MODULE: periph_module_t = 20;
+pub const periph_module_t_PERIPH_SPI_DMA_MODULE: periph_module_t = 21;
+pub const periph_module_t_PERIPH_SDMMC_MODULE: periph_module_t = 22;
+pub const periph_module_t_PERIPH_SDIO_SLAVE_MODULE: periph_module_t = 23;
+pub const periph_module_t_PERIPH_CAN_MODULE: periph_module_t = 24;
+pub const periph_module_t_PERIPH_EMAC_MODULE: periph_module_t = 25;
+pub const periph_module_t_PERIPH_RNG_MODULE: periph_module_t = 26;
+pub const periph_module_t_PERIPH_WIFI_MODULE: periph_module_t = 27;
+pub const periph_module_t_PERIPH_BT_MODULE: periph_module_t = 28;
+pub const periph_module_t_PERIPH_WIFI_BT_COMMON_MODULE: periph_module_t = 29;
+pub const periph_module_t_PERIPH_BT_BASEBAND_MODULE: periph_module_t = 30;
+pub const periph_module_t_PERIPH_BT_LC_MODULE: periph_module_t = 31;
+pub const periph_module_t_PERIPH_AES_MODULE: periph_module_t = 32;
+pub const periph_module_t_PERIPH_SHA_MODULE: periph_module_t = 33;
+pub const periph_module_t_PERIPH_RSA_MODULE: periph_module_t = 34;
+pub type periph_module_t = u32;
+extern "C" {
+    #[doc = " @brief      enable peripheral module"]
+    #[doc = ""]
+    #[doc = " @param[in]  periph    :  Peripheral module name"]
+    #[doc = ""]
+    #[doc = " Clock for the module will be ungated, and reset de-asserted."]
+    #[doc = ""]
+    #[doc = " @return     NULL"]
+    #[doc = ""]
+    pub fn periph_module_enable(periph: periph_module_t);
+}
+extern "C" {
+    #[doc = " @brief      disable peripheral module"]
+    #[doc = ""]
+    #[doc = " @param[in]  periph    :  Peripheral module name"]
+    #[doc = ""]
+    #[doc = " Clock for the module will be gated, reset asserted."]
+    #[doc = ""]
+    #[doc = " @return     NULL"]
+    #[doc = ""]
+    pub fn periph_module_disable(periph: periph_module_t);
+}
+extern "C" {
+    #[doc = " @brief      reset peripheral module"]
+    #[doc = ""]
+    #[doc = " @param[in]  periph    :  Peripheral module name"]
+    #[doc = ""]
+    #[doc = " Reset will asserted then de-assrted for the peripheral."]
+    #[doc = ""]
+    #[doc = " Calling this function does not enable or disable the clock for the module."]
+    #[doc = ""]
+    #[doc = " @return     NULL"]
+    #[doc = ""]
+    pub fn periph_module_reset(periph: periph_module_t);
+}
+#[doc = "< mode: regular UART mode"]
+pub const uart_mode_t_UART_MODE_UART: uart_mode_t = 0;
+#[doc = "< mode: half duplex RS485 UART mode control by RTS pin"]
+pub const uart_mode_t_UART_MODE_RS485_HALF_DUPLEX: uart_mode_t = 1;
+#[doc = "< mode: IRDA  UART mode"]
+pub const uart_mode_t_UART_MODE_IRDA: uart_mode_t = 2;
+#[doc = "< mode: RS485 collision detection UART mode (used for test purposes)"]
+pub const uart_mode_t_UART_MODE_RS485_COLLISION_DETECT: uart_mode_t = 3;
+#[doc = "< mode: application control RS485 UART mode (used for test purposes)"]
+pub const uart_mode_t_UART_MODE_RS485_APP_CTRL: uart_mode_t = 4;
+#[doc = " @brief UART mode selection"]
+pub type uart_mode_t = u32;
+#[doc = "< word length: 5bits"]
+pub const uart_word_length_t_UART_DATA_5_BITS: uart_word_length_t = 0;
+#[doc = "< word length: 6bits"]
+pub const uart_word_length_t_UART_DATA_6_BITS: uart_word_length_t = 1;
+#[doc = "< word length: 7bits"]
+pub const uart_word_length_t_UART_DATA_7_BITS: uart_word_length_t = 2;
+#[doc = "< word length: 8bits"]
+pub const uart_word_length_t_UART_DATA_8_BITS: uart_word_length_t = 3;
+pub const uart_word_length_t_UART_DATA_BITS_MAX: uart_word_length_t = 4;
+#[doc = " @brief UART word length constants"]
+pub type uart_word_length_t = u32;
+#[doc = "< stop bit: 1bit"]
+pub const uart_stop_bits_t_UART_STOP_BITS_1: uart_stop_bits_t = 1;
+#[doc = "< stop bit: 1.5bits"]
+pub const uart_stop_bits_t_UART_STOP_BITS_1_5: uart_stop_bits_t = 2;
+#[doc = "< stop bit: 2bits"]
+pub const uart_stop_bits_t_UART_STOP_BITS_2: uart_stop_bits_t = 3;
+pub const uart_stop_bits_t_UART_STOP_BITS_MAX: uart_stop_bits_t = 4;
+#[doc = " @brief UART stop bits number"]
+pub type uart_stop_bits_t = u32;
+#[doc = "< UART base address 0x3ff40000"]
+pub const uart_port_t_UART_NUM_0: uart_port_t = 0;
+#[doc = "< UART base address 0x3ff50000"]
+pub const uart_port_t_UART_NUM_1: uart_port_t = 1;
+#[doc = "< UART base address 0x3ff6e000"]
+pub const uart_port_t_UART_NUM_2: uart_port_t = 2;
+pub const uart_port_t_UART_NUM_MAX: uart_port_t = 3;
+#[doc = " @brief UART peripheral number"]
+pub type uart_port_t = u32;
+#[doc = "< Disable UART parity"]
+pub const uart_parity_t_UART_PARITY_DISABLE: uart_parity_t = 0;
+#[doc = "< Enable UART even parity"]
+pub const uart_parity_t_UART_PARITY_EVEN: uart_parity_t = 2;
+#[doc = "< Enable UART odd parity"]
+pub const uart_parity_t_UART_PARITY_ODD: uart_parity_t = 3;
+#[doc = " @brief UART parity constants"]
+pub type uart_parity_t = u32;
+#[doc = "< disable hardware flow control"]
+pub const uart_hw_flowcontrol_t_UART_HW_FLOWCTRL_DISABLE: uart_hw_flowcontrol_t = 0;
+#[doc = "< enable RX hardware flow control (rts)"]
+pub const uart_hw_flowcontrol_t_UART_HW_FLOWCTRL_RTS: uart_hw_flowcontrol_t = 1;
+#[doc = "< enable TX hardware flow control (cts)"]
+pub const uart_hw_flowcontrol_t_UART_HW_FLOWCTRL_CTS: uart_hw_flowcontrol_t = 2;
+#[doc = "< enable hardware flow control"]
+pub const uart_hw_flowcontrol_t_UART_HW_FLOWCTRL_CTS_RTS: uart_hw_flowcontrol_t = 3;
+pub const uart_hw_flowcontrol_t_UART_HW_FLOWCTRL_MAX: uart_hw_flowcontrol_t = 4;
+#[doc = " @brief UART hardware flow control modes"]
+pub type uart_hw_flowcontrol_t = u32;
+#[doc = " @brief UART configuration parameters for uart_param_config function"]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_config_t {
+    #[doc = "< UART baud rate"]
+    pub baud_rate: crate::types::c_int,
+    #[doc = "< UART byte size"]
+    pub data_bits: uart_word_length_t,
+    #[doc = "< UART parity mode"]
+    pub parity: uart_parity_t,
+    #[doc = "< UART stop bits"]
+    pub stop_bits: uart_stop_bits_t,
+    #[doc = "< UART HW flow control mode (cts/rts)"]
+    pub flow_ctrl: uart_hw_flowcontrol_t,
+    #[doc = "< UART HW RTS threshold"]
+    pub rx_flow_ctrl_thresh: u8,
+    #[doc = "< Set to true if UART should be clocked from REF_TICK"]
+    pub use_ref_tick: bool,
+}
+#[doc = " @brief UART interrupt configuration parameters for uart_intr_config function"]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_intr_config_t {
+    #[doc = "< UART interrupt enable mask, choose from UART_XXXX_INT_ENA_M under UART_INT_ENA_REG(i), connect with bit-or operator"]
+    pub intr_enable_mask: u32,
+    #[doc = "< UART timeout interrupt threshold (unit: time of sending one byte)"]
+    pub rx_timeout_thresh: u8,
+    #[doc = "< UART TX empty interrupt threshold."]
+    pub txfifo_empty_intr_thresh: u8,
+    #[doc = "< UART RX full interrupt threshold."]
+    pub rxfifo_full_thresh: u8,
+}
+#[doc = "< UART data event"]
+pub const uart_event_type_t_UART_DATA: uart_event_type_t = 0;
+#[doc = "< UART break event"]
+pub const uart_event_type_t_UART_BREAK: uart_event_type_t = 1;
+#[doc = "< UART RX buffer full event"]
+pub const uart_event_type_t_UART_BUFFER_FULL: uart_event_type_t = 2;
+#[doc = "< UART FIFO overflow event"]
+pub const uart_event_type_t_UART_FIFO_OVF: uart_event_type_t = 3;
+#[doc = "< UART RX frame error event"]
+pub const uart_event_type_t_UART_FRAME_ERR: uart_event_type_t = 4;
+#[doc = "< UART RX parity event"]
+pub const uart_event_type_t_UART_PARITY_ERR: uart_event_type_t = 5;
+#[doc = "< UART TX data and break event"]
+pub const uart_event_type_t_UART_DATA_BREAK: uart_event_type_t = 6;
+#[doc = "< UART pattern detected"]
+pub const uart_event_type_t_UART_PATTERN_DET: uart_event_type_t = 7;
+#[doc = "< UART event max index"]
+pub const uart_event_type_t_UART_EVENT_MAX: uart_event_type_t = 8;
+#[doc = " @brief UART event types used in the ring buffer"]
+pub type uart_event_type_t = u32;
+#[doc = " @brief Event structure used in UART event queue"]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct uart_event_t {
+    #[doc = "< UART event type"]
+    pub type_: uart_event_type_t,
+    #[doc = "< UART data size for UART_DATA event"]
+    pub size: size_t,
+}
+pub type uart_isr_handle_t = intr_handle_t;
+extern "C" {
+    #[doc = " @brief Checks whether the driver is installed or not"]
+    #[doc = ""]
+    #[doc = " @param uart_num UART port number, the max port number is (UART_NUM_MAX -1)."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - true  driver is installed"]
+    #[doc = "     - false driver is not installed"]
+    pub fn uart_is_driver_installed(uart_num: uart_port_t) -> bool;
+}
+extern "C" {
+    #[doc = " @brief Set UART data bits."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param data_bit UART data bits"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_set_word_length(uart_num: uart_port_t, data_bit: uart_word_length_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Get UART data bits."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param data_bit Pointer to accept value of UART data bits."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_FAIL  Parameter error"]
+    #[doc = "     - ESP_OK    Success, result will be put in (*data_bit)"]
+    pub fn uart_get_word_length(
+        uart_num: uart_port_t,
+        data_bit: *mut uart_word_length_t,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Set UART stop bits."]
+    #[doc = ""]
+    #[doc = " @param uart_num  UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param stop_bits  UART stop bits"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Fail"]
+    pub fn uart_set_stop_bits(uart_num: uart_port_t, stop_bits: uart_stop_bits_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Get UART stop bits."]
+    #[doc = ""]
+    #[doc = " @param uart_num  UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param stop_bits  Pointer to accept value of UART stop bits."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    #[doc = "     - ESP_OK   Success, result will be put in (*stop_bit)"]
+    pub fn uart_get_stop_bits(uart_num: uart_port_t, stop_bits: *mut uart_stop_bits_t)
+        -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Set UART parity mode."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param parity_mode the enum of uart parity configuration"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_FAIL  Parameter error"]
+    #[doc = "     - ESP_OK    Success"]
+    pub fn uart_set_parity(uart_num: uart_port_t, parity_mode: uart_parity_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Get UART parity mode."]
+    #[doc = ""]
+    #[doc = " @param uart_num  UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param parity_mode Pointer to accept value of UART parity mode."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_FAIL  Parameter error"]
+    #[doc = "     - ESP_OK    Success, result will be put in (*parity_mode)"]
+    #[doc = ""]
+    pub fn uart_get_parity(uart_num: uart_port_t, parity_mode: *mut uart_parity_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Set UART baud rate."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param baudrate UART baud rate."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    #[doc = "     - ESP_OK   Success"]
+    pub fn uart_set_baudrate(uart_num: uart_port_t, baudrate: u32) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Get UART baud rate."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param baudrate Pointer to accept value of UART baud rate"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    #[doc = "     - ESP_OK   Success, result will be put in (*baudrate)"]
+    #[doc = ""]
+    pub fn uart_get_baudrate(uart_num: uart_port_t, baudrate: *mut u32) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Set UART line inverse mode"]
+    #[doc = ""]
+    #[doc = " @param uart_num  UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param inverse_mask Choose the wires that need to be inverted."]
+    #[doc = "        Inverse_mask should be chosen from"]
+    #[doc = "        UART_INVERSE_RXD / UART_INVERSE_TXD / UART_INVERSE_RTS / UART_INVERSE_CTS,"]
+    #[doc = "        combined with OR operation."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_set_line_inverse(uart_num: uart_port_t, inverse_mask: u32) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Set hardware flow control."]
+    #[doc = ""]
+    #[doc = " @param uart_num   UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param flow_ctrl Hardware flow control mode"]
+    #[doc = " @param rx_thresh Threshold of Hardware RX flow control (0 ~ UART_FIFO_LEN)."]
+    #[doc = "        Only when UART_HW_FLOWCTRL_RTS is set, will the rx_thresh value be set."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_set_hw_flow_ctrl(
+        uart_num: uart_port_t,
+        flow_ctrl: uart_hw_flowcontrol_t,
+        rx_thresh: u8,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Set software flow control."]
+    #[doc = ""]
+    #[doc = " @param uart_num   UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param enable     switch on or off"]
+    #[doc = " @param rx_thresh_xon  low water mark"]
+    #[doc = " @param rx_thresh_xoff high water mark"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_set_sw_flow_ctrl(
+        uart_num: uart_port_t,
+        enable: bool,
+        rx_thresh_xon: u8,
+        rx_thresh_xoff: u8,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Get hardware flow control mode"]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param flow_ctrl Option for different flow control mode."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    #[doc = "     - ESP_OK   Success, result will be put in (*flow_ctrl)"]
+    pub fn uart_get_hw_flow_ctrl(
+        uart_num: uart_port_t,
+        flow_ctrl: *mut uart_hw_flowcontrol_t,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Clear UART interrupt status"]
+    #[doc = ""]
+    #[doc = " @param uart_num  UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param clr_mask  Bit mask of the interrupt status to be cleared."]
+    #[doc = "                  The bit mask should be composed from the fields of register UART_INT_CLR_REG."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_clear_intr_status(uart_num: uart_port_t, clr_mask: u32) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Set UART interrupt enable"]
+    #[doc = ""]
+    #[doc = " @param uart_num     UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param enable_mask  Bit mask of the enable bits."]
+    #[doc = "                     The bit mask should be composed from the fields of register UART_INT_ENA_REG."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_enable_intr_mask(uart_num: uart_port_t, enable_mask: u32) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Clear UART interrupt enable bits"]
+    #[doc = ""]
+    #[doc = " @param uart_num      UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param disable_mask  Bit mask of the disable bits."]
+    #[doc = "                      The bit mask should be composed from the fields of register UART_INT_ENA_REG."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_disable_intr_mask(uart_num: uart_port_t, disable_mask: u32) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Enable UART RX interrupt (RX_FULL & RX_TIMEOUT INTERRUPT)"]
+    #[doc = ""]
+    #[doc = " @param uart_num  UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_enable_rx_intr(uart_num: uart_port_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Disable UART RX interrupt (RX_FULL & RX_TIMEOUT INTERRUPT)"]
+    #[doc = ""]
+    #[doc = " @param uart_num  UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_disable_rx_intr(uart_num: uart_port_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Disable UART TX interrupt (TX_FULL & TX_TIMEOUT INTERRUPT)"]
+    #[doc = ""]
+    #[doc = " @param uart_num  UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_disable_tx_intr(uart_num: uart_port_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Enable UART TX interrupt (TX_FULL & TX_TIMEOUT INTERRUPT)"]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param enable  1: enable; 0: disable"]
+    #[doc = " @param thresh  Threshold of TX interrupt, 0 ~ UART_FIFO_LEN"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_enable_tx_intr(
+        uart_num: uart_port_t,
+        enable: crate::types::c_int,
+        thresh: crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Register UART interrupt handler (ISR)."]
+    #[doc = ""]
+    #[doc = " @note UART ISR handler will be attached to the same CPU core that this function is running on."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param fn  Interrupt handler function."]
+    #[doc = " @param arg parameter for handler function"]
+    #[doc = " @param intr_alloc_flags Flags used to allocate the interrupt. One or multiple (ORred)"]
+    #[doc = "        ESP_INTR_FLAG_* values. See esp_intr_alloc.h for more info."]
+    #[doc = " @param handle Pointer to return handle. If non-NULL, a handle for the interrupt will"]
+    #[doc = "        be returned here."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_isr_register(
+        uart_num: uart_port_t,
+        fn_: ::core::option::Option<unsafe extern "C" fn(arg1: *mut crate::types::c_void)>,
+        arg: *mut crate::types::c_void,
+        intr_alloc_flags: crate::types::c_int,
+        handle: *mut uart_isr_handle_t,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Free UART interrupt handler registered by uart_isr_register. Must be called on the same core as"]
+    #[doc = " uart_isr_register was called."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_isr_free(uart_num: uart_port_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Set UART pin number"]
+    #[doc = ""]
+    #[doc = " @note Internal signal can be output to multiple GPIO pads."]
+    #[doc = "       Only one GPIO pad can connect with input signal."]
+    #[doc = ""]
+    #[doc = " @note Instead of GPIO number a macro 'UART_PIN_NO_CHANGE' may be provided"]
+    #[doc = "to keep the currently allocated pin."]
+    #[doc = ""]
+    #[doc = " @param uart_num   UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param tx_io_num  UART TX pin GPIO number."]
+    #[doc = " @param rx_io_num  UART RX pin GPIO number."]
+    #[doc = " @param rts_io_num UART RTS pin GPIO number."]
+    #[doc = " @param cts_io_num UART CTS pin GPIO number."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_set_pin(
+        uart_num: uart_port_t,
+        tx_io_num: crate::types::c_int,
+        rx_io_num: crate::types::c_int,
+        rts_io_num: crate::types::c_int,
+        cts_io_num: crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Manually set the UART RTS pin level."]
+    #[doc = " @note  UART must be configured with hardware flow control disabled."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param level    1: RTS output low (active); 0: RTS output high (block)"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_set_rts(uart_num: uart_port_t, level: crate::types::c_int) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Manually set the UART DTR pin level."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param level    1: DTR output low; 0: DTR output high"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_set_dtr(uart_num: uart_port_t, level: crate::types::c_int) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Set UART idle interval after tx FIFO is empty"]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param idle_num idle interval after tx FIFO is empty(unit: the time it takes to send one bit"]
+    #[doc = "        under current baudrate)"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_set_tx_idle_num(uart_num: uart_port_t, idle_num: u16) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Set UART configuration parameters."]
+    #[doc = ""]
+    #[doc = " @param uart_num    UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param uart_config UART parameter settings"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_param_config(uart_num: uart_port_t, uart_config: *const uart_config_t)
+        -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Configure UART interrupts."]
+    #[doc = ""]
+    #[doc = " @param uart_num  UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param intr_conf UART interrupt settings"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_intr_config(
+        uart_num: uart_port_t,
+        intr_conf: *const uart_intr_config_t,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Install UART driver."]
+    #[doc = ""]
+    #[doc = " UART ISR handler will be attached to the same CPU core that this function is running on."]
+    #[doc = ""]
+    #[doc = " @note  Rx_buffer_size should be greater than UART_FIFO_LEN. Tx_buffer_size should be either zero or greater than UART_FIFO_LEN."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param rx_buffer_size UART RX ring buffer size."]
+    #[doc = " @param tx_buffer_size UART TX ring buffer size."]
+    #[doc = "        If set to zero, driver will not use TX buffer, TX function will block task until all data have been sent out."]
+    #[doc = " @param queue_size UART event queue size/depth."]
+    #[doc = " @param uart_queue UART event queue handle (out param). On success, a new queue handle is written here to provide"]
+    #[doc = "        access to UART events. If set to NULL, driver will not use an event queue."]
+    #[doc = " @param intr_alloc_flags Flags used to allocate the interrupt. One or multiple (ORred)"]
+    #[doc = "        ESP_INTR_FLAG_* values. See esp_intr_alloc.h for more info. Do not set ESP_INTR_FLAG_IRAM here"]
+    #[doc = "        (the driver's ISR handler is not located in IRAM)"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_driver_install(
+        uart_num: uart_port_t,
+        rx_buffer_size: crate::types::c_int,
+        tx_buffer_size: crate::types::c_int,
+        queue_size: crate::types::c_int,
+        uart_queue: *mut QueueHandle_t,
+        intr_alloc_flags: crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Uninstall UART driver."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_driver_delete(uart_num: uart_port_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Wait until UART TX FIFO is empty."]
+    #[doc = ""]
+    #[doc = " @param uart_num      UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param ticks_to_wait Timeout, count in RTOS ticks"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK   Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    #[doc = "     - ESP_ERR_TIMEOUT  Timeout"]
+    pub fn uart_wait_tx_done(uart_num: uart_port_t, ticks_to_wait: TickType_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Send data to the UART port from a given buffer and length."]
+    #[doc = ""]
+    #[doc = " This function will not wait for enough space in TX FIFO. It will just fill the available TX FIFO and return when the FIFO is full."]
+    #[doc = " @note This function should only be used when UART TX buffer is not enabled."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param buffer data buffer address"]
+    #[doc = " @param len    data length to send"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - (-1)  Parameter error"]
+    #[doc = "     - OTHERS (>=0) The number of bytes pushed to the TX FIFO"]
+    pub fn uart_tx_chars(
+        uart_num: uart_port_t,
+        buffer: *const crate::types::c_char,
+        len: u32,
+    ) -> crate::types::c_int;
+}
+extern "C" {
+    #[doc = " @brief Send data to the UART port from a given buffer and length,"]
+    #[doc = ""]
+    #[doc = " If the UART driver's parameter 'tx_buffer_size' is set to zero:"]
+    #[doc = " This function will not return until all the data have been sent out, or at least pushed into TX FIFO."]
+    #[doc = ""]
+    #[doc = " Otherwise, if the 'tx_buffer_size' > 0, this function will return after copying all the data to tx ring buffer,"]
+    #[doc = " UART ISR will then move data from the ring buffer to TX FIFO gradually."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param src   data buffer address"]
+    #[doc = " @param size  data length to send"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - (-1) Parameter error"]
+    #[doc = "     - OTHERS (>=0) The number of bytes pushed to the TX FIFO"]
+    pub fn uart_write_bytes(
+        uart_num: uart_port_t,
+        src: *const crate::types::c_char,
+        size: size_t,
+    ) -> crate::types::c_int;
+}
+extern "C" {
+    #[doc = " @brief Send data to the UART port from a given buffer and length,"]
+    #[doc = ""]
+    #[doc = " If the UART driver's parameter 'tx_buffer_size' is set to zero:"]
+    #[doc = " This function will not return until all the data and the break signal have been sent out."]
+    #[doc = " After all data is sent out, send a break signal."]
+    #[doc = ""]
+    #[doc = " Otherwise, if the 'tx_buffer_size' > 0, this function will return after copying all the data to tx ring buffer,"]
+    #[doc = " UART ISR will then move data from the ring buffer to TX FIFO gradually."]
+    #[doc = " After all data sent out, send a break signal."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param src   data buffer address"]
+    #[doc = " @param size  data length to send"]
+    #[doc = " @param brk_len break signal duration(unit: the time it takes to send one bit at current baudrate)"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - (-1) Parameter error"]
+    #[doc = "     - OTHERS (>=0) The number of bytes pushed to the TX FIFO"]
+    pub fn uart_write_bytes_with_break(
+        uart_num: uart_port_t,
+        src: *const crate::types::c_char,
+        size: size_t,
+        brk_len: crate::types::c_int,
+    ) -> crate::types::c_int;
+}
+extern "C" {
+    #[doc = " @brief UART read bytes from UART buffer"]
+    #[doc = ""]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = " @param buf     pointer to the buffer."]
+    #[doc = " @param length  data length"]
+    #[doc = " @param ticks_to_wait sTimeout, count in RTOS ticks"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - (-1) Error"]
+    #[doc = "     - OTHERS (>=0) The number of bytes read from UART FIFO"]
+    pub fn uart_read_bytes(
+        uart_num: uart_port_t,
+        buf: *mut u8,
+        length: u32,
+        ticks_to_wait: TickType_t,
+    ) -> crate::types::c_int;
+}
+extern "C" {
+    #[doc = " @brief Alias of uart_flush_input."]
+    #[doc = "        UART ring buffer flush. This will discard all data in the UART RX buffer."]
+    #[doc = " @note  Instead of waiting the data sent out, this function will clear UART rx buffer."]
+    #[doc = "        In order to send all the data in tx FIFO, we can use uart_wait_tx_done function."]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_flush(uart_num: uart_port_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Clear input buffer, discard all the data is in the ring-buffer."]
+    #[doc = " @note  In order to send all the data in tx FIFO, we can use uart_wait_tx_done function."]
+    #[doc = " @param uart_num UART_NUM_0, UART_NUM_1 or UART_NUM_2"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_flush_input(uart_num: uart_port_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief   UART get RX ring buffer cached data length"]
+    #[doc = ""]
+    #[doc = " @param   uart_num UART port number."]
+    #[doc = " @param   size Pointer of size_t to accept cached data length"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_get_buffered_data_len(uart_num: uart_port_t, size: *mut size_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief   UART disable pattern detect function."]
+    #[doc = "          Designed for applications like 'AT commands'."]
+    #[doc = "          When the hardware detects a series of one same character, the interrupt will be triggered."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART port number."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_disable_pattern_det_intr(uart_num: uart_port_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief UART enable pattern detect function."]
+    #[doc = "        Designed for applications like 'AT commands'."]
+    #[doc = "        When the hardware detect a series of one same character, the interrupt will be triggered."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART port number."]
+    #[doc = " @param pattern_chr character of the pattern"]
+    #[doc = " @param chr_num number of the character, 8bit value."]
+    #[doc = " @param chr_tout timeout of the interval between each pattern characters, 24bit value, unit is APB (80Mhz) clock cycle."]
+    #[doc = "        When the duration is less than this value, it will not take this data as at_cmd char"]
+    #[doc = " @param post_idle idle time after the last pattern character, 24bit value, unit is APB (80Mhz) clock cycle."]
+    #[doc = "        When the duration is less than this value, it will not take the previous data as the last at_cmd char"]
+    #[doc = " @param pre_idle idle time before the first pattern character, 24bit value, unit is APB (80Mhz) clock cycle."]
+    #[doc = "        When the duration is less than this value, it will not take this data as the first at_cmd char"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    pub fn uart_enable_pattern_det_intr(
+        uart_num: uart_port_t,
+        pattern_chr: crate::types::c_char,
+        chr_num: u8,
+        chr_tout: crate::types::c_int,
+        post_idle: crate::types::c_int,
+        pre_idle: crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Return the nearest detected pattern position in buffer."]
+    #[doc = "        The positions of the detected pattern are saved in a queue,"]
+    #[doc = "        this function will dequeue the first pattern position and move the pointer to next pattern position."]
+    #[doc = " @note  If the RX buffer is full and flow control is not enabled,"]
+    #[doc = "        the detected pattern may not be found in the rx buffer due to overflow."]
+    #[doc = ""]
+    #[doc = "        The following APIs will modify the pattern position info:"]
+    #[doc = "        uart_flush_input, uart_read_bytes, uart_driver_delete, uart_pop_pattern_pos"]
+    #[doc = "        It is the application's responsibility to ensure atomic access to the pattern queue and the rx data buffer"]
+    #[doc = "        when using pattern detect feature."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART port number"]
+    #[doc = " @return"]
+    #[doc = "     - (-1) No pattern found for current index or parameter error"]
+    #[doc = "     - others the pattern position in rx buffer."]
+    pub fn uart_pattern_pop_pos(uart_num: uart_port_t) -> crate::types::c_int;
+}
+extern "C" {
+    #[doc = " @brief Return the nearest detected pattern position in buffer."]
+    #[doc = "        The positions of the detected pattern are saved in a queue,"]
+    #[doc = "        This function do nothing to the queue."]
+    #[doc = " @note  If the RX buffer is full and flow control is not enabled,"]
+    #[doc = "        the detected pattern may not be found in the rx buffer due to overflow."]
+    #[doc = ""]
+    #[doc = "        The following APIs will modify the pattern position info:"]
+    #[doc = "        uart_flush_input, uart_read_bytes, uart_driver_delete, uart_pop_pattern_pos"]
+    #[doc = "        It is the application's responsibility to ensure atomic access to the pattern queue and the rx data buffer"]
+    #[doc = "        when using pattern detect feature."]
+    #[doc = ""]
+    #[doc = " @param uart_num UART port number"]
+    #[doc = " @return"]
+    #[doc = "     - (-1) No pattern found for current index or parameter error"]
+    #[doc = "     - others the pattern position in rx buffer."]
+    pub fn uart_pattern_get_pos(uart_num: uart_port_t) -> crate::types::c_int;
+}
+extern "C" {
+    #[doc = " @brief Allocate a new memory with the given length to save record the detected pattern position in rx buffer."]
+    #[doc = " @param uart_num UART port number"]
+    #[doc = " @param queue_length Max queue length for the detected pattern."]
+    #[doc = "        If the queue length is not large enough, some pattern positions might be lost."]
+    #[doc = "        Set this value to the maximum number of patterns that could be saved in data buffer at the same time."]
+    #[doc = " @return"]
+    #[doc = "     - ESP_ERR_NO_MEM No enough memory"]
+    #[doc = "     - ESP_ERR_INVALID_STATE Driver not installed"]
+    #[doc = "     - ESP_FAIL Parameter error"]
+    #[doc = "     - ESP_OK Success"]
+    pub fn uart_pattern_queue_reset(
+        uart_num: uart_port_t,
+        queue_length: crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief UART set communication mode"]
+    #[doc = " @note  This function must be executed after uart_driver_install(), when the driver object is initialized."]
+    #[doc = " @param uart_num     Uart number to configure"]
+    #[doc = " @param mode UART    UART mode to set"]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn uart_set_mode(uart_num: uart_port_t, mode: uart_mode_t) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief UART set threshold timeout for TOUT feature"]
+    #[doc = ""]
+    #[doc = " @param uart_num     Uart number to configure"]
+    #[doc = " @param tout_thresh  This parameter defines timeout threshold in uart symbol periods. The maximum value of threshold is 126."]
+    #[doc = "        tout_thresh = 1, defines TOUT interrupt timeout equal to transmission time of one symbol (~11 bit) on current baudrate."]
+    #[doc = "        If the time is expired the UART_RXFIFO_TOUT_INT interrupt is triggered. If tout_thresh == 0,"]
+    #[doc = "        the TOUT feature is disabled."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    #[doc = "     - ESP_ERR_INVALID_STATE Driver is not installed"]
+    pub fn uart_set_rx_timeout(uart_num: uart_port_t, tout_thresh: u8) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Returns collision detection flag for RS485 mode"]
+    #[doc = "        Function returns the collision detection flag into variable pointed by collision_flag."]
+    #[doc = "        *collision_flag = true, if collision detected else it is equal to false."]
+    #[doc = "        This function should be executed when actual transmission is completed (after uart_write_bytes())."]
+    #[doc = ""]
+    #[doc = " @param uart_num       Uart number to configure"]
+    #[doc = " @param collision_flag Pointer to variable of type bool to return collision flag."]
+    #[doc = ""]
+    #[doc = " @return"]
+    #[doc = "     - ESP_OK Success"]
+    #[doc = "     - ESP_ERR_INVALID_ARG Parameter error"]
+    pub fn uart_get_collision_flag(uart_num: uart_port_t, collision_flag: *mut bool) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Set the number of RX pin signal edges for light sleep wakeup"]
+    #[doc = ""]
+    #[doc = " UART can be used to wake up the system from light sleep. This feature works"]
+    #[doc = " by counting the number of positive edges on RX pin and comparing the count to"]
+    #[doc = " the threshold. When the count exceeds the threshold, system is woken up from"]
+    #[doc = " light sleep. This function allows setting the threshold value."]
+    #[doc = ""]
+    #[doc = " Stop bit and parity bits (if enabled) also contribute to the number of edges."]
+    #[doc = " For example, letter 'a' with ASCII code 97 is encoded as 0100001101 on the wire"]
+    #[doc = " (with 8n1 configuration), start and stop bits included. This sequence has 3"]
+    #[doc = " positive edges (transitions from 0 to 1). Therefore, to wake up the system"]
+    #[doc = " when 'a' is sent, set wakeup_threshold=3."]
+    #[doc = ""]
+    #[doc = " The character that triggers wakeup is not received by UART (i.e. it can not"]
+    #[doc = " be obtained from UART FIFO). Depending on the baud rate, a few characters"]
+    #[doc = " after that will also not be received. Note that when the chip enters and exits"]
+    #[doc = " light sleep mode, APB frequency will be changing. To make sure that UART has"]
+    #[doc = " correct baud rate all the time, select REF_TICK as UART clock source,"]
+    #[doc = " by setting use_ref_tick field in uart_config_t to true."]
+    #[doc = ""]
+    #[doc = " @note in ESP32, the wakeup signal can only be input via IO_MUX (i.e."]
+    #[doc = "       GPIO3 should be configured as function_1 to wake up UART0,"]
+    #[doc = "       GPIO9 should be configured as function_5 to wake up UART1), UART2"]
+    #[doc = "       does not support light sleep wakeup feature."]
+    #[doc = ""]
+    #[doc = " @param uart_num  UART number"]
+    #[doc = " @param wakeup_threshold  number of RX edges for light sleep wakeup, value is 3 .. 0x3ff."]
+    #[doc = " @return"]
+    #[doc = "      - ESP_OK on success"]
+    #[doc = "      - ESP_ERR_INVALID_ARG if uart_num is incorrect or wakeup_threshold is"]
+    #[doc = "        outside of [3, 0x3ff] range."]
+    pub fn uart_set_wakeup_threshold(
+        uart_num: uart_port_t,
+        wakeup_threshold: crate::types::c_int,
+    ) -> esp_err_t;
+}
+extern "C" {
+    #[doc = " @brief Get the number of RX pin signal edges for light sleep wakeup."]
+    #[doc = ""]
+    #[doc = " See description of uart_set_wakeup_threshold for the explanation of UART"]
+    #[doc = " wakeup feature."]
+    #[doc = ""]
+    #[doc = " @param uart_num  UART number"]
+    #[doc = " @param[out] out_wakeup_threshold  output, set to the current value of wakeup"]
+    #[doc = "                                   threshold for the given UART."]
+    #[doc = " @return"]
+    #[doc = "      - ESP_OK on success"]
+    #[doc = "      - ESP_ERR_INVALID_ARG if out_wakeup_threshold is NULL"]
+    pub fn uart_get_wakeup_threshold(
+        uart_num: uart_port_t,
+        out_wakeup_threshold: *mut crate::types::c_int,
+    ) -> esp_err_t;
+}
 pub type esp_event_base_t = *const crate::types::c_char;
 pub type esp_event_loop_handle_t = *mut crate::types::c_void;
 pub type esp_event_handler_t = ::core::option::Option<

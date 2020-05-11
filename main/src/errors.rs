@@ -1,5 +1,5 @@
 use esp_idf_sys::{
-    esp_err_t, ESP_ERR_INVALID_ARG, ESP_ERR_INVALID_CRC, ESP_ERR_INVALID_MAC,
+    esp_err_t, BaseType_t, ESP_ERR_INVALID_ARG, ESP_ERR_INVALID_CRC, ESP_ERR_INVALID_MAC,
     ESP_ERR_INVALID_RESPONSE, ESP_ERR_INVALID_SIZE, ESP_ERR_INVALID_STATE, ESP_ERR_INVALID_VERSION,
     ESP_ERR_NOT_FOUND, ESP_ERR_NOT_SUPPORTED, ESP_ERR_NO_MEM, ESP_ERR_TIMEOUT, ESP_OK,
 };
@@ -38,7 +38,8 @@ pub enum Error {
     /// MAC address was invalid
     InvalidMac,
 
-    Other(esp_err_t),
+    OtherEsp(esp_err_t),
+    OtherFreeRTOS(BaseType_t),
 }
 
 pub type Result<T, E = Error> = core::result::Result<T, E>;
@@ -60,7 +61,27 @@ impl From<EspError> for Result<()> {
             ESP_ERR_INVALID_CRC => InvalidCrc,
             ESP_ERR_INVALID_VERSION => InvalidVersion,
             ESP_ERR_INVALID_MAC => InvalidMac,
-            _ => Other(value.0),
+            _ => OtherEsp(value.0),
+        })
+    }
+}
+
+#[allow(non_camel_case_types)]
+pub struct FreeRTOSError(pub BaseType_t);
+impl FreeRTOSError {
+    pub fn into_result(self) -> Result<()> {
+        Result::from(self)
+    }
+}
+
+impl From<FreeRTOSError> for Result<()> {
+    fn from(value: FreeRTOSError) -> Self {
+        Err(match value.0 {
+            // pdPASS
+            1 => return Ok(()),
+            0 => Error::OtherFreeRTOS(0),
+            -1 => Error::NoMem,
+            unknown => Error::OtherFreeRTOS(unknown),
         })
     }
 }

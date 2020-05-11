@@ -7,12 +7,13 @@ edition = "2018"
 crate-type = ["staticlib"]
 
 [dependencies]
+cstr_core = { version = "0.2.0", features = ["alloc"] }
 embedded-hal = { version = "0.2.3", features = ["unproven"] }
-ssd1306 = "0.3.1"
 esp-idf-alloc = "0.1.0"
 esp-idf-sys = { path = "./esp-idf-sys/" }
 genio = { version = "0.2.0", default-features = false }
 nb = { version = "0.1.1", features = ["unstable"] }
+ssd1306 = "0.3.1"
 
 [profile.dev]
 lto = false 

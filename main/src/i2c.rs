@@ -1,7 +1,4 @@
-use crate::{
-    delay::portMAX_DELAY,
-    errors::{Error, EspError, Result},
-};
+use crate::errors::{Error, EspError, Result};
 use core::{convert::TryInto, ptr::null_mut};
 use embedded_hal::blocking::i2c::{Read, Write, WriteRead};
 use esp_idf_sys::{
@@ -183,7 +180,7 @@ impl Write for Master {
         cmd.write(bytes, true)?;
         cmd.stop()?;
 
-        self.begin_cmd(cmd, portMAX_DELAY)?;
+        self.begin_cmd(cmd, TickType_t::max_value())?;
 
         Ok(())
     }
@@ -198,7 +195,7 @@ impl Read for Master {
         cmd.read(buffer, i2c_ack_type_t_I2C_MASTER_LAST_NACK)?;
         cmd.stop()?;
 
-        self.begin_cmd(cmd, portMAX_DELAY)?;
+        self.begin_cmd(cmd, TickType_t::max_value())?;
 
         Ok(())
     }
@@ -214,7 +211,7 @@ impl WriteRead for Master {
         cmd.read(buffer, i2c_ack_type_t_I2C_MASTER_LAST_NACK)?;
         cmd.stop()?;
 
-        self.begin_cmd(cmd, portMAX_DELAY)?;
+        self.begin_cmd(cmd, TickType_t::max_value())?;
 
         Ok(())
     }
@@ -302,7 +299,7 @@ impl genio::Read for Slave {
                 self.port.into(),
                 buf.as_mut_ptr(),
                 buf.len() as u32,
-                self.timeout.unwrap_or(portMAX_DELAY),
+                self.timeout.unwrap_or(TickType_t::max_value()),
             )
         };
 
@@ -326,7 +323,7 @@ impl genio::Write for Slave {
                 self.port.into(),
                 buf.as_ptr() as *const u8 as *mut u8,
                 buf.len().try_into().unwrap(),
-                self.timeout.unwrap_or(portMAX_DELAY),
+                self.timeout.unwrap_or(TickType_t::max_value()),
             )
         };
 

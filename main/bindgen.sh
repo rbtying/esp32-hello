@@ -2,8 +2,6 @@
 
 set -eu
 
-XTENSA_LLVM_ROOT=/opt/llvm-xtensa
-
 INCLUDES=`cat ../build/esp-idf/main/main_includes.txt`
 COMPS=$IDF_PATH/components
 : "${SYSROOT:=$($XTENSA_LLVM_ROOT/bin/clang --print-resource-dir)}"

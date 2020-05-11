@@ -196,14 +196,28 @@ pub fn initialize_wifi() {
                         wifi_config.sta.bssid.copy_from_slice(&evt.bssid);
                     }
 
-                    crate::println!(
-                        "SSID: {:?}",
-                        cstr_core::CStr::from_bytes_with_nul_unchecked(&wifi_config.sta.ssid)
-                    );
-                    crate::println!(
-                        "Password: {:?}",
-                        cstr_core::CStr::from_bytes_with_nul_unchecked(&wifi_config.sta.password)
-                    );
+                    let ssid_len = wifi_config.sta.ssid.iter().position(|c| *c == b'\0');
+
+                    if let Some(ssid_len) = ssid_len {
+                        crate::println!(
+                            "SSID: {:?}",
+                            cstr_core::CStr::from_bytes_with_nul(
+                                &wifi_config.sta.ssid[..ssid_len + 1]
+                            )
+                        );
+                    } else {
+                        crate::println!("SSID too long?");
+                    }
+                    let password_len = wifi_config.sta.password.iter().position(|c| *c == b'\0');
+
+                    if let Some(password_len) = password_len {
+                        crate::println!(
+                            "Password: {:?}",
+                            cstr_core::CStr::from_bytes_with_nul(
+                                &wifi_config.sta.password[..password_len + 1]
+                            )
+                        );
+                    }
 
                     EspError(esp_idf_sys::esp_wifi_disconnect())
                         .into_result()

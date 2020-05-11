@@ -56,18 +56,23 @@ pub fn app_main() {
         let mut n = 0;
         loop {
             n += 1;
-            crate::println!("loop {}", n);
+            crate::println!(
+                "loop {} stack_hw_mark: {}",
+                n,
+                CurrentTask::get_stack_high_water_mark()
+            );
 
             led_gpio.set_high().unwrap();
-            CurrentTask::delay(Duration::ms(500));
+            CurrentTask::delay(Duration::ms(100));
             led_gpio.set_low().unwrap();
-            CurrentTask::delay(Duration::ms(500));
+            CurrentTask::delay(Duration::ms(100));
         }
     };
 
     let _led_blink_h = Task::new()
         .name("led_blink_task")
         .core_affinity(CpuAffinity::Cpu(Cpu::Pro))
+        .stack_size(4096)
         .start(led_blink_fn)
         .unwrap();
 

@@ -12,9 +12,9 @@ embedded-hal = { version = "0.2.3", features = ["unproven"] }
 esp-idf-hal = { git = "https://github.com/rbtying/esp-idf-hal", features = ["alloc"], default-features = false }
 esp-idf-alloc = "0.1"
 esp_idf_sys = "0.1"
-genio = { version = "0.2.0", default-features = false }
-nb = { version = "0.1.1", features = ["unstable"] }
 ssd1306 = "0.3.1"
+esp_idf_logger = "0.1"
+log = "0.4"
 
 [profile.dev]
 lto = false 

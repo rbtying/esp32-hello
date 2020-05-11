@@ -7,6 +7,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "08c48aae112d48ed9f069b33538ea9e3e90aa263cfa3d1c24309612b1f7472de"
 
 [[package]]
+name = "cfg-if"
+version = "0.1.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4785bdd1c96b2a846b2bd7cc02e86b6b3dbf14e7e53446c4f54c92a361040822"
+
+[[package]]
 name = "cstr_core"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -72,10 +78,21 @@ dependencies = [
  "embedded-hal",
  "esp-idf-alloc",
  "esp-idf-hal",
+ "esp_idf_logger",
  "esp_idf_sys",
- "genio",
- "nb",
+ "log",
  "ssd1306",
+]
+
+[[package]]
+name = "esp_idf_logger"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5b9f0b45388f3f86f43e61f6d84644cfbf78b6dd3c0f8e85ce47514a060806ea"
+dependencies = [
+ "cty",
+ "esp-idf-sys",
+ "log",
 ]
 
 [[package]]
@@ -89,6 +106,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f4e26859a808ffa83a83f20c7e3c9366afea91edae637a6ac203051885882dc8"
 dependencies = [
  "void",
+]
+
+[[package]]
+name = "log"
+version = "0.4.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "14b6052be84e6b71ab17edffc2eeabf5c2c3ae1fdb464aae35ac50c67a44e1f7"
+dependencies = [
+ "cfg-if",
 ]
 
 [[package]]

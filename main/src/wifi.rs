@@ -1,4 +1,5 @@
-use crate::errors::EspError;
+use esp_idf_hal::errors::EspError;
+
 use crate::freertos_task::{Cpu, CpuAffinity, Task, TaskPriority};
 
 struct EventGroupHandle {
@@ -115,10 +116,10 @@ pub fn initialize_wifi() {
             };
 
             if ux_bits & CONNECTED_BIT != 0 {
-                log::info!("Wifi connected to AP");
+                crate::println!("Wifi connected to AP");
             }
             if ux_bits & ESPTOUCH_DONE_BIT != 0 {
-                log::info!("SmartConfig over");
+                crate::println!("SmartConfig over");
                 unsafe { esp_smartconfig_stop() };
                 break;
             }
@@ -176,13 +177,13 @@ pub fn initialize_wifi() {
                 };
             }
             (Some(EventBase::ScEvent), esp_idf_sys::smartconfig_event_t_SC_EVENT_SCAN_DONE) => {
-                log::info!("Scan done");
+                crate::println!("Scan done");
             }
             (Some(EventBase::ScEvent), esp_idf_sys::smartconfig_event_t_SC_EVENT_FOUND_CHANNEL) => {
-                log::info!("Found channel");
+                crate::println!("Found channel");
             }
             (Some(EventBase::ScEvent), esp_idf_sys::smartconfig_event_t_SC_EVENT_GOT_SSID_PSWD) => {
-                log::info!("Got SSID and password");
+                crate::println!("Got SSID and password");
                 let evt =
                     unsafe { *(event_data as *mut esp_idf_sys::smartconfig_event_got_ssid_pswd_t) };
 
@@ -195,11 +196,11 @@ pub fn initialize_wifi() {
                         wifi_config.sta.bssid.copy_from_slice(&evt.bssid);
                     }
 
-                    log::info!(
+                    crate::println!(
                         "SSID: {:?}",
                         cstr_core::CStr::from_bytes_with_nul_unchecked(&wifi_config.sta.ssid)
                     );
-                    log::info!(
+                    crate::println!(
                         "Password: {:?}",
                         cstr_core::CStr::from_bytes_with_nul_unchecked(&wifi_config.sta.password)
                     );

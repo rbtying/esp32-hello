@@ -13,8 +13,6 @@ esp-idf-hal = { git = "https://github.com/rbtying/esp-idf-hal", features = ["all
 esp-idf-alloc = "0.1"
 esp_idf_sys = "0.1"
 ssd1306 = "0.3.1"
-esp_idf_logger = "0.1"
-log = "0.4"
 
 [profile.dev]
 lto = false 

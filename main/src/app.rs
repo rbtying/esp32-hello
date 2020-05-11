@@ -1,17 +1,13 @@
 use core::fmt::Write as _;
 use embedded_hal::digital::v2::OutputPin as _;
-use esp_idf_hal::{gpio, i2c};
+use esp_idf_hal::{errors::EspError, gpio, i2c};
 use ssd1306::{prelude::*, Builder};
 
-use crate::errors::EspError;
 use crate::freertos_task::{Cpu, CpuAffinity, CurrentTask, Task};
 use crate::freertos_units::Duration;
 
 #[no_mangle]
 pub fn app_main() {
-    esp_idf_logger::init().unwrap();
-    log::info!("Log stuff={} and={}", 1, "hi");
-
     EspError(unsafe { esp_idf_sys::nvs_flash_init() })
         .into_result()
         .unwrap();
@@ -60,7 +56,7 @@ pub fn app_main() {
         let mut n = 0;
         loop {
             n += 1;
-            log::info!("loop {}", n);
+            crate::println!("loop {}", n);
 
             led_gpio.set_high().unwrap();
             CurrentTask::delay(Duration::ms(500));

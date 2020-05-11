@@ -9,7 +9,6 @@ use esp_idf_sys::{
     xTaskNotify, xTaskNotifyWait,
 };
 
-use crate::errors::{Error, FreeRTOSError};
 use crate::freertos_units::{Duration, DurationTicks};
 
 #[derive(Copy, Debug, Clone, PartialEq, Eq)]
@@ -320,5 +319,34 @@ impl DelayMs<u16> for CurrentTask {
 impl DelayMs<u32> for CurrentTask {
     fn delay_ms(&mut self, ms: u32) {
         Self::delay(Duration::ms(ms))
+    }
+}
+
+#[derive(Clone, Copy, Debug)]
+pub enum Error {
+    /// Out of memory
+    NoMem,
+    NotFound,
+    NotSupported,
+    OtherFreeRTOS(esp_idf_sys::BaseType_t),
+}
+
+#[allow(non_camel_case_types)]
+pub struct FreeRTOSError(pub esp_idf_sys::BaseType_t);
+impl FreeRTOSError {
+    pub fn into_result(self) -> Result<(), Error> {
+        Result::<(), Error>::from(self)
+    }
+}
+
+impl From<FreeRTOSError> for Result<(), Error> {
+    fn from(value: FreeRTOSError) -> Self {
+        Err(match value.0 {
+            // pdPASS
+            1 => return Ok(()),
+            0 => Error::OtherFreeRTOS(0),
+            -1 => Error::NoMem,
+            unknown => Error::OtherFreeRTOS(unknown),
+        })
     }
 }

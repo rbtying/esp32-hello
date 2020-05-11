@@ -9,8 +9,9 @@ crate-type = ["staticlib"]
 [dependencies]
 cstr_core = { version = "0.2.0", features = ["alloc"] }
 embedded-hal = { version = "0.2.3", features = ["unproven"] }
-esp-idf-alloc = "0.1.0"
-esp-idf-sys = { path = "./esp-idf-sys/" }
+esp-idf-hal = { git = "https://github.com/rbtying/esp-idf-hal", features = ["alloc"], default-features = false }
+esp-idf-alloc = "0.1"
+esp_idf_sys = "0.1"
 genio = { version = "0.2.0", default-features = false }
 nb = { version = "0.1.1", features = ["unstable"] }
 ssd1306 = "0.3.1"
@@ -26,3 +27,8 @@ lto = false
 incremental = false
 debug = false # debug adds frame pointers - which must be omitted
 codegen-units = 1
+
+# We should rely on our own `bindgen` outputs, since they may change what
+# headers are available to us!
+[patch.crates-io]
+esp_idf_sys = { path = './esp-idf-sys' }

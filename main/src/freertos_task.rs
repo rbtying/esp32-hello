@@ -2,6 +2,7 @@
 
 use alloc::boxed::Box;
 use cstr_core::{CStr, CString};
+use embedded_hal::blocking::delay::DelayMs;
 use esp_idf_sys::{
     pcTaskGetTaskName, types::c_void, uxTaskGetStackHighWaterMark, vTaskDelay, vTaskDelete,
     xTaskCreatePinnedToCore, xTaskGetCurrentTaskHandle, xTaskGetCurrentTaskHandleForCPU,
@@ -9,7 +10,7 @@ use esp_idf_sys::{
 };
 
 use crate::errors::{Error, FreeRTOSError};
-use crate::freertos_units::DurationTicks;
+use crate::freertos_units::{Duration, DurationTicks};
 
 #[derive(Copy, Debug, Clone, PartialEq, Eq)]
 #[repr(i32)]
@@ -301,5 +302,23 @@ impl CurrentTask {
     /// Get the minimum amount of stack that was ever left on the current task.
     pub fn get_stack_high_water_mark() -> u32 {
         unsafe { uxTaskGetStackHighWaterMark(core::ptr::null_mut()) as u32 }
+    }
+}
+
+impl DelayMs<u8> for CurrentTask {
+    fn delay_ms(&mut self, ms: u8) {
+        Self::delay(Duration::ms(ms as u32))
+    }
+}
+
+impl DelayMs<u16> for CurrentTask {
+    fn delay_ms(&mut self, ms: u16) {
+        Self::delay(Duration::ms(ms as u32))
+    }
+}
+
+impl DelayMs<u32> for CurrentTask {
+    fn delay_ms(&mut self, ms: u32) {
+        Self::delay(Duration::ms(ms))
     }
 }

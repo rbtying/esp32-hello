@@ -8,17 +8,15 @@ use core::alloc::Layout;
 use core::fmt::Write as _;
 use core::panic::PanicInfo;
 
+use esp_idf_hal::{gpio, i2c};
+
 use embedded_hal::digital::v2::OutputPin as _;
 
 use ssd1306::{prelude::*, Builder};
 
-pub mod delay;
 pub mod errors;
 pub mod freertos_task;
 pub mod freertos_units;
-pub mod gpio;
-pub mod i2c;
-pub mod serial;
 
 #[no_mangle]
 pub fn app_main() {
@@ -44,7 +42,8 @@ pub fn app_main() {
         .unwrap();
         let mut oled_reset = unsafe { gpio::OutputPin::new(16) };
         let mut disp: TerminalMode<_> = Builder::new().connect_i2c(oled_i2c_master).into();
-        disp.reset(&mut oled_reset, &mut delay::FreeRtos).unwrap();
+        disp.reset(&mut oled_reset, &mut freertos_task::CurrentTask)
+            .unwrap();
         disp.init().unwrap();
         disp.clear().unwrap();
         disp.display_on(true).unwrap();

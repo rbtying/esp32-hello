@@ -48,8 +48,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fb00b1df69659d7d59892929069797caccfb3ecc44dd29fc4b79d88435ebac1e"
 
 [[package]]
+name = "esp-idf-hal"
+version = "0.2.0"
+source = "git+https://github.com/rbtying/esp-idf-hal#64360c63122ec8e9ed54c7993922b9b51d75fefc"
+dependencies = [
+ "embedded-hal",
+ "esp-idf-sys",
+ "genio",
+ "nb",
+]
+
+[[package]]
 name = "esp-idf-sys"
-version = "0.1.0"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f6b824a1aff03a105d67b11119595dedbbb4943471dd7e47131f417bb2484eae"
 
 [[package]]
 name = "esp32-hello-rust-main"
@@ -58,11 +71,16 @@ dependencies = [
  "cstr_core",
  "embedded-hal",
  "esp-idf-alloc",
- "esp-idf-sys",
+ "esp-idf-hal",
+ "esp_idf_sys",
  "genio",
  "nb",
  "ssd1306",
 ]
+
+[[package]]
+name = "esp_idf_sys"
+version = "0.1.2"
 
 [[package]]
 name = "genio"

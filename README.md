@@ -1,28 +1,7 @@
 An example ESP32 application which uses `esp-idf` with a Rust crate supplying
-`app_main`.
-
-In order to successfully build this project, you will need:
-
-- A `cargo xbuild` and `rustup` setup which has an `xtensa`-compatible `rustc`
-  linked with the name `xtensa`. You can build this by following the
-  instructions at
-  [https://github.com/MabezDev/rust-xtensa](https://github.com/MabezDev/rust-xtensa)
-  to build `rustc`, and then linking the newly compiled toolchain with
-  `rustup toolchain link xtensa $NEWLY_COMPILED_TOOLCHAIN_PATH`
-- A `clang` which supports the experimental `Xtensa` target. You can build this
-  by using Espressif's forked LLVM at
-  [https://github.com/espressif/llvm-project](https://github.com/espressif/llvm-project)
-
-  Note: this is used only for `bindgen` and not for building `esp-idf`, since
-  `esp-idf` v4.0 doesn't support builds with LLVM yet.
-
-Before attempting to build the code, you'll need the environment variables for
-`esp-idf` set, as well as two additional variables:
-
-```
-export XARGO_RUST_SRC=$RUST_XTENSA_PATH/src
-export XTENSA_LLVM_ROOT=$LLVM_XTENSA_PATH
-```
+`app_main`. An appropriate rustc is selected from the
+rbtying/esp-crossbuild-env, which should minimize the amount of effort
+necessary to comiple the code.
 
 This project is built against `esp-idf` v4.0, so make sure you have the
 appropriate toolchain installed.
@@ -40,7 +19,7 @@ development it'll be less annoying to try and compile the crate directly:
 
 ```
 cd main
-cargo +xtensa xbuild --target xtensa-esp32-none-elf
+docker run --rm --mount type=bind,source="$(pwd)",target=/project rbtying/esp-crossbuild-env cargo +xtensa xbuild --target xtensa-esp32-none-elf --release
 ```
 
 The `esp-idf` bindings can be regenerated using `bindgen.sh` from the root of

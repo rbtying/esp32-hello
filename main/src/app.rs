@@ -72,7 +72,6 @@ pub fn app_main() {
     let _led_blink_h = Task::new()
         .name("led_blink_task")
         .core_affinity(CpuAffinity::Cpu(Cpu::Pro))
-        .stack_size(4096)
         .start(led_blink_fn)
         .unwrap();
 

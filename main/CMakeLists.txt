@@ -27,8 +27,8 @@ externalproject_add(esp32_rust_main_build
     BUILD_ALWAYS 1
     BUILD_BYPRODUCTS "${COMPONENT_DIR}/target/xtensa-esp32-none-elf/release/libesp32_hello_rust_main.a"
     BUILD_ALWAYS 1
-    BUILD_COMMAND docker run --rm --mount ${docker_mount} rbtying/esp-crossbuild-env cargo +xtensa xbuild --target xtensa-esp32-none-elf
-    COMMAND docker run --rm --mount ${docker_mount} rbtying/esp-crossbuild-env cargo +xtensa xbuild --target xtensa-esp32-none-elf --release
+    BUILD_COMMAND docker run --rm --mount ${docker_mount} rbtying/esp-crossbuild-env-user cargo +xtensa xbuild --target xtensa-esp32-none-elf
+    COMMAND docker run --rm --mount ${docker_mount} rbtying/esp-crossbuild-env-user cargo +xtensa xbuild --target xtensa-esp32-none-elf --release
     INSTALL_COMMAND ""
     LOG_BUILD ON
     )

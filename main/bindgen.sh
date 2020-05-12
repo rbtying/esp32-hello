@@ -4,7 +4,7 @@ set -eu
 
 INCLUDES=$(cat ../build/esp-idf/main/main_includes.txt | python -c "import os.path, sys; print(' '.join(['-I' + os.path.relpath(s.strip()[1:-1], '..') for s in sys.stdin.readlines()]))")
 
-: "${SYSROOT:=$(docker run --rm rbtying/esp-crossbuild-env /opt/llvm-xtensa/bin/clang --print-resource-dir)}"
+: "${SYSROOT:=$(docker run --rm rbtying/esp-crossbuild-env-user /opt/llvm-xtensa/bin/clang --print-resource-dir)}"
 TARGET=xtensa-esp32-none-elf
 CLANG_FLAGS="\
     --sysroot=$SYSROOT \
@@ -19,7 +19,7 @@ CLANG_FLAGS="\
 generate_bindings()
 {
     # --no-rustfmt-bindings because we run rustfmt separately with regular rust
-    docker run --rm --mount type=bind,source=$IDF_PATH,target=/esp-idf --mount type=bind,source=$(pwd)/..,target=/project rbtying/esp-crossbuild-env bindgen \
+    docker run --rm --mount type=bind,source=$IDF_PATH,target=/esp-idf --mount type=bind,source=$(pwd)/..,target=/project rbtying/esp-crossbuild-env-user bindgen \
         --use-core \
         --ctypes-prefix crate::types \
         --no-layout-tests \
@@ -28,7 +28,7 @@ generate_bindings()
         main/esp-idf-sys/src/bindings.h \
         -- $CLANG_FLAGS
 
-    docker run --rm --mount type=bind,source=$(pwd),target=/project rbtying/esp-crossbuild-env rustup run stable rustfmt esp-idf-sys/src/bindings.rs
+    rustup run stable rustfmt esp-idf-sys/src/bindings.rs
 }
 
 generate_bindings "$@"

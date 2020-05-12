@@ -8,7 +8,7 @@ foreach(req ${BUILD_COMPONENTS})
     if (NOT target_type STREQUAL "INTERFACE_LIBRARY")
         get_target_property(target_includes "${req_lib}" INCLUDE_DIRECTORIES)
         foreach(dir ${target_includes})
-            string(APPEND all_includes "-I${dir} ")
+            string(APPEND all_includes "\"${dir}\"\n")
         endforeach()
     endif ()
 endforeach()
@@ -17,6 +17,9 @@ endforeach()
 # automatically as part of the build.
 file(GENERATE OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/main_includes.txt CONTENT ${all_includes})
 
+set(docker_mount "type=bind,source=${COMPONENT_DIR},target=/project")
+string(STRIP ${docker_mount} docker_mount)
+
 externalproject_add(esp32_rust_main_build
     PREFIX ${COMPONENT_DIR}/target
     SOURCE_DIR ${COMPONENT_DIR}
@@ -24,8 +27,8 @@ externalproject_add(esp32_rust_main_build
     BUILD_ALWAYS 1
     BUILD_BYPRODUCTS "${COMPONENT_DIR}/target/xtensa-esp32-none-elf/release/libesp32_hello_rust_main.a"
     BUILD_ALWAYS 1
-    BUILD_COMMAND cargo +xtensa xbuild --target xtensa-esp32-none-elf
-    COMMAND cargo +xtensa xbuild --target xtensa-esp32-none-elf --release
+    BUILD_COMMAND docker run --rm --mount ${docker_mount} rbtying/esp-crossbuild-env cargo +xtensa xbuild --target xtensa-esp32-none-elf
+    COMMAND docker run --rm --mount ${docker_mount} rbtying/esp-crossbuild-env cargo +xtensa xbuild --target xtensa-esp32-none-elf --release
     INSTALL_COMMAND ""
     LOG_BUILD ON
     )
